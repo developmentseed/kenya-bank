@@ -12,14 +12,14 @@
     <div id="header"><div class="limiter">
         <h1>Open Education</h1>
     </div></div>
+    <div id="navbox">
+		<div id="nav" class="layers"></div>
+	</div>
     <div id="content"><div class="limiter">
         <div id="about">
-            <p>All of the data visualized on the map comes from the <a href="https://opendata.go.ke/">KENYA openData</a> portal which allows anyone access to a myriad of census data on a variety of topics.</p><p>Feel free to explore the map below.</p>
+            <p>Education creates opportunity for individuals to contribute and compete locally and internationally. Therefore visualizing Kenyan education data reveals a dynamic picture of the present situation, as well as future challenges and opportunities. With fifty percent of the population under the age of 18 in 2009, it is critical to increase transparency in the process of investing in these future leaders. Explore the site to analyze how resources can be used to position Kenya to meet its Vision 2030 goal of having a “globally competitive, quality education and training for sustainable development”.[1]</p>
         </div>
-            </div>
-			<div id="navbox">
-			 <div id="nav" class="layers"></div>
-			</div></div>
+    </div></div>
     <div id="map" class="map"></div>
 
     <!-- External libraries and site script -->
@@ -35,7 +35,7 @@
 
         // Make a new map in #map
         new MB.map('map', {
-            id: 'mayarichman.map-efaqlkw1',
+            id: 'mapbox.mapbox-streets',
             center: {
                 lat: -0.000,
                 lon: 37.4195,
@@ -66,7 +66,7 @@
                 }
             },
               {
-                    name: 'Net Attendance: Primary',
+                    name: 'Access',
                     id: 'mayarichman.map-efaqlkw1,mayarichman.attendance_primary',
                     el: 'attendance',
                     layer: 1,
@@ -76,7 +76,7 @@
                           zoom: 7
                     }
                 },
-            {
+            /*{
                 name: 'Net Attendance: Secondary',
                 id: 'mayarichman.map-efaqlkw1,mayarichman.net_attendance_sec',
                 el: 'zip',
@@ -86,9 +86,9 @@
                         lon: 37.4195,
                         zoom: 7
                 }
-            },
+            },*/
             {
-                name: 'Poverty',
+                name: 'Equity',
                 id: 'mayarichman.map-efaqlkw1,mayarichman.Poverty_Kenya',
                 el: 'zip',
                 layer: 1,

@@ -97,14 +97,16 @@ body > div {
   top:0;
   right:0;
   left:0;
-  height:30px;
-  background:rgb(216,130,98);
-  background:rgba(216,130,98, 0.9);
-  border-bottom:1px solid #ccc;
+  height:29px;
+  background:#2e383e;
   color:#fff;
   overflow:hidden;
   padding:10px 0;
   z-index:2;
+  -moz-box-shadow: 0 0 5px #999;
+  -webkit-box-shadow: 0 0 5px #999;
+  box-shadow: 0 0 5px #999;
+  border-bottom:1px solid #444;
 }
 #header img {
   display:block;
@@ -129,16 +131,14 @@ body > div {
 }
 #content {
   position:absolute;
-  top:50px;
+  top:100px;
   right:0;
   bottom:0;
-  width:280px;
-  background:rgb(200,183,183);
-  background:rgba(200,183,183, 0.9);
-  border-left:1px solid #ccc;
+  width:400px;
+  background:#2E383E;
   overflow-x:hidden;
   overflow-y:auto;
-  padding:20px;
+  padding:0;
 }
 #content h2{
 color:#fff;
@@ -154,19 +154,14 @@ color:#fff;
 .layers a {
   display:block;
   padding:6px;
-  background:rgb(244,215,215);
+  background:none;
   max-width:200px;
-  border-color:rgba(200,183,183, 0.9);
-  border-width:2px;
-  border-style:solid;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
+  font-size: 16px;
 }
 .layers a:hover, .layers a:focus, .layers a.active {
-  background:rgb(216,130,98);
-  border-color:#e3dbdb;
-  border-width:2px;
-  border-style:solid;
-  color:white;
+  background:#F1F7FC;
+  color:#2e383e;
 }
 p {
   margin-bottom:1em;
@@ -176,8 +171,8 @@ label {
   font-weight:700;
 }
 #about p {
-  font-size:20px;
-  line-height:30px;
+  font-size:15px;
+  line-height:22px;
   display:block;
   color:#444;
   margin:20px;
@@ -281,30 +276,29 @@ a.zoomer {
     height:100%;
 }
 .hero #content {
-  top:50px;
-  left:0;
+  top:106px;
   right:0;
-  bottom:auto;
-  border-left:none;
+  bottom:0;
   border-right:none;
-  border-top:1px solid #ccc;
-  width:50%;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  width:416px;
 }
 .hero #content .limiter {
-  width:500px;
-  margin:0px auto;
-  position:relative;
+  top:0;
+  bottom:200px;
+  margin:0 15px 0 15px;
+  position:absolute;
+  background:#F1F7FC;
 }
-.hero .navbox {
-	top:500px;
-	bottom:auto;
-	z-index:1;
+.hero #navbox {
+	top:50px;
+	right:0;
+	z-index:3;
 	position:absolute;
+	background:#2e383e;
+	padding:10px 10px 0 10px;
 }
 .hero a.zoomer {
-  top:350px;
+  top:60px;
 }
 .hero .wax-tooltip {
   top:10px;
@@ -314,7 +308,7 @@ a.zoomer {
   right:100px;
 }
 .hero .share {
-  top:390px;
+  top:100px;
 }
 .hero .layers {
   height:36px;
@@ -322,12 +316,12 @@ a.zoomer {
 .hero .layer {
   width:110px;
   float:left;
-  margin:4px;
+  margin:0 5px;
   text-align:center;
-  color:#444;
-  height:41px;
+  color:#F1F7FC;
+  height:34px;
   font-weight:bold;
-  
+  line-height:32px;
 }
 
 /* embed */
