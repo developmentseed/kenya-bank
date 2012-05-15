@@ -24,11 +24,12 @@
             <p>High literacy rates throughout many districts are the result of a strong primary education system in Kenya. However, many gaps can be seen, with some literacy rates falling below 20% arid areas with lower populations. Predictably, literacy rates are higher where there is great access to schools.</p>
         </div>
         <div class="story" id="Access">
-        	<h2>Primary Attendance</h2>
+        	<p><span class="sublink active" href="#">Primary Attendance</span>&nbsp;&nbsp;&nbsp;&nbsp;<a id="Secondary" class="sublink" href="#">Secondary Attendance</a></p>
 			<p>The introduction of the universal primary education policy in 2003 has been very successful, net enrolment rates increased from 80 percent to 91 percent in 2010. Free basic education is a compulsory right. According to the 2009 census 74 percent of the population has at least a primary education.</p>
-			<p>School locations are key to attendance rates, thus the national level educational attainment is not true in most counties situated in the arid and semi arid lands. There is a sizeable gap in educational attainment between rural and urban areas: 83 percent of the urban population has a primary education or higher compared to 70 percent in the rural areas.</p>
-			<p>There has also been large increases in the number of children enrolled in primary school in some of the more challenging counties such as Garissa, Turkana, Kericho, Mandera, Bungoma, Samburu, Nyeri and Siaya; although overall the enrolment rates remain far behind the national average and only about half of children in the arid and semi arid lands are enrolled in primary school.</p>
-			<p>Attendance becomes even worse in secondary school</p>
+        </div>
+        <div class="story" id="Secondary">
+        	<p><a id="Access" class="sublink" href="#">Primary Attendance</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sublink active" href="#">Secondary Attendance</span></p>
+			<p>There is much greater regional variation in attending secondary school, than at primary. County enrollment rates range from 5-10 percent in the northern region and some parts of the Coast to around 50 percent in Kiambu and Nairobi. Most children passing the primary school exam can find a place in secondary school, but places have become competitive with less public secondary schools than private schools.</p>
         </div>
         <div class="story" id="Equity">
             <p>As the map and the charts below show, per capita spending tends to be low in the north, coast and arid land areas; as a result of the higher pupil teacher ratios and the challenge of getting good teachers in these regions. Counties in these areas all tend to have lower net enrolment rates.</p>
@@ -58,7 +59,7 @@
             zoomRange: [0, 15],
             features: [
                 'zoomwheel',
-                'tooltips',
+                'movetips',
                 'zoombox',
                 'zoompan',
                 'legend',
@@ -70,7 +71,7 @@
         new MB.layers('nav', 'map', [
             {
                 name: 'Literacy',
-                id: 'mapbox.mapbox-light,mayarichman.avg_lit',
+                id: 'mapbox.mapbox-light,wb-kenya.literacy',
                 el: 'Literacy',
                 layer: 1,
                 center: {
@@ -82,8 +83,8 @@
             },
               {
                     name: 'Access',
-                    id: 'mapbox.mapbox-light,mayarichman.attendance_primary',
-                    el: 'attendance',
+                    id: 'mapbox.mapbox-light,wb-kenya.net_attendance_primary_schools',
+                    el: 'Access',
                     layer: 1,
                     center: {
                       lat: 1,
@@ -92,21 +93,24 @@
                       ease:2000
                 	}
                 },
-            /*{
-                name: 'Net Attendance: Secondary',
-                id: 'mayarichman.map-efaqlkw1,mayarichman.net_attendance_sec',
+            {
+                name: 'Equity',
+                id: 'mapbox.mapbox-light,wb-kenya.poverty_rate',
                 el: 'zip',
                 layer: 1,
                 center: {
-                        lat: 2,
-                        lon: 37.4195,
-                        zoom: 7
+                      lat: 1,
+                      lon: 40,
+                      zoom: 7,
+                      ease:2000
                 }
-            },*/
-            {
-                name: 'Equity',
-                id: 'mapbox.mapbox-light,mayarichman.Poverty_Kenya',
-                el: 'zip',
+            }
+        ]);
+        new MB.sublayers('no-nav', 'map', [
+        	{
+                name: 'Secondary',
+                id: 'mapbox.mapbox-light,wb-kenya.net_attendance_secondary_school',
+                el: 'Secondary',
                 layer: 1,
                 center: {
                       lat: 1,

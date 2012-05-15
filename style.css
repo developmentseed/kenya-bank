@@ -156,6 +156,8 @@ color:#fff;
   background:rgba(240,245,245,.15);
   max-width:200px;
   border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
   font-size: 14px;
 }
 .layers a:hover, .layers a:focus {
@@ -184,7 +186,7 @@ label {
   display:block;
 }
 .story p {
-  font-size:15px;
+  font-size:14px;
   line-height:22px;
   display:block;
 }
@@ -199,6 +201,26 @@ label {
 .story a:hover {
   color:#3a98de;
   background:#fff;
+}
+.story a.sublink {
+  color:#999;
+}
+.story a.sublink:hover {
+  color:#444;
+  background:rgba(255,255,255,.5);
+}
+.story .sublink.active {
+  color:#444;
+  background:rgba(173,216,239,.5);
+}
+.story .sublink {
+  font-size:15px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  padding:5px;
+  border:1px solid #ddd;
+  font-weight:bold;
 }
 form.geocode input[type=text] {
   height:20px;
@@ -247,12 +269,6 @@ form.geocode.loading input[type=submit] {
   font-size:11px;
 }
 a.zoomer {
-  top:60px;
-}
-
-.wax-tooltip {
-  left:auto;
-  right:350px;
   top:60px;
 }
 .wax-legends {
@@ -329,8 +345,16 @@ a.zoomer {
   top:60px;
 }
 .hero .wax-tooltip {
-  top:10px;
-  right:10px;
+  pointer-events:none;
+  background:rgba(240,245,245,.9);
+  color:#444;
+  right:auto;
+  margin-left:5px;
+  margin-top:-25px;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border:1px solid #999;
 }
 .hero .share {
   top:100px;

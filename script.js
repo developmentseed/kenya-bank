@@ -107,20 +107,22 @@ MB.refresh = function(m, l) {
 MB.layers = function(switcher, m, layers) {
     $.each(layers, function(i, l) {
         if (l.el) {
-            $('#' + l.el)
+            $('a#' + l.el)
                 .click(function(e) {
                     e.preventDefault();
                     $('#' + switcher + ' .layer').removeClass('active');
+                    $('.story a').removeClass('active');
                     $(this).addClass('active');
                     $('.story').removeClass('active');
                     $('.story#' + l.el).addClass('active');
-                    $('#nav.layer').removeClass('active');
-                    $('#nav #layer-' + i).addClass('active');
+                    console.log(l.el);
+	                $('#nav.layer').removeClass('active');
+	                $('#nav #layer-' + i).addClass('active');
                     MB.refresh(m, l);
                 });
         }
 
-        if (switcher) {
+        if (switcher == 'nav') {
             $('#' + switcher).append($('<a href="#">' + l.name + '</a>')
                 .attr('id', 'layer-' + i)
                 .addClass('layer')
@@ -133,6 +135,23 @@ MB.layers = function(switcher, m, layers) {
                     MB.refresh(m, l);
                 })
             );
+        }
+    });
+};
+
+MB.sublayers = function(switcher, m, sublayers) {
+    $.each(sublayers, function(i, l) {
+        if (l.el) {
+            $('#' + l.el)
+                .click(function(e) {
+                    e.preventDefault();
+                    $('.story a').removeClass('active');
+                    $(this).addClass('active');
+                    $('.story').removeClass('active');
+                    $('.story#' + l.el).addClass('active');
+                    console.log(l.el);
+                    MB.refresh(m, l);
+                });
         }
     });
 };
