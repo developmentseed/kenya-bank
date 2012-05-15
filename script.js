@@ -112,6 +112,10 @@ MB.layers = function(switcher, m, layers) {
                     e.preventDefault();
                     $('#' + switcher + ' .layer').removeClass('active');
                     $(this).addClass('active');
+                    $('.story').removeClass('active');
+                    $('.story#' + l.el).addClass('active');
+                    $('#nav.layer').removeClass('active');
+                    $('#nav #layer-' + i).addClass('active');
                     MB.refresh(m, l);
                 });
         }
@@ -125,7 +129,7 @@ MB.layers = function(switcher, m, layers) {
                     $('#' + switcher + ' .layer').removeClass('active');
                     $(this).addClass('active');
                     $('.story').removeClass('active');
-                    $('#' + l.name).addClass('active');
+                    $('.story#' + l.name).addClass('active');
                     MB.refresh(m, l);
                 })
             );

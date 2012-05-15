@@ -32,7 +32,6 @@
  .close,
  .share,
  .zoomer,
- .wax-legend,
  .wax-tooltip,
  .wax-share div,
  .wax-share .twitter,
@@ -66,7 +65,7 @@
   max-width:1500px;
   max-height:400px;
   overflow:auto;
-  background:#F1F7FC;
+  background:none;
   color:#444444;
   width:220px\9; /* IE 8 and below */
   }
