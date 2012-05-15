@@ -210,8 +210,9 @@ label {
   background:rgba(255,255,255,.5);
 }
 .story .sublink.active {
-  color:#444;
+  color:#222;
   background:rgba(173,216,239,.5);
+  border:1px solid #ccc;
 }
 .story .sublink {
   font-size:15px;
@@ -220,7 +221,7 @@ label {
   -webkit-border-radius: 3px;
   padding:5px;
   border:1px solid #ddd;
-  font-weight:bold;
+  color:#222;
 }
 form.geocode input[type=text] {
   height:20px;
