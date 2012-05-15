@@ -10,14 +10,29 @@
 </head>
 <body class="hero">
     <div id="header"><div class="limiter">
-        <h1>Open Education</h1>
+        <h1>Open Education in Kenya</h1>
     </div></div>
     <div id="navbox">
 		<div id="nav" class="layers"></div>
 	</div>
     <div id="content"><div class="limiter">
-        <div id="about">
-            <p>Education creates opportunity for individuals to contribute and compete locally and internationally. Therefore visualizing Kenyan education data reveals a dynamic picture of the present situation, as well as future challenges and opportunities. With fifty percent of the population under the age of 18 in 2009, it is critical to increase transparency in the process of investing in these future leaders. Explore the site to analyze how resources can be used to position Kenya to meet its Vision 2030 goal of having a “globally competitive, quality education and training for sustainable development”.[1]</p>
+        <div class="story active" id="about">
+        	<h2>Mapping successful trends and remaining challenges</h2>
+            <p>Education creates opportunity for individuals to contribute and compete locally and internationally. Therefore visualizing Kenyan education data reveals a dynamic picture of the present situation, as well as future challenges and opportunities. With fifty percent of the population under the age of 18 in 2009, it is critical to increase transparency in the process of investing in these future leaders. <a id="Literacy" href="#">Explore the site</a> to analyze how resources can be used to position Kenya to meet its Vision 2030 goal of having a “globally competitive, quality education and training for sustainable development”.[1]</p>
+        </div>
+        <div class="story" id="Literacy">
+            <p>High literacy rates throughout many districts are the result of a strong primary education system in Kenya. However, many gaps can be seen, with some literacy rates falling below 20% arid areas with lower populations. Predictably, literacy rates are higher where there is great access to schools.</p>
+        </div>
+        <div class="story" id="Access">
+        	<p><span class="sublink active" href="#">Primary Attendance</span>&nbsp;&nbsp;&nbsp;&nbsp;<a id="Secondary" class="sublink" href="#">Secondary Attendance</a></p>
+			<p>The introduction of the universal primary education policy in 2003 has been very successful, net enrolment rates increased from 80 percent to 91 percent in 2010. Free basic education is a compulsory right. According to the 2009 census 74 percent of the population has at least a primary education.</p>
+        </div>
+        <div class="story" id="Secondary">
+        	<p><a id="Access" class="sublink" href="#">Primary Attendance</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sublink active" href="#">Secondary Attendance</span></p>
+			<p>There is much greater regional variation in attending secondary school, than at primary. County enrollment rates range from 5-10 percent in the northern region and some parts of the Coast to around 50 percent in Kiambu and Nairobi. Most children passing the primary school exam can find a place in secondary school, but places have become competitive with less public secondary schools than private schools.</p>
+        </div>
+        <div class="story" id="Equity">
+            <p>As the map and the charts below show, per capita spending tends to be low in the north, coast and arid land areas; as a result of the higher pupil teacher ratios and the challenge of getting good teachers in these regions. Counties in these areas all tend to have lower net enrolment rates.</p>
         </div>
     </div></div>
     <div id="map" class="map"></div>
@@ -35,16 +50,16 @@
 
         // Make a new map in #map
         new MB.map('map', {
-            id: 'mapbox.mapbox-streets',
+            id: 'mapbox.mapbox-light',
             center: {
-                lat: -0.000,
-                lon: 37.4195,
-                zoom: 5
+                lat: 1,
+                lon: 42,
+                zoom: 6
             },
             zoomRange: [0, 15],
             features: [
                 'zoomwheel',
-                'tooltips',
+                'movetips',
                 'zoombox',
                 'zoompan',
                 'legend',
@@ -56,46 +71,52 @@
         new MB.layers('nav', 'map', [
             {
                 name: 'Literacy',
-                id: 'mayarichman.map-efaqlkw1,mayarichman.avg_lit',
+                id: 'mapbox.mapbox-light,wb-kenya.literacy',
+                el: 'Literacy',
                 layer: 1,
                 center: {
-                     lat: 2,
-                      lon: 37.4195,
+                      lat: 1,
+                      lon: 40,
                       zoom: 7,
                       ease:2000
                 }
             },
               {
                     name: 'Access',
-                    id: 'mayarichman.map-efaqlkw1,mayarichman.attendance_primary',
-                    el: 'attendance',
+                    id: 'mapbox.mapbox-light,wb-kenya.net_attendance_primary_schools',
+                    el: 'Access',
                     layer: 1,
                     center: {
-                          lat: 2,
-                          lon: 37.4195,
-                          zoom: 7
-                    }
+                      lat: 1,
+                      lon: 40,
+                      zoom: 7,
+                      ease:2000
+                	}
                 },
-            /*{
-                name: 'Net Attendance: Secondary',
-                id: 'mayarichman.map-efaqlkw1,mayarichman.net_attendance_sec',
-                el: 'zip',
-                layer: 1,
-                center: {
-                        lat: 2,
-                        lon: 37.4195,
-                        zoom: 7
-                }
-            },*/
             {
                 name: 'Equity',
-                id: 'mayarichman.map-efaqlkw1,mayarichman.Poverty_Kenya',
+                id: 'mapbox.mapbox-light,wb-kenya.poverty_rate',
                 el: 'zip',
                 layer: 1,
                 center: {
-                        lat: 2,
-                        lon: 37.4195,
-                        zoom: 7
+                      lat: 1,
+                      lon: 40,
+                      zoom: 7,
+                      ease:2000
+                }
+            }
+        ]);
+        new MB.sublayers('no-nav', 'map', [
+        	{
+                name: 'Secondary',
+                id: 'mapbox.mapbox-light,wb-kenya.net_attendance_secondary_school',
+                el: 'Secondary',
+                layer: 1,
+                center: {
+                      lat: 1,
+                      lon: 40,
+                      zoom: 7,
+                      ease:2000
                 }
             }
         ]);
