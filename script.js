@@ -40,6 +40,7 @@ MB.map = function(el, l) {
 
         if ($.inArray('legend',l.features) >= 0) {
             MB.maps[el].legend = wax.mm.legend(MB.maps[el], t).appendTo(MB.maps[el].parent);
+            $('.wax-legends').appendTo($('#content'));
         }
 
         if ($.inArray('bwdetect',l.features) >= 0) {
@@ -123,6 +124,8 @@ MB.layers = function(switcher, m, layers) {
                     e.preventDefault();
                     $('#' + switcher + ' .layer').removeClass('active');
                     $(this).addClass('active');
+                    $('.story').removeClass('active');
+                    $('#' + l.name).addClass('active');
                     MB.refresh(m, l);
                 })
             );

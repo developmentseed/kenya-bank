@@ -41,9 +41,9 @@
   position:absolute;
   border:1px solid #ccc;
   background:#fff;
-  border-radius:3px;
-  -moz-border-radius:3px;
-  -webkit-border-radius:3px;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
   box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
   -moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
   -webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
@@ -63,11 +63,10 @@
  .wax-legend,
  .wax-tooltip {
   padding:4px 9px;
-  min-width:800px;
   max-width:1500px;
   max-height:400px;
   overflow:auto;
-  background:rgba(200,183,183,.9);
+  background:#F1F7FC;
   color:#444444;
   width:220px\9; /* IE 8 and below */
   }
