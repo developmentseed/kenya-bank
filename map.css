@@ -61,7 +61,7 @@
 
  .wax-legend,
  .wax-tooltip {
-  padding:4px 9px;
+  padding:19px 15px;
   max-height:400px;
   overflow:auto;
   background:none;
@@ -70,20 +70,32 @@
   }
  .int-title {
   font-size:15px;
-  font-variant:bold;
-  padding:5px;
+  padding-bottom:10px;
  }
  .int-chart-title {
   font-size:12px;
   margin-top:5px;
   margin-bottom:5px;
  }
- .int-container{
+ .int-container {
   max-width:300px;
-  min-width:324px;
+  min-width:90px;
+  max-height:80px;
   margin:4px;
   float:center;	
  }
+ .int-sign {
+  font-size:90px;
+  margin-top:15px;
+  min-width:45px;
+  min-height:50px;
+  float:center;
+  margin:10px;
+ }
+ .int-value{
+  font-size:40px;
+  padding-top:13px;
+  }
  .wax-legend { position:relative; }
 
 /* ### Zoomer, close buttons, share ### */

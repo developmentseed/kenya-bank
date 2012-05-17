@@ -21,7 +21,7 @@
             <p>Education creates opportunity for individuals to contribute and compete locally and internationally. Therefore visualizing Kenyan education data reveals a dynamic picture of the present situation, as well as future challenges and opportunities. With fifty percent of the population under the age of 18 in 2009, it is critical to increase transparency in the process of investing in these future leaders. <a id="Literacy" href="#">Explore the site</a> to analyze how resources can be used to position Kenya to meet its Vision 2030 goal of having a “globally competitive, quality education and training for sustainable development”.[1]</p>
         </div>
         <div class="story" id="Literacy">
-            <p>High literacy rates throughout many districts are the result of a strong primary education system in Kenya. However, many gaps can be seen, with some literacy rates falling below 20% arid areas with lower populations. Predictably, literacy rates are higher where there is great access to schools.</p>
+            <p>High literacy rates throughout many districts are the result of a strong primary education system in Kenya. However, many gaps can be seen, with some literacy rates falling below 20% arid areas with lower populations. Predictably, literacy rates are higher where there is great access to schools. Literacy cannot improve without <a id="Access" href="#">access</a> to quality primary and secondary schools.</p>
         </div>
         <div class="story" id="Access">
         	<p><span class="sublink active" href="#">Primary Attendance</span>&nbsp;&nbsp;&nbsp;&nbsp;<a id="Secondary" class="sublink" href="#">Secondary Attendance</a></p>
@@ -31,19 +31,15 @@
         	<p><a id="Access" class="sublink" href="#">Primary Attendance</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sublink active" href="#">Secondary Attendance</span></p>
 			<p>There is much greater regional variation in attending secondary school, than at primary. County enrollment rates range from 5-10 percent in the northern region and some parts of the Coast to around 50 percent in Kiambu and Nairobi. Most children passing the primary school exam can find a place in secondary school, but places have become competitive with less public secondary schools than private schools.</p>
         </div>
-        <div class="story" id="Primary">
-	        <p><span class="sublink" href="#">Primary Schools</span>&nbsp;&nbsp;&nbsp;&nbsp;<a id="Secondary_Schools" class="sublink" href="#">Secondary Schools</a></p>
-	         <p>Ahhhh</p>
-	    </div>
-		<div class="story" id="Secondary_Schools">
-        	<p><a id="Primary" class="sublink" href="#">Primary Schools</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sublink" href="#">Secondary Schools</span></p>
-			<p>Ahhh pt.2</p>
-        </div>
         <div class="story" id="Equity">
+	<p><span class="sublink active" href="#">Poverty Rate</span>&nbsp;&nbsp;&nbsp;&nbsp;<a id="Test" class="sublink" href="#">County Test Results</a></p>
             <p>In Wajir, a district with an 84% poverty rate in the ASAL, family related reasons, such as "Had to work or help at home" and economic reasons like "No money for school costs", are frequently cited as the reason for never attending school. Regardless of the school location and public education ensured as a universal right, other school-related costs or a family's economic insecurity can jeopardize the student attendance and retention.</p>
-
-			<p>Hover over each District to find out why students aren't attending.</p>
+			<p>Zoom out and hover over each District to find out why students aren't attending.</p>
         </div>
+      <div class="story" id="Test">
+	<p><a id="Equity" class="sublink" href="#">Poverty Rate</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sublink active" href="#">County Test Results</span></p>
+	<p>While the map shows some improvement in schools with passing average from 2006 to 2010, many have had an increase in failing averages within each school.</p>
+	</div>	
     </div></div>
     <div id="map" class="map"></div>
 
@@ -60,7 +56,7 @@
 
         // Make a new map in #map
         new MB.map('map', {
-            id: 'mayarichman.map-8i4e9lcn',
+            id: 'mayarichman.map-8i4e9lcn,wb-kenya.literacy',
             center: {
                 lat: 1,
                 lon: 42,
@@ -110,8 +106,8 @@
                 layer: 1,
                 center: {
                       lat: 1,
-                      lon: 40,
-                      zoom: 7,
+                      lon: 41,
+                      zoom: 8,
                       ease:2000
                 }
             }
@@ -121,6 +117,18 @@
                 name: 'Secondary',
                 id: 'mayarichman.map-8i4e9lcn,mayarichman.updated_sec,mayarichman.literacy_invisible,wb-kenya.secondary_schools',
                 el: 'Access',
+                layer: 1,
+                center: {
+                      lat: 1,
+                      lon: 40,
+                      zoom: 7,
+                      ease:2000
+                }
+            },
+			{
+                name: 'Test',
+                id: 'mayarichman.map-8i4e9lcn,mayarichman.test_results_3',
+                el: 'Test',
                 layer: 1,
                 center: {
                       lat: 1,
