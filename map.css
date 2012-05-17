@@ -53,22 +53,37 @@
   position:absolute;
   z-index:999998;
   right:10px;
+  
   }
 
  .wax-legends { bottom:10px; }
- .wax-tooltip { top:10px; }
+ .wax-tooltip { top:10px;max-width:326px;}
 
  .wax-legend,
  .wax-tooltip {
   padding:4px 9px;
-  max-width:1500px;
   max-height:400px;
   overflow:auto;
   background:none;
   color:#444444;
   width:220px\9; /* IE 8 and below */
   }
-
+ .int-title {
+  font-size:15px;
+  font-variant:bold;
+  padding:5px;
+ }
+ .int-chart-title {
+  font-size:12px;
+  margin-top:5px;
+  margin-bottom:5px;
+ }
+ .int-container{
+  max-width:300px;
+  min-width:324px;
+  margin:4px;
+  float:center;	
+ }
  .wax-legend { position:relative; }
 
 /* ### Zoomer, close buttons, share ### */

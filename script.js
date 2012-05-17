@@ -111,11 +111,14 @@ MB.layers = function(switcher, m, layers) {
                 .click(function(e) {
                     e.preventDefault();
                     $('#' + switcher + ' .layer').removeClass('active');
+                    console.log(switcher + " switcher");
                     $('.story a').removeClass('active');
                     $(this).addClass('active');
+                    console.log(l.name);
+                    //console.log(l.el);
                     $('.story').removeClass('active');
                     $('.story#' + l.el).addClass('active');
-                    console.log(l.el);
+                    console.log(this);
 	                $('#nav.layer').removeClass('active');
 	                $('#nav #layer-' + i).addClass('active');
                     MB.refresh(m, l);
@@ -142,14 +145,14 @@ MB.layers = function(switcher, m, layers) {
 MB.sublayers = function(switcher, m, sublayers) {
     $.each(sublayers, function(i, l) {
         if (l.el) {
-            $('#' + l.el)
+	       $('.story a').removeClass('active');
+            $('#' + l.name)
                 .click(function(e) {
                     e.preventDefault();
                     $('.story a').removeClass('active');
                     $(this).addClass('active');
                     $('.story').removeClass('active');
-                    $('.story#' + l.el).addClass('active');
-                    console.log(l.el);
+                    $('.story#' + l.name).addClass('active');
                     MB.refresh(m, l);
                 });
         }

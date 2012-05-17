@@ -31,8 +31,18 @@
         	<p><a id="Access" class="sublink" href="#">Primary Attendance</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sublink active" href="#">Secondary Attendance</span></p>
 			<p>There is much greater regional variation in attending secondary school, than at primary. County enrollment rates range from 5-10 percent in the northern region and some parts of the Coast to around 50 percent in Kiambu and Nairobi. Most children passing the primary school exam can find a place in secondary school, but places have become competitive with less public secondary schools than private schools.</p>
         </div>
+        <div class="story" id="Primary">
+	        <p><span class="sublink" href="#">Primary Schools</span>&nbsp;&nbsp;&nbsp;&nbsp;<a id="Secondary_Schools" class="sublink" href="#">Secondary Schools</a></p>
+	         <p>Ahhhh</p>
+	    </div>
+		<div class="story" id="Secondary_Schools">
+        	<p><a id="Primary" class="sublink" href="#">Primary Schools</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sublink" href="#">Secondary Schools</span></p>
+			<p>Ahhh pt.2</p>
+        </div>
         <div class="story" id="Equity">
-            <p>As the map and the charts below show, per capita spending tends to be low in the north, coast and arid land areas; as a result of the higher pupil teacher ratios and the challenge of getting good teachers in these regions. Counties in these areas all tend to have lower net enrolment rates.</p>
+            <p>In Wajir, a district with an 84% poverty rate in the ASAL, family related reasons, such as "Had to work or help at home" and economic reasons like "No money for school costs", are frequently cited as the reason for never attending school. Regardless of the school location and public education ensured as a universal right, other school-related costs or a family's economic insecurity can jeopardize the student attendance and retention.</p>
+
+			<p>Hover over each District to find out why students aren't attending.</p>
         </div>
     </div></div>
     <div id="map" class="map"></div>
@@ -50,7 +60,7 @@
 
         // Make a new map in #map
         new MB.map('map', {
-            id: 'mapbox.mapbox-light',
+            id: 'mayarichman.map-8i4e9lcn',
             center: {
                 lat: 1,
                 lon: 42,
@@ -71,7 +81,7 @@
         new MB.layers('nav', 'map', [
             {
                 name: 'Literacy',
-                id: 'mapbox.mapbox-light,wb-kenya.literacy',
+                id: 'mayarichman.map-8i4e9lcn,wb-kenya.literacy',
                 el: 'Literacy',
                 layer: 1,
                 center: {
@@ -83,7 +93,7 @@
             },
               {
                     name: 'Access',
-                    id: 'mapbox.mapbox-light,wb-kenya.net_attendance_primary_schools',
+                    id: 'mayarichman.map-8i4e9lcn,mayarichman.updated_primary,mayarichman.literacy_invisible,wb-kenya.primary_schools',
                     el: 'Access',
                     layer: 1,
                     center: {
@@ -95,8 +105,8 @@
                 },
             {
                 name: 'Equity',
-                id: 'mapbox.mapbox-light,wb-kenya.poverty_rate',
-                el: 'zip',
+                id: 'mayarichman.map-8i4e9lcn,mayarichman.poverty_rate,wb-kenya.reason_icon,mayarichman.charts_2',
+                el: 'Equity',
                 layer: 1,
                 center: {
                       lat: 1,
@@ -109,8 +119,8 @@
         new MB.sublayers('no-nav', 'map', [
         	{
                 name: 'Secondary',
-                id: 'mapbox.mapbox-light,wb-kenya.net_attendance_secondary_school',
-                el: 'Secondary',
+                id: 'mayarichman.map-8i4e9lcn,mayarichman.updated_sec,mayarichman.literacy_invisible,wb-kenya.secondary_schools',
+                el: 'Access',
                 layer: 1,
                 center: {
                       lat: 1,
@@ -119,8 +129,9 @@
                       ease:2000
                 }
             }
+
         ]);
-        new MB.layout();
+
     </script>
 </body>
 </html>
