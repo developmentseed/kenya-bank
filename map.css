@@ -68,34 +68,38 @@
   color:#444444;
   width:220px\9; /* IE 8 and below */
   }
- .int-title {
-  font-size:15px;
-  padding-bottom:10px;
- }
- .int-chart-title {
-  font-size:12px;
-  margin-top:5px;
-  margin-bottom:5px;
- }
- .int-container {
-  max-width:300px;
-  min-width:90px;
-  max-height:80px;
-  margin:4px;
-  float:center;	
- }
- .int-sign {
-  font-size:90px;
-  margin-top:15px;
-  min-width:45px;
-  min-height:50px;
-  float:center;
-  margin:10px;
- }
- .int-value{
-  font-size:40px;
-  padding-top:13px;
+ .wax-tooltip .test{
+  } 
+ .wax-tooltip span.value-indicator{
+  font-size:50px;
   }
+ .wax-tooltip h4.int-title {
+  font-size:12px;
+  font-weight:normal;   
+  }
+ .wax-tooltip h6.int-value{
+  font-size:30px;
+  font-weight:400;
+  }
+  .wax-tooltip h5.int-chart-title{
+    font-size:10px;
+    font-weight:normal;
+  }
+  .wax-tooltip span.icon{
+    position: absolute;
+  }
+  .wax-tooltip .chart ul{
+    width:30px;
+  }
+  .wax-tooltip .chart ul li{
+  padding:2px;
+  display:block;
+  }
+  .wax-tooltip img.chart{
+  position:relative;
+  margin-left:30px;
+  }
+
  .wax-legend { position:relative; }
 
 /* ### Zoomer, close buttons, share ### */
