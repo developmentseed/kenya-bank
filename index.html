@@ -33,7 +33,7 @@
         </div>
         <div class="story" id="Equity">
 	<p><span class="sublink active" href="#">Poverty Rate</span>&nbsp;&nbsp;&nbsp;&nbsp;<a id="Test" class="sublink" href="#">County Test Results</a></p>
-            <p>In Wajir, a district with an 84% poverty rate in the ASAL, family related reasons, such as "Had to work or help at home" and economic reasons like "No money for school costs", are frequently cited as the reason for never attending school. Regardless of the school location and public education ensured as a universal right, other school-related costs or a family's economic insecurity can jeopardize the student attendance and retention.</p>
+            <p>In Wajir, a district with an 84% poverty rate in the ASAL, family related reasons, such as "Had to work or help at home" and economic reasons like "No money for school costs", are frequently cited as the reason for never attending school.</p> <p>Regardless of the school location and public education ensured as a universal right, other school-related costs or a family's economic insecurity can jeopardize the student attendance and retention.</p>
 			<p>Zoom out and hover over each District to find out why students aren't attending.</p>
         </div>
       <div class="story" id="Test">
@@ -56,7 +56,7 @@
 
         // Make a new map in #map
         new MB.map('map', {
-            id: 'mayarichman.map-8i4e9lcn,wb-kenya.literacy',
+            id: 'mayarichman.map-8i4e9lcn,mayarichman.literacy',
             center: {
                 lat: 1,
                 lon: 42,
@@ -77,7 +77,7 @@
         new MB.layers('nav', 'map', [
             {
                 name: 'Literacy',
-                id: 'mayarichman.map-8i4e9lcn,wb-kenya.literacy',
+                id: 'mayarichman.map-8i4e9lcn,mayarichman.literacy',
                 el: 'Literacy',
                 layer: 1,
                 center: {
@@ -101,7 +101,7 @@
                 },
             {
                 name: 'Equity',
-                id: 'mayarichman.map-8i4e9lcn,mayarichman.poverty_rate,wb-kenya.reason_icon,mayarichman.chart_diff5',
+                id: 'mayarichman.map-8i4e9lcn,mayarichman.poverty_rate,wb-kenya.reason_icon,mayarichman.charts_final',
                 el: 'Equity',
                 layer: 1,
                 center: {
@@ -115,7 +115,7 @@
         new MB.sublayers('no-nav', 'map', [
         	{
                 name: 'Secondary',
-                id: 'mayarichman.map-8i4e9lcn,mayarichman.updated_sec,wb-kenya.secondary_schools',
+                id: 'mayarichman.map-8i4e9lcn,mayarichman.updated_sec,mayarichman.secondary_schools',
                 el: 'Access',
                 layer: 1,
                 center: {

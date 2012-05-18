@@ -61,45 +61,63 @@
 
  .wax-legend,
  .wax-tooltip {
-  padding:19px 15px;
-  max-height:400px;
-  overflow:auto;
-  background:none;
-  color:#444444;
-  width:220px\9; /* IE 8 and below */
-  }
- .wax-tooltip .test{
+   padding:19px 15px;
+   max-height:400px;
+   overflow:auto;
+   background:none;
+   color:#444444;
+   width:220px\9; /* IE 8 and below */
   } 
  .wax-tooltip span.value-indicator{
-  font-size:50px;
+   font-size:50px;
   }
  .wax-tooltip h4.int-title {
-  font-size:12px;
-  font-weight:normal;   
+   font-size:14px;
+   font-weight:normal;
+   text-transform:capitalize;   
   }
  .wax-tooltip h6.int-value{
-  font-size:30px;
-  font-weight:400;
+   font-size:30px;
+   font-weight:400;
   }
   .wax-tooltip h5.int-chart-title{
-    font-size:10px;
+    font-size:11px;
     font-weight:normal;
+    
   }
   .wax-tooltip span.icon{
     position: absolute;
+  }  
+  .wax-tooltip span.icon li{
+    padding:0px;
+  }
+  .wax-tooltip .chart{
   }
   .wax-tooltip .chart ul{
     width:30px;
   }
   .wax-tooltip .chart ul li{
-  padding:2px;
-  display:block;
+   padding:1px;
+   display:block;
   }
   .wax-tooltip img.chart{
-  position:relative;
-  margin-left:30px;
+   position:relative;
+   margin-left:30px;
   }
-
+  .wax-tooltip h5.int-stat{
+   font-weight:normal;
+   margin-top:10px;
+   margin-bottom:10px;
+   line-height:15px;
+   text-transform:capitalize;  
+  }
+  .wax-tooltip span.int-value{
+    font-size:30px;
+    position:relative;
+    top:5px;
+    left:5px;
+    line-height:1;
+  }
  .wax-legend { position:relative; }
 
 /* ### Zoomer, close buttons, share ### */
