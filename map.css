@@ -112,9 +112,9 @@
    text-transform:capitalize;  
   }
   .wax-tooltip span.int-value{
-    font-size:30px;
+    font-size:20px;
     position:relative;
-    top:5px;
+    top:3px;
     left:5px;
     line-height:1;
   }
