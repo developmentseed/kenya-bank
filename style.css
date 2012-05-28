@@ -48,7 +48,7 @@ body {
 body,
 textarea,
 input {
-  font: 13px/20px Helvetica,arial,freesans,clean,sans-serif;
+  font: 14px/21px Helvetica,arial,freesans,clean,sans-serif;
   }
 pre,
 code { font:normal 12px/20px monospace; }
@@ -57,11 +57,32 @@ h1,h2,h3,h4,h5,h6 {
   font-weight:700;
   margin: 10px 0;
   }
-h1 {
-  font-size: 24px;
-  line-height: 32px;
-  margin: 10px 0;
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #404040;
   }
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+  color: #404040;
+  }
+h1 {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  padding: 20px 0;
+  }
+  h1.heading {
+    background: transparent url(img/sprite.png) no-repeat -410px 8px;
+    padding-left: 100px;
+    }
 h2 {
   font-size: 18px;
   line-height: 22px;
@@ -69,7 +90,7 @@ h2 {
 h3 {
   margin: 0 0 10px;
   font-size: 16px;
-  font-weight: normal;
+  line-height: 24px;
   }
 small {
   font-size: 11px;
@@ -82,7 +103,6 @@ a {
   }
   a:hover {
     color:#3a98de;
-    background:#fff;
     }
 
 p {
@@ -93,6 +113,12 @@ label {
   }
 strong {
   font-weight:700;
+  }
+sup {
+  font-size: 11px;
+  vertical-align: top;
+  position: relative;
+  top: -3px;
   }
 
 /* ------------------------------------------
@@ -115,16 +141,6 @@ strong {
   left:0;
   z-index:0;
   }
-.layer {
-  width:90px;
-  float:left;
-  margin:0 5px;
-  text-align:center;
-  color:#F1F7FC;
-  height:28px;
-  font-weight:bold;
-  line-height:32px;
-  }
 .limiter {
   padding: 0 20px;
   }
@@ -132,46 +148,53 @@ strong {
 /* ------------------------------------------
   General Styling ♥
 ---------------------------------------------*/
+.introduction {
+  padding: 0 20px 10px 0;
+  font-weight: 500;
+  }
+.introduction,
 #nav {
-	background: rgb(46,56,62);
-  background: rgba(140,142,145,.9);
+  background: rgb(0, 143, 213);
+  background: rgba(0, 143, 213, 0.25);
   }
-.tab {
-  display:block;
-  padding:3px;
-  margin:5px 0;
-  background:rgb(244,215,215);
-  max-width:100px;
-  right:100px;
+
+.layers li {
+  float: left;
+  margin: 0 0 0 5px;
   }
+  .layers li:first-child {
+    margin: 0;
+    }
+
 .layers a {
   display:block;
-  padding:6px;
-  background:rgb(241,247,252);
-  background:rgba(240,245,245,.15);
-  max-width:200px;
-  border-radius: 10px 10px 0 0;
-  -moz-border-radius: 10px 10px 0 0;
-  -webkit-border-radius: 10px 10px 0 0;
+  padding: 5px 15px;
+  background: #F0F0F0;
+  height: 25px; line-height: 25px;
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
   font-size: 14px;
+  text-align: center;
+  font-weight: bold;
   }
   .layers a:hover,
   .layers a:focus {
-    background:rgb(240,245,245);
-    background:rgba(240,245,245,.3);
+    background-color: #f5f5f5;
     }
-  .layers a.active {
-    background:rgb(241,247,252);
-    background:rgba(240,245,245,.9);
+  .layers li.active a {
+    background: #fff;
     color:#2e383e;
-    font-size:16px;
     }
 
 .story {
-  display:none;
-  margin:20px;
-  color:#444;
+  display: none;
+  margin: 15px 0;
+  font-weight: 200;
   }
+  .story a {
+    font-weight: 500;
+    }
+
   .story.active {
     display:block;
     }
@@ -231,12 +254,15 @@ strong {
 
 .wax-legends {
   background: #fff;
+  background: rgba(255,255,255,0.8);
   right: 20px;
-  width: 360px;
+  max-width: 360px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   }
 .wax-legend,
 .wax-tooltip {
-  padding: 10px;
+  padding: 8px 10px;
   max-height: 120px;
   width: 220px\9; /* IE 8 and below */
   }
@@ -347,6 +373,24 @@ strong {
   }
   .zoompan .share { top:45px; }
 
+/* ### Legend Styling ### */
+body .wax-legend .scale ul li {
+  margin: 0;
+  }
+body .wax-legend .title {
+  margin: 0 0 4px;
+  }
+body .wax-legend ul.labels li,
+body .wax-legend ul.labels li span {
+  width: 40px;
+  }
+body .wax-legend ul.labels li span {
+  height: 10px;
+  }
+body .wax-legend .scale ul li {
+  font-size: 10px;
+  }
+
 /* ### Attribution ### */
 .wax-attribution {
   position:absolute;
@@ -368,13 +412,14 @@ strong {
   z-index:999999;
   }
 .wax-share div {
-  right:50%;
-  top:50%;
-  margin:-120px -180px 0px 0px;
-  padding:19px;
-  width:320px;
-  height:200px;
-  overflow:hidden;
+  right: 50%;
+  top: 50%;
+  margin: -120px -180px 0px 0px;
+  padding: 20px;
+  width: 320px;
+  height: 200px;
+  overflow: hidden;
+  z-index: 1000;
   }
  .wax-share small { color:#999; }
  .wax-share textarea {
@@ -421,7 +466,7 @@ strong {
 .mmg-default {
   width:20px;
   height:40px;
-  background:url(img/map.png) -120px -30px;
+  background:url(img/controls.png) -120px -30px;
   left:-10px;
   top:-30px;
   }

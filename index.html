@@ -2,49 +2,72 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>Open Education in Kenya</title>
+  <title>Exploring Kenyan Education</title>
   <link rel='stylesheet' href='style.css' type='text/css' />
 </head>
 <body>
 
 <div id='sidebar'>
-  <div class='limiter clearfix'>
-    <h1 class='heading'>Exploring Kenyan Education</h1>
-    <div class='about'>
-      <p>Visualizing education data in Kenya reveals a dynamic picture of the present situation as well as future challenges and opportunities. With fifty percent of the population under the age of 18 in 2009, there is an increasing need increase transparency as the country invests in these future leaders. Explore the site to analyze how resources can be used to reach it's Vision 2030 goal of a, “globally competitive, quality education and training for sustainable development”.<sup>[1]</sup></p>
+    <div class='introduction'>
+      <div class='limiter'>
+        <h1 class='heading'><a href='/'>Exploring Kenyan Education</a></h1>
+        <h3>Visualizing education data in Kenya reveals a dynamic picture of the present situation as well as future challenges and opportunities.</h3>
+        <p>With 50% of the population under the age of 18 it is increasingly more important to increase transparency as the country invests in these future leaders. Explore the site to see how resources are being used to reach Kenya's 2030 goal of a, “globally competitive, quality education and training for sustainable development”.<sup>[1]</sup></p>
+      </div>
     </div>
 
-    <ul id='nav' class='clearfix layers'></div>
- 
-    <div id='content'>
-      <div class='story active' id='literacy'>
-        <p>High literacy rates throughout many districts are the result of a strong primary education system in Kenya. However, many gaps can be seen, with some literacy rates falling below 20% arid areas with lower populations. Predictably, literacy rates are higher where there is great access to schools. Literacy cannot improve without <a id='access' href='#'>access</a> to quality primary and secondary schools.</p>
-      </div>
+    <ul id='nav' class='clearfix limiter layers'></ul>
 
-      <div class='story' id='access'>
-        <p><span class='sublink active' href='#'>Primary Attendance</span><a id='secondary' class='sublink' href='#'>Secondary Attendance</a></p>
-        <p>The introduction of the universal primary education policy in 2003 has been very successful, net enrolment rates increased from 80 percent to 91 percent in 2010. Free basic education is a compulsory right. According to the 2009 census 74 percent of the population has at least a primary education.However the quality of education differs dramatically between public and private schools, with the average pupil-teacher ratio in public primary schools almost 3 times higher than private.</p>
-      </div>
+    <div class='limiter'>
+      <div id='content'>
+        <div class='story literacy active'>
+          <ul class='subnav'>
+            <li><a href='#' class='active'>Poverty</a></li>
+            <li>
+              <a href='#'>School Locations</a>
+            </li>
+          </ul>
+          <p>High literacy rates throughout many districts are the result of a strong primary education system in Kenya. However, many gaps can be seen, with some literacy rates falling below 20% arid areas with lower populations. Predictably, literacy rates are higher where there is great access to schools. Literacy cannot improve without <a data-layer='access' href='#'>access</a> to quality primary and secondary schools.</p>
+        </div>
 
-      <div class='story' id='secondary'>
-        <p><a id='access' class='sublink' href='#'>Primary Attendance</a><span class='sublink active' href='#'>Secondary Attendance</span></p>
-      <p>There is much greater regional variation in attending secondary school, than at primary. County enrollment rates range from 5-10 percent in the northern region and some parts of the Coast to around 50 percent in Kiambu and Nairobi. Most children passing the primary school exam can find a place in secondary school, but places have become competitive with less public secondary schools than private schools.</p>
-      </div>
-      
-      <div class='story' id='equity'>
-        <p><span class='sublink active' href='#'>Poverty Rate</span><a id='test' class='sublink' href='#'>County Test Results</a></p>
-      <p>In Wajir, a district with an 84% poverty rate in the ASAL, family related reasons, such as 'Had to work or help at home' and economic reasons like 'No money for school costs', are frequently cited as the reason for never attending school.</p> <p>Regardless of the school location and public education ensured as a universal right, other school-related costs or a family"s economic insecurity can jeopardize the student attendance and retention.</p>
-      <p>Zoom out and hover over each District to find out why students aren"t attending.</p>
-      </div>
+        <div class='story access'>
+          <ul class='subnav'>
+            <li><a href='#' class='sublink active'>Primary Attendance</a></li>
+            <li><a href='#' data-layer='secondary' class='sublink'>Secondary Attendance</a></li>
+          </ul>
+          <p>The introduction of the universal primary education policy in 2003 has been very successful, net enrolment rates increased from 80 percent to 91 percent in 2010. Free basic education is a compulsory right. According to the 2009 census 74 percent of the population has at least a primary education.However the quality of education differs dramatically between public and private schools, with the average pupil-teacher ratio in public primary schools almost 3 times higher than private.</p>
+        </div>
 
-      <div class='story' id='test'>
-        <p><a id='equity' class='sublink' href='#'>Poverty Rate</a><span class='sublink active' href='#'>County Test Results</span></p>
-        <p>While the map shows some improvement in schools with passing average from 2006 to 2010, many have had an increase in failing averages within each school.</p>
+        <!-- Secondary section from sub nav on access -->
+        <div class='story secondary'>
+          <ul class='subnav'>
+            <li><a href='#' data-layer='access' class='sublink'>Primary Attendance</a></li>
+            <li><a href='#' class='sublink active'>Secondary Attendance</a></li>
+          </ul>
+          <p>There is much greater regional variation in attending secondary school, than at primary. County enrollment rates range from 5-10 percent in the northern region and some parts of the Coast to around 50 percent in Kiambu and Nairobi. Most children passing the primary school exam can find a place in secondary school, but places have become competitive with less public secondary schools than private schools.</p>
+        </div>
+
+        <div class='story equity'>
+          <ul class='subnav'>
+            <li><a href='#' class='sublink active'>Poverty Rate</a>
+            <li><a data-layer='test-results' class='sublink' href='#'>County Test Results</a></li>
+          </ul>
+          <p>In Wajir, a district with an 84% poverty rate in the ASAL, family related reasons, such as 'Had to work or help at home' and economic reasons like 'No money for school costs', are frequently cited as the reason for never attending school.</p> <p>Regardless of the school location and public education ensured as a universal right, other school-related costs or a family"s economic insecurity can jeopardize the student attendance and retention.</p>
+          <p>Zoom out and hover over each District to find out why students aren"t attending.</p>
+        </div>
+
+        <div class='story test-results'>
+          <ul class='subnav'>
+            <li><a href='#' data-layer='equity' class='sublink'>Poverty Rate</a></li>
+            <li><a href='#' class='sublink active'>County Test Results</a></li>
+          </ul>
+          <p>While the map shows some improvement in schools with passing average from 2006 to 2010, many have had an increase in failing averages within each school.</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
-    
+
 <div id='map' class='map'></div>
 
 <!-- External libraries and site script -->
@@ -59,26 +82,25 @@
   new MB.map('map', {
     id: 'mayarichman.map-8i4e9lcn,mayarichman.literacy',
     center: {
-      lat: 1,
-      lon: 42,
-      zoom: 6
+      lat: 0,
+      lon: 35.318,
+      zoom: 7
     },
     zoomrange: [0, 15],
     features: [
-      "zoomwheel",
-      "movetips",
-      "zoombox",
-      "zoompan",
-      "legend",
-      "share"
+      'zoomwheel',
+      'zoombox',
+      'zoompan',
+      'legend',
+      'share'
     ]
   });
-  
-  new MB.layers("nav", "map", [
+
+  new MB.layers('nav', 'map', [
     {
-      name: "literacy",
-      id: "mayarichman.map-8i4e9lcn,mayarichman.literacy",
-      el: "literacy",
+      name: 'Context',
+      id: 'mayarichman.map-8i4e9lcn,mayarichman.literacy',
+      el: 'literacy',
       layer: 1,
       center: {
         lat: 1,
@@ -88,21 +110,21 @@
       }
     },
     {
-        name: "access",
-        id: "mayarichman.map-8i4e9lcn,mayarichman.updated_primary,mayarichman.primary_school",
-        el: "access",
-        layer: 1,
-        center: {
-          lat: 1,
-          lon: 40,
-          zoom: 7,
-          ease:2000
-        }
-      },
+      name: 'Performance',
+      id: 'mayarichman.map-8i4e9lcn,mayarichman.updated_primary,mayarichman.primary_school',
+      el: 'access',
+      layer: 1,
+      center: {
+        lat: 1,
+        lon: 40,
+        zoom: 7,
+        ease:2000
+      }
+    },
     {
-      name: "equity",
-      id: "mayarichman.map-8i4e9lcn,mayarichman.poverty_rate,wb-kenya.reason_icon,mayarichman.charts_final",
-      el: "equity",
+      name: 'Investment',
+      id: 'mayarichman.map-8i4e9lcn,mayarichman.poverty_rate,wb-kenya.reason_icon,mayarichman.charts_final',
+      el: 'equity',
       layer: 1,
       center: {
         lat: 1,
@@ -112,11 +134,11 @@
       }
     }
   ]);
-  new MB.sublayers("no-nav", "map", [
+  new MB.sublayers('no-nav', 'map', [
     {
-      name: "secondary",
-      id: "mayarichman.map-8i4e9lcn,mayarichman.updated_sec,mayarichman.secondary_schools",
-      el: "access",
+      name: 'secondary',
+      id: 'mayarichman.map-8i4e9lcn,mayarichman.updated_sec,mayarichman.secondary_schools',
+      el: 'access',
       layer: 1,
       center: {
         lat: 1,
@@ -126,9 +148,9 @@
       }
     },
     {
-      name: "test",
-      id: "mayarichman.map-8i4e9lcn,mayarichman.test_results9",
-      el: "test",
+      name: 'test',
+      id: 'mayarichman.map-8i4e9lcn,mayarichman.test_results9',
+      el: 'test-results',
       layer: 1,
       center: {
         lat: 1,
