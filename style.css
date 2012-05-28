@@ -194,31 +194,43 @@ sup {
   .story a {
     font-weight: 500;
     }
-
   .story.active {
     display:block;
     }
-  .story .sublink {
-    font-size:15px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    padding:5px;
-    border:1px solid #ddd;
-    color:#222;
+
+/*Sub Navigation per story*/
+.subnav {
+  position: relative;
+  }
+.subnav .section {
+  position: absolute;
+  left: 130px;
+  top: 0;
+  }
+
+.subnav li a.section-name {
+  display: block;
+  width: 110px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  color: #404040;
+  }
+  .subnav li a.section-name:hover {
+    background: #f0f0f0;
     }
-    .story .sublink.active {
-      color:#222;
-      background:rgba(173,216,239,.5);
-      border:1px solid #ccc;
-      }
-    .story a.sublink {
-      color:#999;
-      }
-    .story a.sublink:hover {
-      color:#444;
-      background:rgba(255,255,255,.5);
-      }
+  .subnav li.active a.section-name {
+    background: #259dc8;
+    color: #fff;    
+    }
+
+.subnav li .section {
+  display: none;
+  }
+  .subnav li.active .section {
+    display: block;
+    }
 
 /* ------------------------------------------
   Map Styling ♥
