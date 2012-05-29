@@ -26,7 +26,8 @@ MB.map = function(el, l) {
       MB.maps[el].setZoomRange(t.minzoom, t.maxzoom);
     }
 
-    // new MM.Hash(MB.maps[el]);
+    new MM.Hash(MB.maps[el]);
+
     if ($.inArray('attribuition', l.features) >= 0) wax.mm.attribution(MB.maps[el], t).appendTo(MB.maps[el].parent);
     if ($.inArray('zoompan', l.features) >= 0)   wax.mm.zoomer(MB.maps[el]).appendTo(MB.maps[el].parent);
     if ($.inArray('zoombox', l.features) >= 0)   wax.mm.zoombox(MB.maps[el]);
