@@ -2,7 +2,7 @@ var MB = {};
 MB.maps = {};
 
 MB.api = function(l) {
-  return 'http://api.tiles.mapbox.com/v3/' + l.id + '.jsonp';
+  return 'http://api.tiles.mapbox.com/v3/mayarichman.map-8i4e9lcn,' + l.id + '.jsonp';
 };
 
 MB.map = function(el, l) {
@@ -26,9 +26,8 @@ MB.map = function(el, l) {
       MB.maps[el].setZoomRange(t.minzoom, t.maxzoom);
     }
 
-  new MM.Hash(MB.maps[el]);
-    wax.mm.attribution(MB.maps[el], t).appendTo(MB.maps[el].parent);
-
+    // new MM.Hash(MB.maps[el]);
+    if ($.inArray('attribuition', l.features) >= 0) wax.mm.attribution(MB.maps[el], t).appendTo(MB.maps[el].parent);
     if ($.inArray('zoompan', l.features) >= 0)   wax.mm.zoomer(MB.maps[el]).appendTo(MB.maps[el].parent);
     if ($.inArray('zoombox', l.features) >= 0)   wax.mm.zoombox(MB.maps[el]);
     if ($.inArray('bwdetect', l.features) >= 0)  wax.mm.bwdetect(MB.maps[el]);
@@ -87,74 +86,40 @@ MB.refresh = function(m, l) {
   }
 };
 
-MB.layers = function(switcher, m, layers) {
-  $.each(layers, function(i, l) {
-    if (l.el) {
-      $('a[data-layer="' + l.el + '"]')
-      .click(function(e) {
-        e.preventDefault();
-        if (!$(this).hasClass('active')) {
-          $('#' + switcher + ' .layer').removeClass('active');
-          $('.story a').removeClass('active');
-          $(this).addClass('active');
-          $('.story').removeClass('active');
-          $('.story.' + l.name).addClass('active');
-          $('#nav .layer').removeClass('active');
-          $('#nav #layer-' + i).addClass('active');
-          MB.refresh(m, l);
-        }
-      });
-    }
+$(function() {
 
-    if (switcher === 'nav') {
-      $('#' + switcher).append($('<li><a href="#">' + l.name + '</a></li>')
-        .attr('id', 'layer-' + i)
-        .addClass('layer')
-        .click(function(e) {
-          e.preventDefault();
-          if (!$(this).hasClass('active')) {
-            $('#' + switcher + ' .layer').removeClass('active');
-            $(this).addClass('active');
-            $('.story').removeClass('active');
-            $('.story.' + l.el).addClass('active');
-            MB.refresh(m, l);
-          }
-        })
-     );
+  // Primary Navigation 
+  $('#nav').find('a').click(function(e) {
+    e.preventDefault();
+    if (!$(this).parent().hasClass('active')) {
+      var name = $(this).attr('data-story');
+      var story = $('.' + name);
+
+      $('#nav li, .story').removeClass('active');
+      $(this).parent().addClass('active');
+      story.addClass('active');
+      story.find('li a').first().trigger('click');
     }
   });
-};
 
-// Sub navigation per story.
-$('a.section-name').click(function(e) {
-  e.preventDefault();
-  if (!$(this).hasClass('active')) {
-    $('.subnav li').removeClass('active');
-    $(this).parent().addClass('active');
+  // Sub Navigation per story.
+  $('a.section-name').click(function(e) {
+    e.preventDefault();
+    if (!$(this).parent().hasClass('active')) {
+      $('.subnav li').removeClass('active');
+      $(this).parent().addClass('active');
 
-    var options = {};
-    options.layers = $(this).attr('data-layer');
-    // Build an object that mirrors what li gives us based on what's 
-    // presented to us by the data-attributes defined.
-    // Then fire MB.refresh('map', options);
-  }
+      var options = {};
+      options.id = $(this).attr('data-layer');
+      options.center = {};
+      options.center.lon = $(this).attr('data-lon') || undefined;
+      options.center.lat = $(this).attr('data-lat') || undefined;
+      options.center.zoom = $(this).attr('data-zoom') || undefined;
+      options.center.ease = $(this).attr('data-ease') || 0;
+
+      // Build an object that mirrors what li gives us based on what's 
+      // presented to us by the data-attributes defined.
+      MB.refresh('map', options);
+    }
+  });
 });
-
-MB.sublayers = function(switcher, m, sublayers) {
-  $.each(sublayers, function(i, l) {
-    if (l.el) {
-      $('.story a').removeClass('active');
-      $('#' + l.name)
-      .click(function(e) {
-        e.preventDefault();
-        if (!$(this).hasClass('active')) {
-          $('.story a').removeClass('active');
-          $(this).addClass('active');
-          $('.story').removeClass('active');
-          $('.story#' + l.name).addClass('active');
-          MB.refresh(m, l);
-        }
-      });
-    }
-  });
-};

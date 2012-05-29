@@ -42,7 +42,7 @@ table { border-collapse: collapse; border-spacing: 0; }
   Typography ♥
 ---------------------------------------------*/
 body {
-  background: #fff;
+  background: #a0aece;
   color: #303030;
   }
 body,
@@ -77,11 +77,13 @@ h1 {
   font-size: 18px;
   line-height: 24px;
   margin: 0;
-  padding: 20px 0;
+  padding: 20px 0 10px;
   }
   h1.heading {
-    background: transparent url(img/sprite.png) no-repeat -410px 8px;
-    padding-left: 100px;
+    background: #fff url(img/sprite.png) no-repeat -410px 8px;
+    padding: 20px 20px 10px;
+    margin-bottom: 10px;
+    width: 440px;
     }
 h2 {
   font-size: 18px;
@@ -125,8 +127,7 @@ sup {
   Layout ♥
 ---------------------------------------------*/
 #sidebar {
-  background: #fff;
-  background: rgba(255,255,255,0.9);
+  background: transparent url(img/sidebar-bg.png) repeat-x 0 0;
   position: absolute;
   left: 0;
   width: 480px;
@@ -144,20 +145,34 @@ sup {
 .limiter {
   padding: 0 20px;
   }
+  #content .limiter {
+    padding: 0 20px 0 13px;
+    }
 
 /* ------------------------------------------
   General Styling ♥
 ---------------------------------------------*/
-.introduction {
-  padding: 0 20px 10px 0;
-  font-weight: 500;
-  }
-.introduction,
-#nav {
-  background: rgb(0, 143, 213);
-  background: rgba(0, 143, 213, 0.25);
+.icon.kenya-opendata {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.90);
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 120px;
+  height: 70px;
+  z-index: 1000;
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  background-position: 10px 10px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;  
   }
 
+.introduction {
+  padding: 0 20px 0 0;
+  font-weight: 500;
+  height: 270px;
+  }
 .layers li {
   float: left;
   margin: 0 0 0 5px;
@@ -167,10 +182,12 @@ sup {
     }
 
 .layers a {
-  display:block;
+  display: block;
   padding: 5px 15px;
-  background: #F0F0F0;
-  height: 25px; line-height: 25px;
+  background: #fefefe;
+  color: #A0A0A0;
+  height: 25px;
+  line-height: 25px;
   border-radius: 5px 5px 0 0;
   -moz-border-radius: 5px 5px 0 0;
   font-size: 14px;
@@ -179,16 +196,22 @@ sup {
   }
   .layers a:hover,
   .layers a:focus {
-    background-color: #f5f5f5;
+    background-color: #fff;
+    color: #6f6f6f;
     }
   .layers li.active a {
-    background: #fff;
-    color:#2e383e;
+    background: #000;
+    background: rgba(0,0,0,0.85);
+    color:#fff;
     }
 
+#content {
+  color: #7f7f7f;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.15); 
+  }
 .story {
   display: none;
-  margin: 15px 0;
+  padding: 15px 0;
   font-weight: 200;
   }
   .story a {
@@ -204,26 +227,35 @@ sup {
   }
 .subnav .section {
   position: absolute;
-  left: 130px;
-  top: 0;
+  left: 135px;
+  top: 2px;
   }
 
+.subnav li {
+  margin-bottom: 2px;
+  }
 .subnav li a.section-name {
   display: block;
-  width: 110px;
-  padding: 5px;
+  width: 104px;
+  padding: 5px 8px;
   font-weight: bold;
   font-size: 12px;
   line-height: 16px;
   color: #404040;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  color: #6f6f6f;
   }
   .subnav li a.section-name:hover {
-    background: #f0f0f0;
+    background: #2f2f2f;
     }
   .subnav li.active a.section-name {
     background: #259dc8;
-    color: #fff;    
+    color: #fff;
     }
+  .context .subnav li.active a.section-name     { background: #0CA361; }
+  .performance .subnav li.active a.section-name { background: #91A30C; }
+  .investment .subnav li.active a.section-name  { background: #259dc8; }
 
 .subnav li .section {
   display: none;
@@ -258,20 +290,19 @@ sup {
 .wax-tooltip {
   position: absolute;
   z-index: 10000;
-  right: 20px;
-  }
-.wax-legends { bottom: 20px; }
-.wax-tooltip { top: 20px; max-width:326px; }
-.wax-legend { position:relative; }
-
-.wax-legends {
+  right: 15px;
+  bottom: 15px;
   background: #fff;
-  background: rgba(255,255,255,0.8);
-  right: 20px;
+  background: rgba(255,255,255,0.9);
   max-width: 360px;
   -moz-border-radius: 2px;
   border-radius: 2px;
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   }
+.wax-tooltip { bottom: 108px; }
+.wax-legend { position:relative; }
+
 .wax-legend,
 .wax-tooltip {
   padding: 8px 10px;
@@ -351,41 +382,47 @@ sup {
 .zoomer {
   width: 28px;
   height: 28px;
-  top: 20px;
-  left: 500px;
+  top: 15px;
+  left: 495px;
   z-index: 2;
   }
   .zoomin {
-    background-position:-31px -1px;
-    border-radius:3px 0 0 3;
-    -moz-border-radius:3px 0 0 3px;
+    background-position: -31px -1px;
+    border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
     }
   .zoomout {
-    left: 528px;
+    left: 524px;
     background-position:-61px -1px;
     border-radius:0 3px 3px 0;
     -moz-border-radius:0 3px 3px 0;
     }
 
 .share {
-  left: 500px;
-  top: 55px;
-  width: 57px;
-  height: 18px;
+  left: 495px;
+  top: 44px;
+  width: 59px;
+  height: 23px;
   font-weight: bold;
-  line-height: 18px;
+  line-height: 24px;
   font-size: 10px;
   text-align: center;
   text-transform: uppercase;
   background: #333;
   background: rgba(32,32,32,0.75);
-  border-color: #666;
-  border-color: rgba(128,128,128,0.75);
   color: #fff;
+  border: none;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
   }
+  .share:hover {
+    color: #fff;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.75);
+    }
   .zoompan .share { top:45px; }
 
-/* ### Legend Styling ### */
+/* ### Legend Styling Overrides ### */
 body .wax-legend .scale ul li {
   margin: 0;
   }
@@ -405,14 +442,16 @@ body .wax-legend .scale ul li {
 
 /* ### Attribution ### */
 .wax-attribution {
-  position:absolute;
-  background:#fff;
-  font:normal 10px/20px Arial,sans-serif;
-  z-index:99999;
-  text-align:center;
-  padding:0px 5px;
-  bottom:0px;
-  left:0px;
+  background: rgba(255, 255, 255, 0.9);
+  background: #fff;
+  font-size: 10px;
+  position: absolute;
+  z-index: 99999;
+  text-align: center;
+  bottom: 0;
+  left: 480px;
+  text-align: center;
+  width: 120px;
   }
 .wax-share {
   background:#666;
@@ -463,16 +502,16 @@ body .wax-legend .scale ul li {
     }
 
 .mapbox-watermark {
-  position:absolute;
-  left:5px;
-  bottom:5px;
-  z-index:99999;
-  display:block;
-  width:65px;
-  height:20px;
-  text-indent:-999em;
-  overflow:hidden;
   background:url(img/controls.png) 0px -90px no-repeat;
+  position: absolute;
+  left: 500px;
+  bottom: 5px;
+  z-index: 1000;
+  display: block;
+  width: 65px;
+  height: 20px;
+  text-indent: -999em;
+  overflow: hidden;
   }
 .attribution .mapbox-watermark { bottom:25px; }
 .mmg-default {
@@ -481,18 +520,6 @@ body .wax-legend .scale ul li {
   background:url(img/controls.png) -120px -30px;
   left:-10px;
   top:-30px;
-  }
-.wax-tooltip {
-  pointer-events:none;
-  background:rgba(240,245,245,.9);
-  color:#444;
-  right:auto;
-  margin-left:5px;
-  margin-top:-25px;
-  border-radius:3px;
-  -moz-border-radius:3px;
-  -webkit-border-radius:3px;
-  border:1px solid #999;
   }
 
 /* Animation */
@@ -519,7 +546,7 @@ body .wax-legend .scale ul li {
  *  Little Helpers ♥
  *  ------------------------------------------------------- */
 .icon {
-  background-image: url(images/sprite.png);
+  background-image: url(img/sprite.png);
   background-repeat: no-repeat;
   background-position: 0 0;
   display: block;

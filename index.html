@@ -9,38 +9,44 @@
 
 <div id='sidebar'>
   <div class='introduction'>
+    <h1 class='heading'><a href='/'>Exploring Kenyan Education</a></h1>
     <div class='limiter'>
-      <h1 class='heading'><a href='/'>Exploring Kenyan Education</a></h1>
       <h3>Visualizing education data in Kenya reveals a dynamic picture of the present situation as well as future challenges and opportunities.</h3>
       <p>With 50% of the population under the age of 18 it is increasingly more important to increase transparency as the country invests in these future leaders. Explore the site to see how resources are being used to reach Kenya's 2030 goal of a, “globally competitive, quality education and training for sustainable development”.<sup>[1]</sup></p>
     </div>
   </div>
 
-  <ul id='nav' class='clearfix limiter layers'></ul>
+  <ul id='nav' class='clearfix limiter layers'>
+    <li class='active'><a href='#' data-story='context' class='active'>Context</a></li>
+    <li><a href='#' data-story='performance'>Performance</a></li>
+    <li><a href='#' data-story='investment'>Investment</a></li>
+  </ul>
 
-  <div class='limiter'>
-    <div id='content'>
+  <div id='content'>
+    <div class='limiter clearfix'>
       <div class='story context active'>
         <ul class='subnav'>
           <li class='active'>
-            <a href='#' class='section-name'>Poverty</a>
+            <a href='#' data-lat='0' data-lon='40' data-zoom='7' data-ease='2000' data-layer='mayarichman.poverty_rate' class='section-name'>Poverty</a>
             <div class='section'>
               <p>High literacy rates throughout many districts are the result of a strong primary education system in Kenya. However, many gaps can be seen, with some literacy rates falling below 20% arid areas with lower populations. Predictably, literacy rates are higher where there is great access to schools. Literacy cannot improve without <a data-layer='access' href='#'>access</a> to quality primary and secondary schools.</p>
             </div>
           </li>
           <li>
-            <a href='#' class='section-name'>School Locations</a>
+            <a href='#' data-layer='mayarichman.poverty_rate' class='section-name'>School Locations</a>
             <div class='section'>
               Words here about School Locations
               <ul>
-                <li><a href='#' class='primary toggle'>Primary</a></li>
-                <li><a href='#' class='secondary toggle'>Secondary</a></li>
+                <li><a href='#' data-layer='mayarichman.poverty_rate,mayarichman.primary_schools' class='active primary toggle'>Primary</a></li>
+                <li><a href='#' data-layer='mayarichman.poverty_rate,mayarichman.secondary_schools' class='secondary toggle'>Secondary</a></li>
               </ul>
             </div>
           </li>
           <li>
-            <a href='#' class='section-name'>Reasons not attending School</a>
-            <div class='section'></div>
+            <a href='#' data-layer='mayarichman.poverty_rate,mayarichman.secondary_schools' class='section-name'>Reasons not attending School</a>
+            <div class='section'>
+              Text goes here.
+            </div>
           </li>
         </ul>
       </div>
@@ -48,7 +54,7 @@
       <div class='story performance'>
         <ul class='subnav'>
           <li class='active'>
-            <a href='#' class='section-name'>Literacy by District</a>
+            <a href='#' data-layer='mayarichman.literacy_mon' class='section-name'>Literacy by District</a>
             <div class='section'>
               <p>The introduction of the universal primary education policy in 2003 has been very successful, net enrolment rates increased from 80 percent to 91 percent in 2010. Free basic education is a compulsory right. According to the 2009 census 74 percent of the population has at least a primary education.However the quality of education differs dramatically between public and private schools, with the average pupil-teacher ratio in public primary schools almost 3 times higher than private.</p>
             </div>         
@@ -116,6 +122,7 @@
 </div>
 
 <div id='map' class='map'></div>
+<a class='kenya-opendata icon' href='https://opendata.go.ke'>Kenya OpenData</a>
 
 <script src='ext/jquery.min.js'></script>
 <script src='ext/modestmaps.min.js'></script>
@@ -125,7 +132,7 @@
 <script src='site.js'></script>
 <script>
   new MB.map('map', {
-    id: 'mayarichman.map-8i4e9lcn,mayarichman.literacy',
+    id: 'mayarichman.literacy',
     center: {
       lat: 0,
       lon: 35.318,
@@ -137,74 +144,11 @@
       'zoombox',
       'zoompan',
       'legend',
+      'attribuition',
+      'tooltips',
       'share'
     ]
   });
-
-  new MB.layers('nav', 'map', [
-    {
-      name: 'Context',
-      id: 'mayarichman.map-8i4e9lcn,mayarichman.literacy',
-      el: 'context',
-      layer: 1,
-      center: {
-        lat: 1,
-        lon: 40,
-        zoom: 7,
-        ease:2000
-      }
-    },
-    {
-      name: 'Performance',
-      id: 'mayarichman.map-8i4e9lcn,mayarichman.updated_primary,mayarichman.primary_school',
-      el: 'performance',
-      layer: 1,
-      center: {
-        lat: 1,
-        lon: 40,
-        zoom: 7,
-        ease:2000
-      }
-    },
-    {
-      name: 'Investment',
-      id: 'mayarichman.map-8i4e9lcn,mayarichman.poverty_rate,wb-kenya.reason_icon,mayarichman.charts_final',
-      el: 'investment',
-      layer: 1,
-      center: {
-        lat: 1,
-        lon: 41,
-        zoom: 8,
-        ease:2000
-      }
-    }
-  ]);
-  new MB.sublayers('no-nav', 'map', [
-    {
-      name: 'secondary',
-      id: 'mayarichman.map-8i4e9lcn,mayarichman.updated_sec,mayarichman.secondary_schools',
-      el: 'access',
-      layer: 1,
-      center: {
-        lat: 1,
-        lon: 40,
-        zoom: 7,
-        ease:2000
-      }
-    },
-    {
-      name: 'test',
-      id: 'mayarichman.map-8i4e9lcn,mayarichman.test_results9',
-      el: 'test-results',
-      layer: 1,
-      center: {
-        lat: 1,
-        lon: 40,
-        zoom: 7,
-        ease:2000
-      }
-    }
-  ]);
 </script>
 </body>
 </html>
