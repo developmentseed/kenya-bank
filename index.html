@@ -90,7 +90,7 @@
             </div>
           </li>
           <li>
-            <a href='#' class='section-name'>Enrollment by County</a>
+            <a href='#' class='section-name'>Enrollment by District</a>
             <div class='section'>
               Text goes here
               <ul>
@@ -125,7 +125,7 @@
 <script src='site.js'></script>
 <script>
   new MB.map('map', {
-    id: 'mayarichman.map-8i4e9lcn,mayarichman.literacy',
+    id: 'mayarichman.map-8i4e9lcn,mayarichman.poverty_final',
     center: {
       lat: 0,
       lon: 35.318,
@@ -144,37 +144,37 @@
   new MB.layers('nav', 'map', [
     {
       name: 'Context',
-      id: 'mayarichman.map-8i4e9lcn,mayarichman.literacy',
+      id: 'mayarichman.map-8i4e9lcn,mayarichman.poverty_final,wb-kenya.reason_icon',
       el: 'context',
       layer: 1,
       center: {
-        lat: 1,
-        lon: 40,
+        lat: 0,
+        lon: 35.318,
         zoom: 7,
-        ease:2000
+        ease:2000  
       }
     },
     {
       name: 'Performance',
-      id: 'mayarichman.map-8i4e9lcn,mayarichman.updated_primary,mayarichman.primary_school',
+      id: 'mayarichman.map-8i4e9lcn,mayarichman.yes',
       el: 'performance',
       layer: 1,
       center: {
-        lat: 1,
-        lon: 40,
+        lat: 0,
+        lon: 35.318,
         zoom: 7,
         ease:2000
       }
     },
     {
       name: 'Investment',
-      id: 'mayarichman.map-8i4e9lcn,mayarichman.poverty_rate,wb-kenya.reason_icon,mayarichman.charts_final',
+      id: 'mayarichman.map-8i4e9lcn,mayarichman.spending_primary',
       el: 'investment',
       layer: 1,
       center: {
-        lat: 1,
-        lon: 41,
-        zoom: 8,
+        lat: 0,
+        lon: 35.318,
+        zoom: 7,
         ease:2000
       }
     }
@@ -186,8 +186,8 @@
       el: 'access',
       layer: 1,
       center: {
-        lat: 1,
-        lon: 40,
+        lat: 0,
+        lon: 35.318,
         zoom: 7,
         ease:2000
       }
@@ -198,8 +198,8 @@
       el: 'test-results',
       layer: 1,
       center: {
-        lat: 1,
-        lon: 40,
+        lat: 0,
+        lon: 35.318,
         zoom: 7,
         ease:2000
       }
