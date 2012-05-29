@@ -20,8 +20,8 @@ MB.map = function(el, l) {
       lon: (l.center) ? l.center.lon : t.center[0]
     }, (l.center) ? l.center.zoom : t.center[2]);
 
-    if (l.zoomRange) {
-      MB.maps[el].setZoomRange(l.zoomRange[0], l.zoomRange[1]);
+    if (l.zoomrange) {
+      MB.maps[el].setZoomRange(l.zoomrange[0], l.zoomrange[1]);
     } else {
       MB.maps[el].setZoomRange(t.minzoom, t.maxzoom);
     }
@@ -103,24 +103,37 @@ $(function() {
     }
   });
 
+  var buildRequest = function(el) {
+    var options = {}
+    options.id = el.attr('data-layer');
+    options.center = {};
+    options.center.lon = el.attr('data-lon') || undefined;
+    options.center.lat = el.attr('data-lat') || undefined;
+    options.center.zoom = el.attr('data-zoom') || undefined;
+    options.center.ease = el.attr('data-ease') || 0;
+
+    MB.refresh('map', options);
+  }
+
   // Sub Navigation per story.
   $('a.section-name').click(function(e) {
     e.preventDefault();
+    var el = $(this);
     if (!$(this).parent().hasClass('active')) {
       $('.subnav li').removeClass('active');
       $(this).parent().addClass('active');
+      buildRequest(el);
+    }
+  });
 
-      var options = {};
-      options.id = $(this).attr('data-layer');
-      options.center = {};
-      options.center.lon = $(this).attr('data-lon') || undefined;
-      options.center.lat = $(this).attr('data-lat') || undefined;
-      options.center.zoom = $(this).attr('data-zoom') || undefined;
-      options.center.ease = $(this).attr('data-ease') || 0;
-
-      // Build an object that mirrors what li gives us based on what's
-      // presented to us by the data-attributes defined.
-      MB.refresh('map', options);
+  // Primary/Seconday Toggle
+  $('a.toggle').click(function (e) {
+    e.preventDefault();
+    var el = $(this);
+    if (!$(this).hasClass('active')) {
+      $('a.toggle').removeClass('active');
+      $(this).addClass('active');
+      buildRequest(el);
     }
   });
 });

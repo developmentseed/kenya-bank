@@ -48,7 +48,7 @@ body {
 body,
 textarea,
 input {
-  font: 14px/21px Helvetica,arial,freesans,clean,sans-serif;
+  font: 200 14px/21px Helvetica,arial,freesans,clean,sans-serif;
   }
 pre,
 code { font:normal 12px/20px monospace; }
@@ -74,7 +74,7 @@ h6 a:hover {
   color: #404040;
   }
 h1 {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   margin: 0;
   padding: 20px 0 10px;
@@ -95,8 +95,8 @@ h2 {
   }
 h3 {
   margin: 0 0 10px;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
   }
 small {
   font-size: 11px;
@@ -157,23 +157,25 @@ sup {
   General Styling ♥
 ---------------------------------------------*/
 .icon.kenya-opendata {
-  background-color: #fff;
+  background-color: #202020;
+  background-color: rgba(0,0,0,0.75);
+  background-position: 12px 8px;
   position: absolute;
-  top: 15px;
+  bottom: 30px;
   right: 0;
-  width: 120px;
-  height: 60px;
+  margin-top: -25px;
+  width: 100px;
+  height: 50px;
   z-index: 1000;
-  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  background-position: 10px 5px;
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
   }
+  .icon.kenya-opendata:hover {
+    background-color: rgba(0,0,0,0.9);
+    }
 
 .introduction {
   padding: 0 20px 0 0;
-  font-weight: 500;
   height: 290px;
   color: #d5ecf9;
   color: rgba(255, 255, 255, 0.85);
@@ -210,7 +212,7 @@ sup {
     }
   .layers li.active a {
     background: #fff;
-    color: #006B9F;
+    color: #303030;
     }
 
 #content {
@@ -223,7 +225,6 @@ sup {
 .story {
   display: none;
   padding: 15px 0;
-  font-weight: 200;
   }
   .story a {
     font-weight: 500;
@@ -238,7 +239,7 @@ sup {
   }
 .subnav .section {
   position: absolute;
-  left: 135px;
+  left: 130px;
   top: 2px;
   }
 
@@ -247,7 +248,7 @@ sup {
   }
 .subnav li a.section-name {
   display: block;
-  width: 104px;
+  width: 99px;
   padding: 5px 8px;
   font-weight: bold;
   font-size: 12px;
@@ -267,11 +268,28 @@ sup {
     display: block;
     }
 
+.section ul li {
+  float: left;
+  }
+  ul li a.toggle {
+    display: block;
+    font-weight: bold;
+    padding: 2px 8px 2px 0;
+    color: #202020;
+    }
+    ul li a.toggle.active {
+      color: #006B9F;
+      color: red;
+      }
+    #content a.toggle:hover {
+      text-decoration: none;
+      }
+
 /* ------------------------------------------
   Map Styling ♥
 ---------------------------------------------*/
-.close,
 .share,
+.close,
 .zoomer,
 .wax-share div,
 .wax-share .twitter,
@@ -282,149 +300,92 @@ sup {
   background:#fff;
   border-radius:5px;
   -moz-border-radius:5px;
-  -webkit-border-radius:5px;
-  box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
-  -moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
-  -webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  box-shadow:rgba(0,0,0,0.1) 0 1px 3px;
+  -moz-box-shadow:rgba(0,0,0,0.1) 0 1px 3px;
   }
 
 /* ### Tooltips, legends ### */
-.wax-legends,
-.wax-tooltip {
+.wax-legends {
   position: absolute;
   z-index: 10000;
-  right: 15px;
+  left: 470px;
   bottom: 15px;
   background: #fff;
-  background: rgba(255,255,255,0.9);
   max-width: 360px;
   -moz-border-radius: 2px;
   border-radius: 2px;
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  }
-.wax-tooltip { bottom: 108px; }
-.wax-legend { position:relative; }
-
-.wax-legend,
-.wax-tooltip {
-  padding: 8px 10px;
   max-height: 120px;
+  padding: 8px 10px;
   width: 220px\9; /* IE 8 and below */
   }
-.wax-tooltip span.value-indicator{
-  font-size:50px;
+.wax-legend {
+  position: relative;
   }
-.wax-tooltip h4.int-title {
-  font-size:14px;
-  font-weight:normal;
-  text-transform:capitalize;
-  }
-.wax-tooltip h6.int-value{
-  font-size:30px;
-  font-weight:400;
-  }
-.wax-tooltip h5.int-chart-title{
-  font-size:11px;
-  font-weight:normal;
-  }
-.wax-tooltip span.icon{
-  position: absolute;
-  }
-.wax-tooltip span.icon li{
-  padding:0px;
-  }
-.wax-tooltip .chart ul {
-  width:30px;
-  }
-  .wax-tooltip .chart ul li {
-    padding:1px;
-    display:block;
-    }
-
-.wax-tooltip img.chart{
-  position:relative;
-  margin-left:30px;
-  }
-.wax-tooltip h5.int-stat{
-  font-weight:normal;
-  margin: 10px 0;
-  text-transform:capitalize;
-  }
-.wax-tooltip span.int-value{
-  font-size:20px;
-  position:relative;
-  top:3px;
-  left:5px;
-  line-height:1;
-  }
-
 .close,
 .zoomer {
-  text-indent:-999em;
-  background-image:url(img/controls.png);
-  background-position:60px 60px;
-  background-repeat:no-repeat;
-  overflow:hidden;
-  }
-.close:active,
-.zoomer:active {
-  border-color:#bbb;
-  background-color:#ddd;
-  box-shadow:inset rgba(0,0,0,0.1) 0 1px 3px;
-  -moz-box-shadow:inset rgba(0,0,0,0.1) 0 1px 3px;
-  -webkit-box-shadow:inset rgba(0,0,0,0.1) 0 1px 3px;
-  }
-.close {
-  top:4px;
-  right:4px;
-  width:18px;
-  height:18px;
-  background-position:-6px -6px;
-  }
-.zoomer {
+  text-indent: -999em;
+  background-image: url(img/controls.png);
+  background-position: 60px 60px;
+  background-repeat: no-repeat;
+  overflow: hidden;
   width: 28px;
   height: 28px;
   top: 15px;
-  left: 465px;
   z-index: 2;
   }
+  .zoomer {
+    left: 470px;
+    }
+  .close:active,
+  .zoomer:active {
+    border-color: #bbb;
+    box-shadow:inset rgba(0,0,0,0.1) 0 1px 3px;
+    -moz-box-shadow:inset rgba(0,0,0,0.1) 0 1px 3px;
+    }
   .zoomin {
     background-position: -31px -1px;
     border-radius: 3px 0 0 3px;
     -moz-border-radius: 3px 0 0 3px;
     }
   .zoomout {
-    left: 494px;
+    left: 499px;
     background-position:-61px -1px;
     border-radius:0 3px 3px 0;
     -moz-border-radius:0 3px 3px 0;
     }
-
-.share {
-  left: 465px;
-  top: 44px;
-  width: 59px;
-  height: 23px;
-  font-weight: bold;
-  line-height: 24px;
-  font-size: 10px;
-  text-align: center;
-  text-transform: uppercase;
-  background: #333;
-  background: rgba(32,32,32,0.75);
-  color: #fff;
-  border: none;
-  -moz-border-radius: 0 0 3px 3px;
-  border-radius: 0 0 3px 3px;
-  z-index: 1000;
+.close {
+  top: 4px;
+  right: 4px;
+  width: 18px;
+  height: 18px;
+  background-position: -6px -6px;
   }
-  .share:hover {
-    color: #fff;
-    background-color: #000;
-    background-color: rgba(0,0,0,0.75);
-    }
-  .zoompan .share { top:45px; }
+.wax-tooltip  {
+  background: #fff;
+  width: 220px;
+  padding: 10px;
+  position: absolute;
+  z-index: 15000;
+  top: 20px;
+  right: 20px;
+  }
+
+/*Wax tooltip reset*/
+.wax-tooltip h1,
+.wax-tooltip h2,
+.wax-tooltip h3,
+.wax-tooltip h4,
+.wax-tooltip h5,
+.wax-tooltip h6 {
+  font: 13px/20px Helvetica,arial,freesans,clean,sans-serif;
+  margin: 0;
+  padding: 0;
+  }
+.wax-tooltip span.int-value {
+  display: block;
+  }
 
 /* ### Legend Styling Overrides ### */
 body .wax-legend .scale ul li {
@@ -446,26 +407,51 @@ body .wax-legend .scale ul li {
 
 /* ### Attribution ### */
 .wax-attribution {
-  background: rgba(255, 255, 255, 0.9);
-  background: #fff;
   font-size: 10px;
   position: absolute;
-  z-index: 99999;
-  text-align: center;
-  bottom: 0;
-  left: 465px;
-  text-align: center;
-  width: 120px;
+  z-index: 10000;
+  bottom: 5px;
+  right: 10px;
   }
+  body .wax-attribution a,
+  body .wax-legend a {
+    color: #303030;
+    font-weight: 500;
+    }
+
 .wax-share {
-  background:#666;
-  background:rgba(32,32,32,0.75);
-  position:absolute;
-  width:100%;
-  height:100%;
-  top:0px; left:0px; right:0px; bottom:0px;
-  z-index:999999;
+  background: #666;
+  background: rgba(32,32,32,0.75);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0; left: 0; right:0; bottom: 0;
+  z-index: 500000;
   }
+.share {
+  left: 470px;
+  top: 44px;
+  width: 59px;
+  height: 23px;
+  font-weight: bold;
+  line-height: 24px;
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #333;
+  background-color: rgba(0,0,0,0.75);
+  color: #fff;
+  border: none;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  z-index: 1000;
+  }
+  .share:hover {
+    color: #fff;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.90);
+    }
+  .zoompan .share { top:45px; }
 .wax-share div {
   right: 50%;
   top: 50%;
