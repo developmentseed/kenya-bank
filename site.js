@@ -32,7 +32,7 @@ MB.map = function(el, l) {
     if ($.inArray('zoompan', l.features) >= 0)   wax.mm.zoomer(MB.maps[el]).appendTo(MB.maps[el].parent);
     if ($.inArray('zoombox', l.features) >= 0)   wax.mm.zoombox(MB.maps[el]);
     if ($.inArray('bwdetect', l.features) >= 0)  wax.mm.bwdetect(MB.maps[el]);
-    if ($.inArray('share', l.features) >= 0)     wax.mm.share(MB.maps[el], t).appendTo(MB.maps[el].parent);
+    if ($.inArray('share', l.features) >= 0)     wax.mm.share(MB.maps[el], t).appendTo($('body')[0]);
 
     if ($.inArray('legend', l.features) >= 0) {
       MB.maps[el].legend = wax.mm.legend(MB.maps[el], t).appendTo(MB.maps[el].parent);
