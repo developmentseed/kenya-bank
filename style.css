@@ -74,15 +74,14 @@ h6 a:hover {
   color: #404040;
   }
 h1 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   margin: 0;
   padding: 20px 0 10px;
   }
   h1.heading {
-    background: transparent url(img/sprite.png) no-repeat -380px 15px;
-    padding: 20px 20px 10px 125px;
-    margin-bottom: 10px;
+    background: transparent url(img/sprite.png) no-repeat -365px 15px;
+    padding: 20px 20px 20px 130px;
     width: 290px;
     }
     h1.heading a {
@@ -159,13 +158,13 @@ sup {
 .icon.kenya-opendata {
   background-color: #202020;
   background-color: rgba(0,0,0,0.75);
-  background-position: 12px 8px;
+  background-position: 12px 10px;
   position: absolute;
   bottom: 30px;
   right: 0;
   margin-top: -25px;
-  width: 100px;
-  height: 50px;
+  width: 95px;
+  height: 55px;
   z-index: 1000;
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
@@ -212,7 +211,7 @@ sup {
     }
   .layers li.active a {
     background: #fff;
-    color: #303030;
+    color: #202020;
     }
 
 #content {
@@ -257,7 +256,7 @@ sup {
   border-radius: 2px;
   }
   .subnav li.active a.section-name {
-    background: #303030;
+    background: #202020;
     color: #fff;
     }
 
@@ -267,21 +266,29 @@ sup {
   .subnav li.active .section {
     display: block;
     }
-
+.section ul {
+  margin-bottom: 8px;
+  }
 .section ul li {
   float: left;
   }
   ul li a.toggle {
     display: block;
     font-weight: bold;
-    padding: 2px 8px 2px 0;
-    color: #202020;
+    padding: 2px 0;
+    text-align: center;
+    background: #cfcfcf;
+    width: 80px;
+    color: #fff;
+    margin-right: 1px;
     }
-    ul li a.toggle.active {
-      color: #006B9F;
-      color: red;
+    #content a.toggle.active:hover,
+    #content a.toggle.active {
+      background: #202020;
+      color: #fff;
       }
     #content a.toggle:hover {
+      background: #b0b0b0;
       text-decoration: none;
       }
 
@@ -363,13 +370,19 @@ sup {
   background-position: -6px -6px;
   }
 .wax-tooltip  {
-  background: #fff;
+  background-color: #202020;
+  background-color: rgba(0,0,0,0.75);
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   width: 220px;
   padding: 10px;
   position: absolute;
   z-index: 15000;
   top: 20px;
   right: 20px;
+  color: #a0a0a0;
   }
 
 /*Wax tooltip reset*/
@@ -383,8 +396,28 @@ sup {
   margin: 0;
   padding: 0;
   }
+.wax-tooltip h4.int-title,
+.wax-tooltip h5.int-stat {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 14px;
+  }
+.wax-tooltip h4.int-title {
+  margin-bottom: 10px;
+  color: #fff;
+  }
+.wax-tooltip h5.int-stat {
+  color: inherit;
+  }
 .wax-tooltip span.int-value {
   display: block;
+  font-weight: 200;
+  text-transform: none;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 10px;
+  color: #fff;
   }
 
 /* ### Legend Styling Overrides ### */
@@ -415,7 +448,7 @@ body .wax-legend .scale ul li {
   }
   body .wax-attribution a,
   body .wax-legend a {
-    color: #303030;
+    color: #202020;
     font-weight: 500;
     }
 

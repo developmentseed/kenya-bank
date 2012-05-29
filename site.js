@@ -2,7 +2,7 @@ var MB = {};
 MB.maps = {};
 
 MB.api = function(l) {
-  return 'http://api.tiles.mapbox.com/v3/mayarichman.map-8i4e9lcn,' + l.id + '.jsonp';
+  return 'http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,' + l.id + '.jsonp';
 };
 
 MB.map = function(el, l) {
