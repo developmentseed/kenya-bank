@@ -80,8 +80,8 @@ h1 {
   padding: 20px 0 10px;
   }
   h1.heading {
-    background: transparent url(img/sprite.png) no-repeat -365px 10px;
-    padding: 20px 20px 10px 140px;
+    background: transparent url(img/sprite.png) no-repeat -380px 15px;
+    padding: 20px 20px 10px 125px;
     margin-bottom: 10px;
     width: 290px;
     }
@@ -210,7 +210,7 @@ sup {
     }
   .layers li.active a {
     background: #fff;
-    color: #3D4753;
+    color: #006B9F;
     }
 
 #content {
@@ -256,7 +256,7 @@ sup {
   border-radius: 2px;
   }
   .subnav li.active a.section-name {
-    background: #3D4753;
+    background: #303030;
     color: #fff;
     }
 
