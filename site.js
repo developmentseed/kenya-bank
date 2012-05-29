@@ -26,7 +26,7 @@ MB.map = function(el, l) {
       MB.maps[el].setZoomRange(t.minzoom, t.maxzoom);
     }
 
-    new MM.Hash(MB.maps[el]);
+    // new MM.Hash(MB.maps[el]);
 
     if ($.inArray('attribuition', l.features) >= 0) wax.mm.attribution(MB.maps[el], t).appendTo(MB.maps[el].parent);
     if ($.inArray('zoompan', l.features) >= 0)   wax.mm.zoomer(MB.maps[el]).appendTo(MB.maps[el].parent);
@@ -89,7 +89,7 @@ MB.refresh = function(m, l) {
 
 $(function() {
 
-  // Primary Navigation 
+  // Primary Navigation
   $('#nav').find('a').click(function(e) {
     e.preventDefault();
     if (!$(this).parent().hasClass('active')) {
@@ -118,7 +118,7 @@ $(function() {
       options.center.zoom = $(this).attr('data-zoom') || undefined;
       options.center.ease = $(this).attr('data-ease') || 0;
 
-      // Build an object that mirrors what li gives us based on what's 
+      // Build an object that mirrors what li gives us based on what's
       // presented to us by the data-attributes defined.
       MB.refresh('map', options);
     }
