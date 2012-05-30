@@ -5,7 +5,7 @@ body {
   overflow-x:hidden;
 }
 .header {
-  background: #222 url(../img/open-bg-opt.jpg) repeat-x 0 0;
+  background: #222 url(../img/open-bg.jpg) repeat-x 0 0;
   color: #fff;
   height: 320px;
   position: relative;
@@ -149,7 +149,7 @@ body {
   }
 .open-embed-code {
   position:relative;
-  margin-top: 5%;
+  margin-top: 25px;
   left:10px;
   width:90%;
   }
@@ -180,6 +180,7 @@ textarea.embed-code {
   -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   outline: none;
+  border: 0 none;
   }
 .collection {
   border-top: 1px solid #ccc;
@@ -235,7 +236,7 @@ a.download {
   float: right;
   width: 70%;
   background: none;
-  font-size: 13px;
+  font-size: 12px;
   }
 .api-button:hover {
   text-decoration: underline;
@@ -287,6 +288,7 @@ a.download {
   border-radius: 4px;
   font-weight: bold;
   font-size: 13px;
+  line-height: 18px;
   -moz-transition: box-shadow, background-color 0.1s linear;
   -o-transition: box-shadow, background-color 0.1s linear;
   -webkit-transition: box-shadow, background-color 0.1s linear;
