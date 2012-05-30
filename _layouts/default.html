@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% assign base = site.baseurl %}
+{% assign canonical = base + page.url | remove_first:'/' | remove_first: 'index.html' %}
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>PRCC Disaster Data</title>
+  <meta name="viewport" content="width=980" />
+  <meta name='apple-mobile-web-app-status-bar-style' content='black' />
+  <meta name='apple-mobile-web-app-capable' content='yes' />
+  <meta property='og:title' content='PRCC Disaster Data' />
+  <meta property='og:type' content='website' />
+  <meta property='og:image' content='' />
+  <meta property='og:site_name' content='PRCC Disaster Data' />
+  <meta property='fb:admins' content='' />
+  <meta property='og:description' content='Pacific Rim Coordination Center: Disaster Data' />
+  <link rel='apple-touch-startup-image' href='{{base}}images/ios-bg.png' />
+  <link rel="canonical" href="{{canonical}}" />
+  <link rel='shortcut icon' href='{{base}}images/favicon.ico' type='image/x-icon' />
+  <link rel='stylesheet' href='{{base}}css/reset.css' type='text/css' media='screen' />
+  <link rel='stylesheet' href='{{base}}css/style.css' type='text/css' media='screen' />
+  <link rel='stylesheet' href='{{base}}css/open.css' type='text/css' media='screen' />
+  <link rel='stylesheet' href='{{base}}css/ipad.css' type='text/css' media='only screen and (device-width: 768px)' />
+  {% if base != '/' %}
+  <script type="text/javascript">
+    // Enforce canonical domain
+    var domain = window.location.protocol + '//' + window.location.hostname + '/',
+        baseurl = '{{base}}',
+        path = window.location.href.replace(domain, '');
+    if (domain !== baseurl) {
+        window.location = baseurl + path.substring(path.indexOf('/') + 1);
+    }
+  </script>
+  {% endif %}  
+  {% if page.url == '/index.html' %}
+  <script type="text/javascript">
+    touchMove = function(event) {
+        // Prevent scrolling on this element
+        event.preventDefault();
+    }
+  </script>
+  {% endif %}
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-88478-29']);
+    _gaq.push(['_setDomainName', '.pacificrimnetwork.org']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script>
+</head>
+
+{% if page.url == '/index.html' %}
+<body class='front' ontouchmove='touchMove(event);'>
+{% else %}
+<body>
+{% endif %}
+<div id='masthead'>
+  <a href='{{base}}' class='title'>PRCC Disaster Data</a>
+  <ul class='pages'>
+    <li><a class='{% if page.category == 'open' %}active{% endif %}' href='{{base}}open'>Open Data</a></li>
+    <li><a href='#' id='partner-button'>Partnerships</a></li>
+  </ul>
+  {% if page.url != '/open' %}
+  <div class='dropdown active'>
+    <em>Select a Country <span></span></em>
+    <ul class='countries'>
+      <li><a class='indonesia' href='{{base}}#indonesia'>Indonesia</a></li>
+      <li><a class='japan' href='{{base}}#japan'>Japan</a></li>
+      <li><a class='philippines' href='{{base}}#philippines'>Philippines</a></li>
+      <li><a class='thailand' href='{{base}}#thailand'>Thailand</a></li>
+      <li><a class='vietnam' href='{{base}}#vietnam'>Vietnam</a></li>
+    </ul>
+  </div>
+  {% endif %}
+</div>
+  {{content}}
+<div class='contact-modal' style='display:none;'>
+	<div class='contact-content'>
+	  <h3>Partnership Help Desk</h3>
+	  <p>Want to connect to an organization?</p>
+	  <p>If you're representing a business, non-profit, government agency, or community, Business Civic Leadership Center (BCLC) can help connect you to the right business or practitioner.</p>
+	  <p>Simply email <a href='mailto:BCLChelpdesk@uschamber.com'>BCLChelpdesk@uschamber.com</a>	 and a member of the BCLC team will get back to you as soon as possible.</p>
+	  <a href='#' class='icon contact-close'>Close</a>
+	</div>
+</div>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js'></script>
+<script src='{{base}}js/libs/underscore.min.js'></script>
+<script src='{{base}}js/libs/jquery.cycle.lite.min.js'></script>
+<script src='{{base}}js/libs/jquery.viewport.mini.js'></script>
+<script src='{{base}}js/libs/modestmaps.min.js'></script>
+<script src='{{base}}js/libs/wax.mm.min.js'></script>
+<script src='{{base}}js/libs/easey.min.js'></script>
+<script src='{{base}}js/libs/iscroll.js'></script>
+<script src='{{base}}js/libs/dragdealer.js'></script>
+<script src='{{base}}js/app.js'></script>
+<script src='{{base}}js/open.js'></script>
+
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4ebd8f52613f5d6139000005');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+
+</body>
+</html>

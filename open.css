@@ -1,0 +1,255 @@
+/*-----------------------------------
+  Open Section
+-------------------------------------*/
+
+.header {
+  background: #222 url(../images/open-bg-opt.jpg) repeat-x 0 0;
+  color: #fff;
+  height: 320px;
+  position: relative;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  }
+  .mask {
+    background-image: url(../images/mask-left-opt.png);
+    width: 100%;
+    height: 100%;
+    }
+  .header .titles {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    }
+    .titles h1 {
+      text-shadow: 0 4px 0 rgba(0,0,0,0.15);
+      }
+    .titles h3 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      }
+  .header .blurb {
+    position: absolute;
+    top: 125px;
+    left: 20px;
+    width: 475px;
+    }
+    .header .blurb p {
+      color: white;
+      }
+      .header .blurb p a {
+        color: white;
+        text-decoration: underline;
+        }
+
+#open-page {
+  position: relative;
+  top: 0;
+  left: 0;
+  width:100%;
+  }
+
+  .nav-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16%;
+    }
+  .navigation {
+    margin-top: 15px;
+    }
+    .navigation a {
+      color: #7c7c7c;
+      padding: 8px 2px 2px;
+      }
+      .navigation a:hover {
+        background-color: #ddd;
+        }
+      .navigation li {
+        line-height: 30px;
+        }
+        .navigation li a {
+          display: block;
+          padding: 0 15px;
+          }
+      .navigation li a.active {
+        color: #fff;
+        background-color: #7c7c7c;
+        }
+        .navigation.fixed {
+          position: fixed;
+          top: 0;
+          width: 16%;
+          }
+
+  .open-wrapper {
+    position: relative;
+    top: 0;
+    left: 17%;
+    width: 83%;
+    }
+  
+    .content {
+      width: 60%;
+      overflow: hidden;
+      }
+      .content h2 {
+        display: block;
+        margin: 15px 20px;
+        }
+
+#open-footer {
+  height:60px;
+  background:#202020;
+  padding-top: 15px;
+  padding-left: 15px;
+  position: relative;
+  z-index: 2;
+  }
+
+.open-drawer-content {
+  position:absolute;
+  top:0;
+  bottom: 0;
+  width:40%;
+  right: -200%;
+  overflow: hidden;
+  background: #ccdee9;
+  border-left: 10px solid #ccdee9;
+  z-index: 2;
+
+  }
+  .open-drawer-content.active {
+      right: -1px;
+    }
+  .largemap {
+    width:100%;
+    height: 420px;
+    background: #2c2c2c;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+    }
+  .open-drawer-content.active.fixed {
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 33.2%
+  }
+.open-embed-code {
+  position:relative;
+  margin-top: 5%;
+  left:10px;
+  width:90%;
+  }
+.open-api-code {
+  position:relative;
+  margin-top:2%;
+  left:10px;
+  width:90%;
+  }
+.embed-label {
+  float:left;
+  line-height:23px;
+  margin-right:6px;
+  font-weight:bold;
+  }
+textarea.embed-code {
+  font: normal 11px/15px 'Menlo Regular',Consolas,monospace;
+  float: right;
+  overflow:hidden;
+  width:70%;
+  background: white;
+  }
+.collection {
+  border-top: 1px solid #ccc;
+  position: relative;
+  padding: 10px 20px;
+  padding-right: 38%;
+  min-height: 185px;
+  }
+  .collection:hover {
+    background: #f2f7f9;
+    cursor: pointer;
+    }
+  .collection.active {
+    background: #ccdee9;
+    }
+.collection .details {
+  margin-bottom: 15px;
+  }
+.collection p {
+  font-size: 12px;
+  line-height: 17px;
+  margin-bottom: 10px;
+  color:#8a8a8a;
+  cursor: text;
+  }
+.downloads {
+  position: relative;
+  margin-top: 2%;
+  left:10px;
+  width: 100%;
+  }
+  .col.downloads span {
+    float: left;
+    }
+a.download {
+  float:left;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  padding: 5px 6px;
+  -moz-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  -webkit-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+  }
+  a.download:visited,
+  a.download:hover {
+    background: #F2F7F9;
+    }
+
+.api-button, .api-button:hover {
+  padding: 5px 20px 5px 0;
+  float: right;
+  width: 70%;
+  background: none;
+  }
+.api-button:hover {
+  text-decoration: underline;
+  }
+.map-preview {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  max-width: 175px;
+  overflow: hidden;
+  margin: 15px 15px 15px 0;
+  }
+  .map-preview img {
+    width: 100%;
+    }
+
+.downloads .icon {
+  background: transparent url(../images/sprite.png) no-repeat 0 -50px;
+  display: block;
+  width: 45px;
+  height: 50px;
+  margin-right: 5px;
+  }
+
+@media screen and (max-width: 1250px) {
+  .downloads .icon {
+    display: none;
+  }
+}
+.downloads span.icon.csv {
+  background-position: 0 -185px;
+  }
+.downloads span.icon.shapefile, .downloads span.icon.geotiff {
+  background-position: -100px -185px;
+  }
+.downloads span.icon.geojson {
+  background-position: -50px -185px;
+  }

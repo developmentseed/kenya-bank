@@ -1,0 +1,104 @@
+---
+layout: default
+---
+
+<div class='header'>
+    <div class='mask'>
+        <div class='titles'>
+            <h1>{{page.title}}</h1>
+            <h3>{{page.subtitle}}</h3>
+        </div>
+        <div class='blurb'>
+            {{content}}
+        </div>
+    </div>
+</div> <!-- /.header -->
+
+<div id='open-page'>
+    <div class='nav-wrapper'>
+        <div class='navigation' data-scrollspy="scrollspy">
+            <ul>
+                {% for category in page.categories %}
+                <li><a class='{% if forloop.first %}active{% endif %}' href='#{{ category | downcase | replace: ' ', '-' }}'>{{ category }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div> <!-- /.nav-wrapper -->
+    
+    <div class='open-wrapper clearfix'>
+        <div class='content'>
+            {% for category in page.categories %}
+            <h2 id='{{ category | downcase | replace: ' ', '-' }}'>{{ category }}</h2>
+        
+                {% for dataset in site.categories.data %}
+                {% if dataset.categories contains category %}
+        
+                <div class='collection clearfix' id='{{ dataset.title | downcase | replace: ' ', '-' }}'>
+                    <h4 class='title'>{{dataset.title}}</h4>
+                    <div class='col details'>
+                        {{ dataset.content | markdownify }}
+                    </div>
+                    <div class='map-preview {{ dataset.title | downcase | replace: ' ', '-' }}'>
+                        <img src="{{ dataset.thumbnail }}">
+                    </div>
+
+                </div>
+
+                <div class='open-drawer-content' data-profile='{{ dataset.title | downcase | replace: ' ', '-' }}'>
+                    <div class='largemap' data-map='{{dataset.embed}}'></div>
+                    <div class='col downloads clearfix'>
+                        {% for download in dataset.downloads %}
+                        <a href='{{ download.link }}' class='download download-{{download.type}} clearfix'>
+                            <span class='icon {{download.type}}'>{{download.type | capitalize}}</span>
+                            <span class='button black'>Download {{download.type | capitalize}}</span>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    <div class='open-embed-code clearfix'>
+                        <span class='embed-label'>Embed:</span>
+                        <textarea class='embed-code' rows='1' wrap='off' readonly><iframe src="{{dataset.embed}}" frameborder="0" width="500" height="400"></iframe></textarea>
+                    </div>
+                    <div class='open-api-code clearfix'>
+                        <span class='embed-label'>API:</span>
+                        <textarea class='embed-code' rows='1' wrap='off' readonly>{{dataset.api}}</textarea>
+                        <a href='#' class='api-button clearfix'>API Instructions</a>
+                    </div>
+                </div> <!-- /.open-drawer-content -->                
+                
+                {% endif %}
+                {% endfor %}
+        
+            {% endfor %}
+        
+        </div> <!-- /.content -->
+    </div> <!-- /.open-wrapper -->
+
+</div> <!-- /#open-page -->
+
+<div class='api-modal' style='display:none;'>
+    <div class='api-content'>
+        <h3>MapBox API</h3>
+        <p>All maps are powered by MapBox Hosting and can be accessed through simple RESTful API calls returning JSON documents.</p>
+        <p>You can access the <a href='http://mapbox.com/hosting/api/' target='_blank'>full API documentation</a>, but to get you started, here are a couple of simple examples:</p>
+        <div class='api-examples'>
+            <p class='api-ex-labels'>Show all maps available under PRCC Data:<br>
+            <code>http://api.tiles.mapbox.com/v2/bclc-apec/maps.json</code></p>
+            <p class='api-ex-labels'>Show all data layers available under PRCC Data:<br>
+            <code>http://api.tiles.mapbox.com/v2/bclc-apec/tilesets.json</code></p>
+            <p class='api-ex-labels'>Get a thumbnail for a map:<br>
+            <code>http://api.tiles.mapbox.com/v2/bclc-apec.apec-earthquake-risk/thumb.png</code></p>
+            <p class='api-ex-labels'>Grab the embeddable html for a map:<br>
+            <code>http://api.tiles.mapbox.com/v2/bclc-apec.apec-earthquake-risk.html</code></p>
+        </div>
+        <a href='#' class='icon api-close'>Close</a>
+    </div>
+</div> <!-- /.api-modal -->
+
+<div id='open-footer'>
+    <ul id='acknowledgment'>
+        <li><a href='http://bclc.uschamber.com' target='_blank' class='icon bclc'>BCLC</a></li>
+        <li><a href='http://uschamber.com' target='_blank' class='icon ucc'>U.S. Chamber of Commerce</a></li>
+        <li><a href='http://usaid.gov' target='_blank' class='icon usaid'>USAID</a></li>
+        <li><a href='http://developmentseed.org' target='_blank' class='icon ds'>Development Seed</a></li>
+    </ul>
+</div> <!-- /#open-footer -->
