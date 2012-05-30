@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Exploring Kenyan Education</title>
+  <link rel='stylesheet' href='style.css' type='text/css' />
+</head>
+<body>
+
+<div id='sidebar'>
+  <div class='introduction'>
+    <h1 class='heading'><a href='/'>Exploring Kenyan Education</a></h1>
+    <div class='limiter'>
+      <h3>Visualizing education data in Kenya reveals a dynamic picture of the present situation as well as future challenges and opportunities.</h3>
+      <p>With 50% of the population under the age of 18 it is increasingly more important to increase transparency as the country invests in these future leaders. Explore the site to see how resources are being used to reach Kenya's 2030 goal of a, “globally competitive, quality education and training for sustainable development”.<sup>[1]</sup></p>
+    </div>
+  </div>
+
+  <ul id='nav' class='clearfix limiter layers'>
+    <li class='active'><a href='#' data-story='context' class='active'>Context</a></li>
+    <li><a href='#' data-story='performance'>Performance</a></li>
+    <li><a href='#' data-story='investment'>Investment</a></li>
+  </ul>
+
+  <div id='content'>
+    <div class='limiter clearfix'>
+      <div class='story context active'>
+        <ul class='subnav'>
+          <li class='active'>
+            <a href='#' data-zoom='7' data-ease='2000' data-layer='mayarichman.poverty_rate' class='section-name'>Poverty</a>
+            <div class='section'>
+              <p>High literacy rates throughout many districts are the result of a strong primary education system in Kenya. However, many gaps can be seen, with some literacy rates falling below 20% arid areas with lower populations. Predictably, literacy rates are higher where there is great access to schools. Literacy cannot improve without <a data-layer='access' href='#'>access</a> to quality primary and secondary schools.</p>
+            </div>
+          </li>
+          <li>
+            <a href='#' data-layer='mayarichman.poverty_final' class='section-name'>School Locations</a>
+            <div class='section'>
+              <ul class='clearfix'>
+                <li><a href='#' data-layer='mayarichman.poverty_final,mayarichman.primary_schools' class='active primary toggle'>Primary</a></li>
+                <li><a href='#' data-layer='mayarichman.poverty_final,mayarichman.secondary_schools' class='secondary toggle'>Secondary</a></li>
+              </ul>
+              Words here about School Locations
+            </div>
+          </li>
+          <li>
+            <a href='#' data-layer='mayarichman.poverty_final,mayarichman.secondary_schools' class='section-name'>Reasons not attending School</a>
+            <div class='section'>
+              Text goes here.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class='story performance'>
+        <ul class='subnav'>
+          <li class='active'>
+            <a href='#' data-layer='mayarichman.literacy_mon' class='section-name'>Literacy by District</a>
+            <div class='section'>
+              <p>The introduction of the universal primary education policy in 2003 has been very successful, net enrolment rates increased from 80 percent to 91 percent in 2010. Free basic education is a compulsory right. According to the 2009 census 74 percent of the population has at least a primary education.However the quality of education differs dramatically between public and private schools, with the average pupil-teacher ratio in public primary schools almost 3 times higher than private.</p>
+            </div>
+          </li>
+          <li>
+            <a href='#' class='section-name'>2010 Exam Results</a>
+            <div class='section'>
+              <ul class='cleafix'>
+                <li><a href='#' class='primary toggle'>Primary</a></li>
+                <li><a href='#' class='secondary toggle'>Secondary</a></li>
+              </ul>
+              Some text goes here
+            </div>
+          </li>
+          <li>
+            <a href='#' class='section-name'>Exam Results 2006-10</a>
+            <div class='section'>
+              <ul class='clearfix'>
+                <li><a href='#' class='primary toggle'>Primary</a></li>
+                <li><a href='#' class='secondary toggle'>Secondary</a></li>
+              </ul>
+              Text goes here
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class='story investment'>
+        <ul class='subnav'>
+          <li class='active'>
+            <a href='#' class='section-name'>Spending by County</a>
+            <div class='section'>
+              <ul class='clearfix'>
+               <li><a href='#' class='primary toggle'>Primary</a></li>
+                <li><a href='#' class='secondary toggle'>Secondary</a></li>
+              </ul>
+              <p>In Wajir, a district with an 84% poverty rate in the ASAL, family related reasons, such as 'Had to work or help at home' and economic reasons like 'No money for school costs', are frequently cited as the reason for never attending school.</p> <p>Regardless of the school location and public education ensured as a universal right, other school-related costs or a family"s economic insecurity can jeopardize the student attendance and retention.</p>
+              <p>Zoom out and hover over each District to find out why students aren"t attending.</p>
+            </div>
+          </li>
+          <li>
+            <a href='#' class='section-name'>Enrollment by District</a>
+            <div class='section'>
+              <ul class='clearfix'>
+                <li><a href='#' class='primary toggle'>Primary</a></li>
+                <li><a href='#' class='secondary toggle'>Secondary</a></li>
+              </ul>
+              Text goes here
+            </div>
+          </li>
+          <li>
+            <a href='#' class='section-name'>Teacher to Pupil Ratio by County</a>
+            <div class='section'>
+              <ul class='clearfix'>
+                <li><a href='#' class='primary toggle'>Primary</a></li>
+                <li><a href='#' class='secondary toggle'>Secondary</a></li>
+              </ul>
+              Text goes here
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id='map' class='map'></div>
+<a class='kenya-opendata icon' href='https://opendata.go.ke'>Kenya OpenData</a>
+
+<script src='ext/jquery.min.js'></script>
+<script src='ext/modestmaps.min.js'></script>
+<script src='ext/wax.mm.min.js'></script>
+<script src='ext/easey.js'></script>
+<script src='ext/mmg.js'></script>
+<script src='site.js'></script>
+<script>
+  new MB.map('map', {
+    id: 'nate.kenya-poverty-light',
+    center: {
+      lat: 0,
+      lon: 35.318,
+      zoom: 7
+    },
+    zoomrange: [7, 11],
+    features: [
+      'zoomwheel',
+      'zoombox',
+      'zoompan',
+      'legend',
+      'attribuition',
+      'tooltips',
+      'share'
+    ]
+  });
+</script>
+</body>
+</html>
