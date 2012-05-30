@@ -111,7 +111,6 @@ $(function() {
     options.center.lat = el.attr('data-lat') || undefined;
     options.center.zoom = el.attr('data-zoom') || undefined;
     options.center.ease = el.attr('data-ease') || 0;
-
     MB.refresh('map', options);
   }
 
