@@ -419,6 +419,21 @@ sup {
   margin: 0 0 10px;
   color: #fff;
   }
+  .wax-tooltip h6.int-gender {
+  position:relative;
+  left:10px;
+  top:10px;
+  font-size:100%;
+  font-weight:bold;
+  text-transform:uppercase;
+  }
+
+  .wax-tooltip span.int-gender{
+  font-size:13px;
+  margin:5px;
+  font-weight:normal;
+  color:#fff;
+  }
 
 /* ### Legend Styling Overrides ### */
 body .wax-legend .scale ul li {
@@ -429,7 +444,7 @@ body .wax-legend .title {
   }
 body .wax-legend ul.labels li,
 body .wax-legend ul.labels li span {
-  width: 40px;
+  width: 60px;
   }
 body .wax-legend ul.labels li span {
   height: 10px;
