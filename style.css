@@ -423,13 +423,13 @@ sup {
   position:relative;
   left:10px;
   top:10px;
-  font-size:100%;
+  font-size:11px;
   font-weight:bold;
   text-transform:uppercase;
   }
 
   .wax-tooltip span.int-gender{
-  font-size:13px;
+  font-size:16px;
   margin:5px;
   font-weight:normal;
   color:#fff;
