@@ -1,5 +1,5 @@
 ---
-title: Primary Spending Per Capita: 2011
+title: "Primary Spending Per Capita: 2011"
 categories: 
     - data
     - Context
@@ -8,6 +8,6 @@ api: http://api.tiles.mapbox.com/v3/mayarichman.kenya_prim_spend.jsonp
 embed: http://a.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_prim_spend.html#6/-0.1318/37.0899
 downloads:
     - type: Shapefile
-      link: #
+      link: https://opendata.go.ke/
 ---
 <p>This layer depicts the primary spending per student, calculated by dividing total county education expenditures estimate by TSC enrollment in Public Primary Schools in 2011. Data collected by the Teacher's Service Commission (TSC) and obtained May 14, 2012.</p>
