@@ -74,7 +74,7 @@ h6 a:hover {
   color: #404040;
   }
 h1 {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   margin: 0;
   padding: 20px 0 10px;
@@ -192,7 +192,7 @@ sup {
 
 .layers a {
   display: block;
-  padding: 5px 15px;
+  padding: 5px 10px;
   background: #1d7fad;
   background: rgba(0,0,0,0.15);
   color: #fff;
@@ -213,6 +213,9 @@ sup {
     background: #fff;
     color: #202020;
     }
+  .layers li.open a {    
+	margin-left: 55px;
+	}
 
 #content {
   font-size: 13px;
@@ -410,6 +413,26 @@ sup {
 .wax-tooltip h5.int-stat {
   color: inherit;
   }
+.wax-tooltip h6.int-sub-stat {  
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 14px;
+  float:left;
+  position:relative;
+  color:inherit;
+  padding-right:10px;
+  }
+  .wax-tooltip h5.int-sub-stat {  
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 14px;
+    float:left;
+    position:relative;
+    color:inherit;
+    padding-right:10px;
+    }
 .wax-tooltip span.int-value {
   display: block;
   font-weight: 200;
@@ -418,6 +441,21 @@ sup {
   line-height: 24px;
   margin: 0 0 10px;
   color: #fff;
+  }
+  .wax-tooltip h6.int-gender {
+  position:relative;
+  left:10px;
+  top:10px;
+  font-size:11px;
+  font-weight:bold;
+  text-transform:uppercase;
+  }
+
+  .wax-tooltip span.int-gender{
+  font-size:16px;
+  margin:5px;
+  font-weight:normal;
+  color:#fff;
   }
 
 /* ### Legend Styling Overrides ### */
@@ -429,7 +467,7 @@ body .wax-legend .title {
   }
 body .wax-legend ul.labels li,
 body .wax-legend ul.labels li span {
-  width: 40px;
+  width: 60px;
   }
 body .wax-legend ul.labels li span {
   height: 10px;
