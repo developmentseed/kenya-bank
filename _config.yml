@@ -1,0 +1,9 @@
+auto: true
+server: true
+exclude:
+  - README.md
+markdown: rdiscount
+rdiscount:
+  extensions: [smart]
+permalink: pretty
+baseurl: 
