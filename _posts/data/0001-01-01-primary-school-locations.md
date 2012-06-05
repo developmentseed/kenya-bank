@@ -1,5 +1,5 @@
 ---
-title: Primary School Locations
+title: Primary School Locations: 2007
 categories: 
     - data
     - Context
@@ -10,4 +10,4 @@ downloads:
     - type: Shapefile
       link: #
 ---
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>This layer contains the coordinates for all the primary school locations in Kenya in 2007, along with the name, sponsor of the school, type of school, pupil-teacher ratio and total enrollment, provided by Ministry of Education and made accessible by the Kenya openData portal. Data was obtained May 14, 2012.</p>
