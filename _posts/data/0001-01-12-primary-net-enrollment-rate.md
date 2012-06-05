@@ -2,7 +2,7 @@
 title: "Primary Net Enrollment Rate: 2009""
 categories: 
     - data
-    - Context
+    - Investment
 thumbnail: http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_ner_prim/7/77/63.png128
 api: http://api.tiles.mapbox.com/v3/mayarichman.kenya_ner_prim.jsonp
 embed: http://a.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_ner_prim.html#6/-0.1318/37.0899

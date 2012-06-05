@@ -2,7 +2,7 @@
 title: "Secondary Pupil Teacher Ratio: 2011"
 categories: 
     - data
-    - Context
+    - Investment
 thumbnail: http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_ptr_sec/7/77/63.png128
 api: http://api.tiles.mapbox.com/v3/mayarichman.kenya_ptr_sec.jsonp
 embed: http://a.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_ptr_sec.html#6/-0.1318/37.0899

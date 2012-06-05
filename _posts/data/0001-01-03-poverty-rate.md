@@ -3,7 +3,7 @@ title: "Poverty Rate: 2005 - 2006"
 categories: 
     - data
     - Context
-thumbnail: http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_poverty_/7/77/63.png128
+thumbnail: http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_poverty/7/77/63.png128
 api: http://api.tiles.mapbox.com/v3/mayarichman.kenya_poverty.jsonp
 embed: http://a.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_poverty.html#6/-0.1318/37.0899
 downloads:

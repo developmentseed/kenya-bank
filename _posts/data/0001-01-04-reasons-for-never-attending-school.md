@@ -3,7 +3,7 @@ title: "Reasons for never attending school : 2005 - 2006"
 categories: 
     - data
     - Context
-thumbnail: http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.reason_icon_/7/77/63.png128
+thumbnail: http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.reason_icon/7/77/63.png128
 api: http://api.tiles.mapbox.com/v3/mayarichman.reason_icon.jsonp
 embed: http://a.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.reason_icon.html#6/-0.1318/37.0899
 downloads:

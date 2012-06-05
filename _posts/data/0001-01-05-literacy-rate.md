@@ -2,8 +2,8 @@
 title: "Literacy Rate: 2005 - 2006"
 categories: 
     - data
-    - Context
-thumbnail: http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_literacy_/7/77/63.png128
+    - Performance
+thumbnail: http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_literacy/7/77/63.png128
 api: http://api.tiles.mapbox.com/v3/mayarichman.kenya_literacy.jsonp
 embed: http://a.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_literacy.html#6/-0.1318/37.0899
 downloads:

@@ -2,7 +2,7 @@
 title: "Secondary Exam Result: 2010"
 categories: 
     - data
-    - Context
+    - Performance
 thumbnail: http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_sec_exam_10/7/77/63.png128
 api: http://api.tiles.mapbox.com/v3/mayarichman.kenya_sec_exam_10.jsonp
 embed: http://a.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_sec_exam_10.html#6/-0.1318/37.0899
