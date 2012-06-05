@@ -410,6 +410,16 @@ sup {
 .wax-tooltip h5.int-stat {
   color: inherit;
   }
+.wax-tooltip h5.int-sub-stat {  
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 14px;
+  float:left;
+  position:relative;
+  color:inherit;
+  padding-right:10px;
+  }
 .wax-tooltip span.int-value {
   display: block;
   font-weight: 200;
