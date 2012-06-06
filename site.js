@@ -2,7 +2,7 @@ var MB = {};
 MB.maps = {};
 
 MB.api = function(l) {
-  return 'http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,' + l.id + '.jsonp';
+  return 'http://api.tiles.mapbox.com/v3/nate.map-9mdbcd15,' + l.id + '.jsonp';
 };
 
 MB.map = function(el, l) {
@@ -90,8 +90,9 @@ MB.refresh = function(m, l) {
 $(function() {
 
   // Primary Navigation
-  $('#nav').find('a').click(function(e) {
-    e.preventDefault();
+  $('#nav').find('a').click(function(e) { 
+	if ($(this).attr('data-story') != 'open') {
+    	e.preventDefault();
     if (!$(this).parent().hasClass('active')) {
       var name = $(this).attr('data-story');
       var story = $('.' + name);
@@ -100,7 +101,8 @@ $(function() {
       $(this).parent().addClass('active');
       story.addClass('active');
       story.find('li a').first().trigger('click');
-    }
+    } 
+	}
   });
 
   var buildRequest = function(el) {

@@ -20,36 +20,37 @@
     <li class='active'><a href='#' data-story='context' class='active'>Context</a></li>
     <li><a href='#' data-story='performance'>Performance</a></li>
     <li><a href='#' data-story='investment'>Investment</a></li>
+    <li class='open'><a href='open' data-story='open'>Data</a></li>
   </ul>
 
   <div id='content'>
     <div class='limiter clearfix'>
       <div class='story context active'>
-        <ul class='subnav'>
-          <li class='active'>
+        <ul class='subnav'> 
+		  <li class='active'>
+	         <a href='#' data-layer='nate.kenya-allschools-hexgrid' class='section-name'>School Locations</a>
+	         <div class='section'>
+	           <ul class='clearfix'>
+	             <li><a href='#' data-layer='nate.kenya-primary-blue' class='primary toggle'>Primary</a></li>
+	             <li><a href='#' data-layer='nate.kenya-primary-blue' class='secondary toggle'>Secondary</a></li>
+	           </ul>
+			     <p>School locations are key to attendance rates, thus the national level educational attainment is not true in most counties situated in the arid and semi arid lands (ASAL). There is a sizeable gap in educational attainment between rural and urban areas: 83 percent of the urban population has a primary education or higher compared to 70 percent in the rural areas.</p>
+	          </div>
+	      </li>	
+          <li>
             <a href='#' data-zoom='7' data-ease='2000' data-layer='mayarichman.kenya_poverty' class='section-name'>Poverty</a>
             <div class='section'>
-              <p>Enrolment and retention of children, especially girls, in primary school in ASAL regions remains
+              <p>Enrollment and retention of children, especially girls, in primary school in ASAL regions remains
                 an enormous challenge, and a coordinated strategy given the many complementary factors
-                explaining the lack of schooling including: overall poverty and female illiteracy levels, distance          to a school, lack of electricity and water, etc.</p>
+                explaining the lack of schooling including: overall poverty and female illiteracy levels, distance to a school, lack of electricity and water, etc.</p>
             </div>
-          </li>
-          <li>
-            <a href='#' data-layer='mayarichman.kenya_poverty_noint,mayarichman.primary_school_locations' class='section-name'>School Locations</a>
-            <div class='section'>
-              <ul class='clearfix'>
-                <li><a href='#' data-layer='mayarichman.mayarichman.kenya_poverty_noint,nate.kenya-primary-schools' class='active primary toggle'>Primary</a></li>
-                <li><a href='#' data-layer='mayarichman.kenya_poverty_noint,mayarichman.secondary_school_locations' class='secondary toggle'>Secondary</a></li>
-              </ul>
-              <p>School locations are key to attendance rates, thus the national level educational attainment is not true in most counties situated in the arid and semi arid lands (ASAL). There is a sizeable gap in educational attainment between rural and urban areas: 83 percent of the urban population has a primary education or higher compared to 70 percent in the rural areas.</p>
-            </div>
-          </li>
+          </li>          
           <li>
             <a href='#' data-layer='mayarichman.kenya_poverty_noint,mayarichman.kenya_icon' class='section-name'>Reasons not attending School</a>
             <div class='section'>
-                  <p>In Wajir, a district with an 84% poverty rate in the ASAL, family related reasons, such as 'Had to work or help at home' and economic reasons like 'No money for school costs', are frequently cited as the reason for never attending school.</p> <p>Regardless of the school location and public education ensured as a universal right, other school-related costs or a family"s economic insecurity can jeopardize the student attendance and retention.</p>
-                  <p>Hover over icons to see why students aren"t attending.</p>
-            </div>
+                <p>In Wajir, a district with an 84% poverty rate in the ASAL, family related reasons, such as 'Had to work or help at home' and economic reasons like 'No money for school costs', are frequently cited as the reason for never attending school.</p> <p>Regardless of the school location and public education ensured as a universal right, other school-related costs or a family"s economic insecurity can jeopardize the student attendance and retention.</p>
+                <p>Hover over icons to see why students aren"t attending.</p>            
+			</div>
           </li>
         </ul>
       </div>
@@ -57,7 +58,7 @@
       <div class='story performance'>
         <ul class='subnav'>
           <li class='active'>
-            <a href='#' data-layer='mayarichman.k_literacy' class='section-name'>Literacy by County</a>
+            <a href='#' data-layer='mayarichman.kenya_lit' class='section-name'>Literacy by District</a>
             <div class='section'>
               <p>High literacy rates throughout many districts are the result of a strong primary education system in Kenya. However, many gaps can be seen, with some literacy rates falling below 20% arid areas with lower populations. Predictably, literacy rates are higher where there is great access to schools. Literacy cannot improve without <a data-layer='access' href='#'>access</a> to quality primary and secondary schools.</p>
             </div>
@@ -100,11 +101,11 @@
             </div>
           </li>
           <li>
-            <a href='#' class='section-name'data-layer='mayarichman.k_ner_prim'>Enrollment by County</a>
+            <a href='#' class='section-name'data-layer='mayarichman.kenya_ner_prim'>Enrollment by District</a>
             <div class='section'>
               <ul class='clearfix'>
-                <li><a href='#' class='primary toggle active' data-layer='mayarichman.k_ner_prim'>Primary</a></li>
-                <li><a href='#' class='secondary toggle' data-layer='mayarichman.k_ner_sec'>Secondary</a></li>
+                <li><a href='#' class='primary toggle active' data-layer='mayarichman.kenya_ner_prim'>Primary</a></li>
+                <li><a href='#' class='secondary toggle' data-layer='mayarichman.kenya_ner_sec'>Secondary</a></li>
               </ul>
               <p>The introduction of the universal primary education policy in 2003 has been very successful, net enrollment rates increased from 80 percent to 91 percent in 2010. Free basic education is a compulsory right, and according to the 2009 census 74 percent of the population has at least a primary education.However the quality of education differs dramatically between public and private schools, with the average pupil-teacher ratio in public primary schools almost 3 times higher than private.</p>
 
@@ -134,17 +135,16 @@
 <script src='ext/modestmaps.min.js'></script>
 <script src='ext/wax.mm.min.js'></script>
 <script src='ext/easey.js'></script>
-<script src='ext/mmg.js'></script>
 <script src='site.js'></script>
 <script>
   new MB.map('map', {
-    id: 'mapbox.mapbox-light,mayarichman.kenya_poverty', 
+    id: 'nate.kenya-allschools-hexgrid',
     center: {
       lat: 0,
       lon: 35.318,
       zoom: 7
     },
-    zoomrange: [7, 11],
+    zoomrange: [6, 15],
     features: [
       'zoomwheel',
       'zoombox',
