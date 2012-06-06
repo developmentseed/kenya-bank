@@ -2,7 +2,7 @@ var MB = {};
 MB.maps = {};
 
 MB.api = function(l) {
-  return 'http://api.tiles.mapbox.com/v3/nate.map-9mdbcd15,' + l.id + '.jsonp';
+  return 'http://api.tiles.mapbox.com/v3/worldbank-education.map-zlpoq0vs,' + l.id + '.jsonp';
 };
 
 MB.map = function(el, l) {
