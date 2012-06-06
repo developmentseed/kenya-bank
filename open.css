@@ -7,7 +7,7 @@ body {
 .header {
   background: #222 url(img/open-bg.jpg) repeat-x 0 0;
   color: #fff;
-  height: 320px;
+  height: 310px;
   position: relative;
   text-shadow: black 0.1em 0.1em 0.2em;
   }
@@ -18,7 +18,7 @@ body {
     }
   .header .titles {
     position: absolute;
-    top: 60px;
+    top: 30px;
     left: 20px;
     }
     .titles h1 {
@@ -37,7 +37,7 @@ body {
       }
   .header .blurb {
     position: absolute;
-    top: 125px;
+    top: 95px;
     left: 20px;
     width: 475px;
     }
