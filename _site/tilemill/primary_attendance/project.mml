@@ -1,0 +1,75 @@
+{
+  "bounds": [
+    28.4766,
+    -7.5368,
+    49.7461,
+    8.8417
+  ],
+  "center": [
+    37.0899,
+    -0.1318,
+    6
+  ],
+  "format": "png",
+  "interactivity": {
+    "layer": "primaryschools",
+    "template_teaser": "<h4 class=\"int-title\">\n{{{lower_district}}}\n</h4>\n<h5 class=\"int-stat\">Name:<span class=\"int-value\">{{{lower_nameofschool}}}</span></h5>\n<h5 class=\"int-stat\">Sponsor of School:<span class=\"int-value\">{{{schoolsponsor_lower}}}</span></h5>\n<h5 class=\"int-stat\">Type of School:<span class=\"int-value\">{{{lower_statusofschool}}}</span></h5>\n<h5 class=\"int-stat\">Pupil Teacher Ratio:<span class=\"int-value\">{{{pupil_teacher_ratio_lower}}}</span></h5>\n<h5 class=\"int-stat\">Total Enrollment:<span class=\"int-value\">\n{{{total enrolment}}}</span></h5>",
+    "fields": [
+      "lower_district",
+      "lower_nameofschool",
+      "schoolsponsor_lower",
+      "lower_statusofschool",
+      "pupil_teacher_ratio_lower",
+      "total enrolment"
+    ]
+  },
+  "minzoom": 6,
+  "maxzoom": 11,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "Datasource": {
+        "type": "sqlite",
+        "file": "/Users/mayarichman/Dropbox/kenya-bank/Ken_Districts.sqlite",
+        "table": "(Select  a.OGC_FID,\n a.GEOMETRY, \na.distid,\n a.distname,\n b.*\nfrom ken_districts a\nleft  join Net_Attendance b on lower(a.distname) = lower(b.District)\n)",
+        "attachdb": "Kenya_Database@/Users/mayarichman/Dropbox/Kenya_Database  ",
+        "extent": "",
+        "id": "net_attendance_primary",
+        "project": "net_attendance",
+        "srs": null
+      },
+      "id": "net_attendance_primary",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "name": "net_attendance_primary"
+    },
+    {
+      "geometry": "point",
+      "Datasource": {
+        "type": "sqlite",
+        "file": "/Users/mayarichman/Dropbox/kenya-bank/Kenya-Bank/Sqlite/primary_schools.sqlite",
+        "table": "( Select a.OGC_FID,\na.GEOMETRY,\nlower(a.name_of_school) as lower_nameofschool,\nlower(a.district) as lower_district,\nlower(a.status_of_school) as lower_statusofschool,\nlower(pupil_teacher_ratio) as pupil_teacher_ratio_lower,\nlower(a.sponsor_of_school) as schoolsponsor_lower,\na.*\nfrom primary_schools a\n)",
+        "attachdb": "",
+        "extent": "",
+        "id": "primaryschools",
+        "project": "net_attendance",
+        "srs": null
+      },
+      "id": "primaryschools",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "name": "primaryschools"
+    }
+  ],
+  "name": "Primary_Schools",
+  "description": "",
+  "legend": "\n",
+  "attribution": "",
+  "_basemap": "http://a.tiles.mapbox.com/v3/mapbox.mapbox-streets.jsonp"
+}

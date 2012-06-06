@@ -1,0 +1,55 @@
+{
+  "bounds": [
+    30.1465,
+    -6.359,
+    45.1318,
+    7.3189
+  ],
+  "center": [
+    36.8701,
+    0.3955,
+    6
+  ],
+  "format": "png",
+  "interactivity": {
+    "fields": [
+      "percent_diff0610",
+      "COUNTY",
+      "percent_passed06",
+      "percent_passed10"
+    ],
+    "layer": "sec_exam_change",
+    "template_teaser": "{{#percent_change_0610}}\n<h4 class=\"int-title\">\n{{{COUNTY}}} \n</h4>\n<h5 class=\"int-stat\">Passed-2006: <span class=\"int-value\">{{{percent_passed06}}}%</span> \n<h5 class=\"int-stat\">Passed-2010: <span class=\"int-value\">{{{percent_passed10}}}%</span>\n<h5 class=\"int-stat\">Change: <span class=\"int-value\">{{{percent_change_0610}}}%</span>\n</h5>\n{{/percent_change_0610}}\n{{^percent_change_0610}}\n<h4 class=\"int-title\">\n</h4>\n{{{COUNTY}}} \n<h5 class=\"int-stat\">Passed-2006: <span class=\"int-value\">{{{percent_passed06}}}%</span></h5> \n<h5 class=\"int-stat\">Passed-2010: <span class=\"int-value\">{{{percent_passed10}}}%</span></h5>\n<h5 class=\"int-stat\">Change: <span class=\"int-value\">0%</span>\n</h5>\n{{/percent_change_0610}}\n"
+  },
+  "minzoom": 6,
+  "maxzoom": 13,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "Datasource": {
+        "type": "sqlite",
+        "file": "/Users/mayarichman/Dropbox/Exam Data/SQlite/Kenya_County.sqlite",
+        "table": "(Select \n a.*,\n b.*\nfrom kenya_county a\nleft outer join secondary_results b on lower(a.county) = lower(b.County)\n)",
+        "attachdb": "Kenya_Database@/Users/mayarichman/Dropbox/kenya-bank/Kenya-Bank/Database/Kenya_Database.sqlite",
+        "extent": "",
+        "id": "sec_exam_change",
+        "project": "secondary_exam_results",
+        "srs": null
+      },
+      "id": "sec_exam_change",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "name": "sec_exam_change"
+    }
+  ],
+  "name": "",
+  "description": "",
+  "_basemap": "http://a.tiles.mapbox.com/v3/mapbox.mapbox-streets.jsonp",
+  "attribution": "",
+  "legend": "<div class='my-legend'>      \n<div class='title'>Change in Secondary Students With Passing Averages: 2006-2010 (%)</div>\n<div class='note'>Change calculated by subtracting percentage passed KCSE exam in 2010 with percentage passed in 2006, aggregated by county.\n</div>\n<div class='scale'>\n  <ul class='labels'>  \n    <li><span style='background:#B7B4B0'></span>< -10</li>    \n    <li><span style='background:#CECBC7;'></span>-10 - 0</li>\n    <li><span style='background:#76cdf5;'></span>0 - 3</li>\n    <li><span style='background:#5db3dc;'></span>3 - 6</li>\n    <li><span style='background:#5d9ebe;'></span>6 - 8</li>\n</ul>\n</div>\n<div class='source'>Source: <a>KCSE 2010</a></div>\n</div>\n\n<style type='text/css'>\n  .wax-legend .title {\n    text-align: left;\n    margin-bottom: 8px;\n    font-weight: bold;\n    font-size: 90%;\n    }\n .wax-legend .note {\n    line-height:13px;\n    font-size:85%;\n    text-align: left;\n    margin-bottom: 8px;\n    font-style: italic;\n   }\n  .wax-legend .scale ul {\n    margin: 0;\n    padding: 0;\n    float: left;\n    list-style: none;\n    }\n  .wax-legend .scale ul li {\n    display: block;\n    float: left;\n    width: 50px;\n    margin-bottom: 6px;\n    text-align: center;\n    font-size: 80%;\n    list-style: none;\n    }\n  .wax-legend ul.labels li span {\n    height: 10px;\n    width: 50px;\n\n    }\n  .wax-legend ul li span {\n    display: block;\n    float: left;\n    }\n  .wax-legend .source {\n    font-size: 70%;\n    color: #999;\n    clear: both;\n    }\n  .wax-attribution a,\n  .wax-legend a {\n    color: #777;\n    }\n</style>"
+}
