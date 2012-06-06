@@ -214,7 +214,7 @@ sup {
     color: #202020;
     }
   .layers li.open a {    
-	margin-left: 45px;
+	margin-left: 35px;
 	}
 
 #content {
@@ -425,7 +425,8 @@ sup {
   .wax-tooltip .gender{
   position:relative;
   left:40px;
-  top:8px;  
+  top:8px;
+  margin:10px;  
   }
   .wax-tooltip h6.int-gender {
   font-size:11px;
@@ -438,6 +439,10 @@ sup {
   font-weight:normal;
   color:#fff;
   }
+  .wax-tooltip .range{
+    right:8px;
+    float:left;
+  }
   .wax-tooltip h6.int-range {
   display:block;
   font-size:10px;
@@ -446,11 +451,6 @@ sup {
   right:146px;
   padding-bottom:10px;
   }
-  .wax-tooltip .range{
-    right:8px;
-    float:left;
-  }
-
 /* ### Legend Styling Overrides ### */
 body .wax-legend .scale ul li {
   margin: 0;
