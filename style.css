@@ -214,7 +214,7 @@ sup {
     color: #202020;
     }
   .layers li.open a {    
-	margin-left: 55px;
+	margin-left: 45px;
 	}
 
 #content {
@@ -610,7 +610,52 @@ body .wax-legend .scale ul li {
 @-webkit-keyframes fade-in { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fade-in { from { opacity:0; } to { opacity:1; } }
 @-ms-keyframes fade-in { from { opacity:0; } to { opacity:1; } }
-@-o-keyframes fade-in { from { opacity:0; } to { opacity:1; } }
+@-o-keyframes fade-in { from { opacity:0; } to { opacity:1; } }     
+
+/*-----------------------------------
+  Methods Modal
+-------------------------------------*/
+.methods-modal {
+  background:#666;
+  background:rgba(32,32,32,0.75);
+  position:absolute;
+  top:0px; left:0px; right:0px; bottom:0px;
+  z-index:999999;
+  overflow-y: auto;
+  }
+.methods-modal h3 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #ccc;
+  }
+.methods-modal p {
+  margin-left: 20px;
+  }
+.methods-modal .methods-content {
+  position:absolute;
+  display:block;
+  left:50%;
+  top:25px;
+  margin:0 0 0 -400px;
+  padding:19px;
+  width:800px;
+  border:1px solid #444;
+  background:#2e2e2e;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  -moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  -webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
+  }
+.methods-modal a.methods-close {
+  position:absolute;
+  right:10px;
+  top:10px;
+  width: 30px;
+  height: 25px;
+  background-position: -465px 0px;
+  }
 
 /*  -------------------------------------------------------
  *  Little Helpers ♥

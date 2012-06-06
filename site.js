@@ -136,5 +136,20 @@ $(function() {
       $(this).addClass('active');
       buildRequest(el);
     }
+  });  
+
+  // About
+  $('a.methods-link').click(function(e){
+      e.preventDefault();
+      $('.methods-modal').css('display', 'block');
   });
+
+  $('a.methods-close').click(function(e){
+      e.preventDefault();
+      $('.methods-modal').css('display', 'none');
+  });
+  
+  if(isTouchDevice()) {
+      $('body').removeClass('no-touch');;
+  }
 });
