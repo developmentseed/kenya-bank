@@ -1,5 +1,5 @@
 ---
-title: "Secondary Spending Per Capita: 2011""
+title: "Secondary Spending Per Capita: 2011"
 categories: 
     - data
     - Investment

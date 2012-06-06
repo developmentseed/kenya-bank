@@ -96,9 +96,9 @@ $(function() {
     if (!$(this).parent().hasClass('active')) {
       var name = $(this).attr('data-story');
       var story = $('.' + name);
-
       $('#nav li, .story').removeClass('active');
       $(this).parent().addClass('active');
+      $(this).addClass('active');
       story.addClass('active');
       story.find('li a').first().trigger('click');
     } 
@@ -119,15 +119,18 @@ $(function() {
   // Sub Navigation per story.
   $('a.section-name').click(function(e) {
     e.preventDefault();
+    console.log($(this));
+    console.log('1');
+    console.log($(this).parent());
     var el = $(this);
-    if (!$(this).parent().hasClass('active')) {
+    if (!$(this).hasClass('active')) {
       $('.subnav li').removeClass('active');
       $(this).parent().addClass('active');
       buildRequest(el);
     }
   });
 
-  // Primary/Seconday Toggle
+  // Primary/Secondary Toggle
   $('a.toggle').click(function (e) {
     e.preventDefault();
     var el = $(this);

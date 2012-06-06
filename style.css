@@ -413,35 +413,6 @@ sup {
 .wax-tooltip h5.int-stat {
   color: inherit;
   }
-.wax-tooltip h6.int-sub-stat {  
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 11px;
-  line-height: 14px;
-  float:left;
-  position:relative;
-  color:inherit;
-  padding-right:10px;
-  }
-.wax-tooltip h5.int-sub-stat {  
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 10px;
-  line-height: 14px;  
-  float:left;
-  position:relative;
-  color:inherit;
-  padding-right:10px;
-  }
-.wax-tooltip span.int-sub-stat-value {
-  display: block;
-  font-weight: 200;
-  text-transform: none;
-  font-size: 15px;
-  line-height: 24px;
-  margin: 0 0 10px;
-  color: #fff;
-}  
 .wax-tooltip span.int-value {
   display: block;
   font-weight: 200;
@@ -451,20 +422,33 @@ sup {
   margin: 0 0 10px;
   color: #fff;
   }
-  .wax-tooltip h6.int-gender {
+  .wax-tooltip .gender{
   position:relative;
-  left:10px;
-  top:10px;
+  left:40px;
+  top:8px;  
+  }
+  .wax-tooltip h6.int-gender {
   font-size:11px;
   font-weight:bold;
-  text-transform:uppercase;
+  text-transform:uppercase;  
   }
-
   .wax-tooltip span.int-gender{
   font-size:16px;
   margin:5px;
   font-weight:normal;
   color:#fff;
+  }
+  .wax-tooltip h6.int-range {
+  display:block;
+  font-size:10px;
+  position:absolute;
+  top:70px;
+  right:146px;
+  padding-bottom:10px;
+  }
+  .wax-tooltip .range{
+    right:8px;
+    float:left;
   }
 
 /* ### Legend Styling Overrides ### */
