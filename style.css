@@ -610,10 +610,11 @@ body .wax-legend .scale ul li {
 .methods-modal h3 {
   margin-bottom: 10px;
   font-size: 28px;
-  color: #ccc;
+  color: #fff;
   }
 .methods-modal p {
   margin-left: 20px;
+  color: #fff;
   }
 .methods-modal .methods-content {
   position:absolute;
