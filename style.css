@@ -80,14 +80,21 @@ h1 {
   padding: 20px 0 10px;
   }
   h1.heading {
-    background: transparent url(img/sprite.png) no-repeat -365px 15px;
-    padding: 20px 20px 20px 130px;
-    width: 290px;
+    padding: 15px 10px 31px 18px;
+    width: 400px;
+    letter-spacing: 0.1em;
+    font-family: 'Pompiere', cursive;
+    font-size:31px;
+    font-variant:small-caps;
     }
     h1.heading a {
       color: #fff;
       }
-
+    h1.heading span.heading{
+      font-size:24px;
+      position: relative;
+      left: 25px;
+      }    
 h2 {
   font-size: 18px;
   line-height: 22px;
@@ -629,7 +636,7 @@ body .wax-legend .scale ul li {
   position:absolute;
   display:block;
   left:50%;
-  top:121px;
+  top:50px;
   margin:0 0 0 -400px;
   padding:19px;
   width:800px;
