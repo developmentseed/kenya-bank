@@ -119,12 +119,9 @@ $(function() {
   // Sub Navigation per story.
   $('a.section-name').click(function(e) {
     e.preventDefault();
-    console.log($(this));
-    console.log('1');
-    console.log($(this).parent());
     var el = $(this);
     if (!$(this).hasClass('active')) {
-      $('.subnav li').removeClass('active');
+      $('.subnav li:not(.subnav li li)').removeClass('active');
       $(this).parent().addClass('active');
       buildRequest(el);
     }
@@ -151,8 +148,11 @@ $(function() {
       e.preventDefault();
       $('.methods-modal').css('display', 'none');
   });
-  
-  if(isTouchDevice()) {
-      $('body').removeClass('no-touch');;
-  }
+
+  // links in the story text to trigger the nav
+  $('a.narrative').click(function(e) {
+    e.preventDefault();
+    var story = $(this).attr('data-which-narrative');
+    $('[data-narrative="' + story + '"]').trigger('click');
+  });
 });

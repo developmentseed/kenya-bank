@@ -3,9 +3,9 @@ title: "Secondary School Locations: 2007"
 categories: 
     - data
     - Context
-thumbnail: http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.secondary_school_locations/7/77/63.png128
-api: http://api.tiles.mapbox.com/v3/mayarichman.secondary_school_locations.jsonp
-embed: http://a.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.secondary_school_locations.html#6/-0.1318/37.0899
+thumbnail: http://api.tiles.mapbox.com/v3/worldbank-education.map-zlpoq0vs,worldbank-education.kenya-secondary-locations-2007/7/77/63.png128
+api: http://api.tiles.mapbox.com/v3/worldbank-education.kenya-secondary-locations-2007.jsonp
+embed: http://a.tiles.mapbox.com/v3/worldbank-education.map-zlpoq0vs,worldbank-education.kenya-secondary-locations-2007.html#6/-0.1318/37.0899
 downloads:
     - type: CSV
       link: https://opendata.go.ke/Education/Kenya-Secondary-Schools-2007/i6vz-a543

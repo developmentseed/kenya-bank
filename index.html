@@ -22,7 +22,7 @@
     <li><a href='#' data-story='performance'>Performance</a></li>
     <li><a href='#' data-story='investment'>Investment</a></li>
   </ul>
-  <ul id='data-modal' class='clearfix limiter layers'>  
+  <ul id='data-modal' class='layers'>  
     <li><a href='open' data-story='open'>Data</a></li> 
     <li><a href='#' data-story='methods' class='methods-link'>?</a></li> 
   </ul>
@@ -38,17 +38,17 @@
 	             <li><a href='#' data-layer='worldbank-education.kenya-secondary-locations-2007' class='secondary toggle'>Secondary</a></li>
 	           </ul>
 			     <p>Kenya's 2009 census reported 74 percent of the population to have at least a primary education. However this statistic is lower in most arid and semi arid lands (ASAL) due to fewer school locations; 83 percent of the urban population has a primary education or higher compared to 70 percent in the rural areas.</p>
-			     <p>Secondary schools are even less prevalent in the ASAL region, where there are also the highest <a data-layer='mayarichman.kenya_poverty' href='#' class='section-nam'>poverty rates</a> in the nation.</p>
+			     <p>Secondary schools are even less prevalent in the ASAL region, where there are also the highest <a href='#' class='narrative' data-which-narrative='2'>poverty rates</a> in the nation.</p>
 	          </div>
 	      </li>	
           <li>
-            <a href='#' data-zoom='7' data-ease='2000' data-layer='worldbank-education.kenya_poverty' class='section-name'>Poverty</a>
+            <a href='#' data-narrative='2' data-zoom='7' data-ease='2000' data-layer='worldbank-education.kenya_poverty' class='section-name'>Poverty</a>
             <div class='section'>
-              <p>Poverty rates are highest in the north and southeast, where there are also less schools available. This educational and economic disadvantage creates an enormous challenge for enrollment and retention of children, especially girls, in these areas. See the most common reasons <a href='#' 'mayarichman.kenya_poverty_noint,mayarichman.kenya_icon' >keeping children from school</a>.</p>
+              <p>Poverty rates are highest in the north and southeast, where there are also less schools available. This educational and economic disadvantage creates an enormous challenge for enrollment and retention of children, especially girls, in these areas. See the most common reasons <a href='#' data-layer='mayarichman.kenya_poverty_noint,mayarichman.kenya_icon' >keeping children from school</a>.</p>
             </div>
           </li>          
           <li>
-            <a href='#' data-layer='mayarichman.kenya_poverty_noint,worldbank-education.kenya_reason' class='section-name'>Reasons not attending School</a>
+            <a href='#' data-layer='mayarichman.kenya_poverty_noint,worldbank-education.kenya_reason_attend' class='section-name'>Reasons not attending School</a>
             <div class='section'>
                 <p>In Wajir, a district with an 84 percent poverty rate in the ASAL, family related reasons, such as 'Had to work or help at home' and economic reasons like 'No money for school costs', are frequently cited as the reason for never attending school.</p> <p>Regardless of the school location and public education ensured as a universal right, other school-related costs or a family"s economic insecurity can jeopardize the student attendance and retention.</p>
                 <p>These factors directly affect  <a href='#' data-story='performance'>school performance</a>.</p>            
@@ -60,7 +60,7 @@
       <div class='story performance'>
         <ul class='subnav'>
           <li class='active'>
-            <a href='#' data-layer='worldbank-education.kenya_lit' class='section-name'>Literacy by District</a>
+            <a href='#' data-layer='worldbank-education.kenya_lit' class='section-name'>Literacy</a>
             <div class='section'>
               <p>High literacy rates throughout many districts are the result of a strong primary education system in Kenya. However, many gaps can be seen, with some literacy rates falling below 20 percent arid areas with lower populations. Predictably, literacy rates are higher where there is great <a href='#' >access to schools</a>. Areas such as West Pokot and Turkana may soon see an increase in literacy due to high <a data-layer='mayarichman.kenya_prim_exam_10' href='#'>2010 exam results</a>, which show strengthening local education. 
             </div>
@@ -93,21 +93,21 @@
       <div class='story investment'>
         <ul class='subnav'>
           <li class='active'>
-            <a href='#' data-layer='worldbank-education.kenya_prim_spend'class='section-name'>Spending by County</a>
+            <a href='#' data-layer='worldbank-education.kenya_prim_spend' class='section-name'>Spending Per Capita</a>
             <div class='section'>
               <ul class='clearfix'>
                <li><a href='#' data-layer='worldbank-education.kenya_prim_spend' class='primary toggle active'>Primary</a></li>
                 <li><a href='#' data-layer='worldbank-education.kenya_sec_spend' class='secondary toggle'>Secondary</a></li>
               </ul>
-            High investment is generally seen where there are also high exam results, except in the case of Samburu, and Garissa. Both counties invested less than $8,000 Kshs. per student, but saw some of the highest positive change in primary exam results from 2006 to 2010.</p>
-            <p>Generally districts with high investment levels in secondary schools have growth in exam results from 2006 to 2010. However, Marsabit has the highest level of secondary school investment with a -9 percent change in secondary school exam results. These examples call for further transparency about investment practices.
+            <p>High investment is generally seen where there are also high exam results, except in the case of Samburu, and Garissa. Both counties invested less than $8,000 Kshs. per student, but saw some of the highest positive change in primary exam results from 2006 to 2010.</p>
+            <p>Generally districts with high investment levels in secondary schools have growth in exam results from 2006 to 2010. However, Marsabit has the highest level of secondary school investment with a -9 percent change in secondary school exam results. These examples call for further transparency about investment practices.</p>
             </div>
           </li>
           <li>
-            <a href='#' class='section-name'data-layer='worldbank-education.kenya_ner_prim'>Enrollment by District</a>
+            <a href='#' class='section-name' data-layer='worldbank-education.kenya_ner_prim'>Net Enrollment Rate</a>
             <div class='section'>
               <ul class='clearfix'>
-                <li><a href='#' class='primary toggle' data-layer='worldbank-education.kenya_ner_prim'>Primary</a></li>
+                <li><a href='#' class='primary toggle active' data-layer='worldbank-education.kenya_ner_prim'>Primary</a></li>
                 <li><a href='#' class='secondary toggle' data-layer='worldbank-education.kenya_ner_sec'>Secondary</a></li>
               </ul>
               <p>The introduction of the universal primary education policy in 2003 has been very successful, net enrollment rates increased from 80 percent to 91 percent in 2010. Free basic education is a compulsory right, and according to the 2009 census 74 percent of the population has at least a primary education.</p>
@@ -115,11 +115,11 @@
             </div>
           </li>
           <li>
-            <a href='#' data-layer='worldbank-education.kenya_ptr_prim'class='section-name'>Teacher to Pupil Ratio by County</a>
+            <a href='#' data-layer='worldbank-education.kenya_ptr_prim' class='section-name'>Pupil-Teacher Ratio</a>
             <div class='section'>
               <ul class='clearfix'>
-                <li><a href='#' data-layer='worldbank-education.kenya_ptr_prim'class='primary toggle active'>Primary</a></li>
-                <li><a href='#' data-layer='worldbank-education.kenya_ptr_sec' class='secondary toggle'>Secondary</a></li>
+                <li><a href='#' data-layer='worldbank-education.kenya_ptr_prim' class='primary toggle active'>Primary</a></li>
+                <li><a href='#' data-layer='    worldbank-education.kenya_ptr_sec' class='secondary toggle'>Secondary</a></li>
               </ul>
               <p>The quality of education differs dramatically between public and private schools, with the average pupil-teacher ratio in public primary schools almost 3 times higher than private. 
                    

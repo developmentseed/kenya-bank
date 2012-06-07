@@ -3,9 +3,9 @@ title: "Secondary Spending Per Capita: 2011"
 categories: 
     - data
     - Investment
-thumbnail: http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_sec_spend/7/77/63.png128
-api: http://api.tiles.mapbox.com/v3/mayarichman.kenya_sec_spend.jsonp
-embed: http://a.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_sec_spend.html#6/-0.1318/37.0899
+thumbnail: http://api.tiles.mapbox.com/v3/worldbank-education.map-zlpoq0vs,worldbank-education.kenya_sec_spend/7/77/63.png128
+api: http://api.tiles.mapbox.com/v3/mayarichman.worldbank-education.kenya_sec_spend.jsonp
+embed: http://a.tiles.mapbox.com/v3/worldbank-education.map-zlpoq0vs,worldbank-education.kenya_sec_spend.html#6/-0.1318/37.0899
 downloads:
     - type: Shapefile
       link: https://opendata.go.ke/

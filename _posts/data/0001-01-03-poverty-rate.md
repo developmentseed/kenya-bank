@@ -3,9 +3,9 @@ title: "Poverty Rate: 2005 - 2006"
 categories: 
     - data
     - Context
-thumbnail: http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_poverty/7/77/63.png128
-api: http://api.tiles.mapbox.com/v3/mayarichman.kenya_poverty.jsonp
-embed: http://a.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_poverty.html#6/-0.1318/37.0899
+thumbnail: http://api.tiles.mapbox.com/v3/worldbank-education.map-zlpoq0vs,worldbank-education.kenya_poverty/7/77/63.png128
+api: http://api.tiles.mapbox.com/v3/worldbank-education.kenya_poverty.jsonp
+embed: http://a.tiles.mapbox.com/v3/worldbank-education.map-zlpoq0vs,worldbank-education.kenya_poverty.html#6/-0.1318/37.0899
 downloads:
     - type: CSV
       link: https://opendata.go.ke/Poverty/County-Poverty-Rates-2005-6/rfxq-gvgu

@@ -1,11 +1,11 @@
 ---
-title: "Reasons for never attending school : 2005 - 2006"
+title: "Reasons for never attending school: 2005 - 2006"
 categories: 
     - data
     - Context
-thumbnail: http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.reason_icon/7/77/63.png128
-api: http://api.tiles.mapbox.com/v3/mayarichman.reason_icon.jsonp
-embed: http://a.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.reason_icon.html#6/-0.1318/37.0899
+thumbnail: http://api.tiles.mapbox.com/v3/worldbank-education.map-zlpoq0vs,worldbank-education.kenya_reason_attend/7/77/63.png128
+api: http://api.tiles.mapbox.com/v3/worldbank-education.kenya_reason_attend.jsonp
+embed: http://a.tiles.mapbox.com/v3/worldbank-education.map-zlpoq0vs,worldbank-education.kenya_reason_attend.html#6/-0.1318/37.0899
 downloads:
     - type: Shapefile
       link: https://opendata.go.ke/Education/Percentage-distribution-of-Population-6-17-years-w/b65y-uj8k

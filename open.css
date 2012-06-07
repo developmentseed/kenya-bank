@@ -3,8 +3,8 @@
 -------------------------------------*/
 body {
   overflow-x:hidden;
-}  
-
+  font: 200 14px/21px Helvetica,arial,freesans,clean,sans-serif;
+}
 .header {
   background: #222 url(img/open-bg.jpg) repeat-x 0 0;
   color: #fff;
@@ -32,11 +32,12 @@ body {
     margin-top: 15px;
     }
     .navigation a {
-      color: #7c7c7c;
+      color: #006B9F;
       padding: 8px 2px 2px;
       }
       .navigation a:hover {
         background-color: #ddd;
+        
         }
       .navigation li {
         line-height: 30px;
@@ -47,7 +48,7 @@ body {
           }
       .navigation li a.active {
         color: #fff;
-        background-color: #7c7c7c;
+        background-color: #000;
         }
         .navigation.fixed {
           position: fixed;

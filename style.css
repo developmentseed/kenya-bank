@@ -80,7 +80,7 @@ h1 {
   padding: 20px 0 10px;
   }
   h1.heading {
-    padding: 15px 10px 31px 18px;
+    padding: 20px 10px 23px 18px;
     width: 400px;
     letter-spacing: 0.1em;
     font-family: 'Pompiere', cursive;
@@ -156,7 +156,7 @@ sup {
   padding: 0 20px;
   }
   #content .limiter {
-    padding: 0 20px 0 13px;
+    padding: 20px 20px 0 13px;
     }
 
 /* ------------------------------------------
@@ -188,6 +188,7 @@ sup {
   }
   .introduction h3 {
     color: #fff;
+    margin-top:12px;
     }
 .layers li {
   float: left;
@@ -233,7 +234,6 @@ sup {
     }
 .story {
   display: none;
-  padding: 15px 0;
   }
   .story a {
     font-weight: 500;
@@ -477,6 +477,7 @@ body .wax-legend ul.labels li span {
   }
 body .wax-legend .scale ul li {
   font-size: 10px;
+  text-align:center;
   }
 
 /* ### Attribution ### */
@@ -616,8 +617,7 @@ body .wax-legend .scale ul li {
   Methods Modal
 -------------------------------------*/
 .methods-modal {
-  background:#666;
-  background:rgba(32,32,32,0.75);
+  background:rgba(137, 222, 255, .75);
   position:absolute;
   top:0px; left:0px; right:0px; bottom:0px;
   z-index:999999;
@@ -629,9 +629,11 @@ body .wax-legend .scale ul li {
   color: #fff;
   }
 .methods-modal p {
-  margin-left: 20px;
   color: #fff;
   }
+.methods-modal a {
+ background:#fff; 
+ }  
 .methods-modal .methods-content {
   position:absolute;
   display:block;
