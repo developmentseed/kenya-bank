@@ -3,6 +3,7 @@
 -------------------------------------*/
 body {
   overflow-x:hidden;
+  font: 200 14px/21px Helvetica,arial,freesans,clean,sans-serif;
 }
 .header {
   background: #222 url(img/open-bg.jpg) repeat-x 0 0;
@@ -29,7 +30,6 @@ body {
       line-height: 18px;
       }
     .titles h3 {
-      font-family: Georgia, serif;
       font-weight: normal;
       font-size: 17px;
       line-height: 26px;
