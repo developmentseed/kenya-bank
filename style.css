@@ -649,6 +649,12 @@ body .wax-legend .scale ul li {
   -moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
   -webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
   }
+  
+#data-modal { 
+ position:relative;
+ bottom:35px;
+ left:328px;
+ }
 .methods-modal a.methods-close {
   text-indent: -999em;
   background-image: url(img/controls.png);
