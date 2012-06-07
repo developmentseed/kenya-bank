@@ -3,9 +3,9 @@ title: "Literacy Rate: 2005 - 2006"
 categories: 
     - data
     - Performance
-thumbnail: http://api.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_literacy/7/77/63.png128
-api: http://api.tiles.mapbox.com/v3/mayarichman.kenya_literacy.jsonp
-embed: http://a.tiles.mapbox.com/v3/mapbox.mapbox-light,mayarichman.kenya_literacy.html#6/-0.1318/37.0899
+thumbnail: http://api.tiles.mapbox.com/v3/worldbank-education.map-zlpoq0vs,worldbank-education.kenya_lit/7/77/63.png128
+api: http://api.tiles.mapbox.com/v3/mayarichman.worldbank-education.kenya_lit.jsonp
+embed: http://a.tiles.mapbox.com/v3/worldbank-education.map-zlpoq0vs,worldbank-education.kenya_lit.html#6/-0.1318/37.0899
 downloads:
     - type: Shapefile
       link: https://opendata.go.ke/
