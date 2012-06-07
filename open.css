@@ -3,59 +3,21 @@
 -------------------------------------*/
 body {
   overflow-x:hidden;
-}
+}  
+
 .header {
   background: #222 url(img/open-bg.jpg) repeat-x 0 0;
   color: #fff;
   height: 320px;
+  top:5px; 
   position: relative;
-  text-shadow: black 0.1em 0.1em 0.2em;
   }
-  .mask {
-    background-image: url(img/mask-left-opt.png);
-    width: 100%;
-    height: 100%;
-    }
-  .header .titles {
-    position: absolute;
-    top: 30px;
-    left: 20px;
-    }
-    .titles h1 {
-      text-shadow: 0 4px 0 rgba(0,0,0,0.15);
-      font-size: 40px;
-      padding: 0;
-      margin-bottom: 15px;
-      line-height: 18px;
-      }
-    .titles h3 {
-      font-family: Georgia, serif;
-      font-weight: normal;
-      font-size: 17px;
-      line-height: 26px;
-      margin: 0;
-      }
-  .header .blurb {
-    position: absolute;
-    top: 95px;
-    left: 20px;
-    width: 475px;
-    }
-    .header .blurb p {
-      color: white;
-      font-size: 13px;
-      line-height: 20px;
-      margin: 10px 0;
-      word-wrap: break-word;
-      }
-      .header .blurb p a {
-        color: white;
-        text-decoration: underline;
-        }
+
 
 #open-page {
-  position: relative;
-  top: 0;
+  position: absolute;
+  z-index: 100;
+  top: 330px;
   left: 0;
   width:100%;
   }
