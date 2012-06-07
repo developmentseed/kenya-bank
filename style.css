@@ -303,7 +303,8 @@ sup {
 .zoomer,
 .wax-share div,
 .wax-share .twitter,
-.wax-share .facebook {
+.wax-share .facebook,
+.methods-modal a.methods-close  {
   display:block;
   position:absolute;
   border:1px solid #ccc;
@@ -334,7 +335,8 @@ sup {
   position: relative;
   }
 .close,
-.zoomer {
+.zoomer,
+a.method-close {
   text-indent: -999em;
   background-image: url(img/controls.png);
   background-position: 60px 60px;
@@ -365,7 +367,7 @@ sup {
     border-radius:0 3px 3px 0;
     -moz-border-radius:0 3px 3px 0;
     }
-.close {
+.close, a.method-close {
   top: 4px;
   right: 4px;
   width: 18px;
@@ -627,7 +629,7 @@ body .wax-legend .scale ul li {
   position:absolute;
   display:block;
   left:50%;
-  top:25px;
+  top:121px;
   margin:0 0 0 -400px;
   padding:19px;
   width:800px;
@@ -641,12 +643,17 @@ body .wax-legend .scale ul li {
   -webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 3px;
   }
 .methods-modal a.methods-close {
+  text-indent: -999em;
+  background-image: url(img/controls.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 18px;
+  height: 18px;
+  top: 4px;
+  right:4px;
+  z-index: 2;
   position:absolute;
-  right:10px;
-  top:10px;
-  width: 30px;
-  height: 25px;
-  background-position: -465px 0px;
+  background-position: -6px -6px;
   color: #ccc;
   }
 
