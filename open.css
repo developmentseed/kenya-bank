@@ -43,7 +43,7 @@ body {
     }
     .header .blurb p {
       color: white;
-      font-size: 13px;
+      font-size: 12px;
       line-height: 20px;
       margin: 10px 0;
       word-wrap: break-word;
@@ -70,11 +70,12 @@ body {
     margin-top: 15px;
     }
     .navigation a {
-      color: #7c7c7c;
+      color: #006B9F;
       padding: 8px 2px 2px;
       }
       .navigation a:hover {
         background-color: #ddd;
+        
         }
       .navigation li {
         line-height: 30px;
@@ -85,7 +86,7 @@ body {
           }
       .navigation li a.active {
         color: #fff;
-        background-color: #7c7c7c;
+        background-color: #000;
         }
         .navigation.fixed {
           position: fixed;
