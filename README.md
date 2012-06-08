@@ -4,4 +4,4 @@ Welcome to the Exploring Kenyan Education site.
 
 This is the public repository for the site: <http://developmentseed.org/kenya-bank/>
 
-![front](img/kenya-front.png)
+![](https://github.com/developmentseed/kenya-bank/raw/gh-pages/img/kenya-front.png)
