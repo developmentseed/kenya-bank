@@ -99,7 +99,7 @@ body {
   top:0;
   bottom: 0;
   width:40%;
-  right: -200%;
+  right:200%;
   overflow: hidden;
   background: #ccdee9;
   border-left: 10px solid #ccdee9;
