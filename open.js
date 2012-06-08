@@ -82,7 +82,6 @@ $(function() {
                                 $('.content h2:above-the-top:last').attr('id');
     
                 var link = $('.navigation a[href="#' + inview + '"]');
-    
                 if (link.length && !link.is('.active')) {
                     $('.navigation a').removeClass('active');
                     link.addClass('active');

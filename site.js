@@ -27,7 +27,7 @@ MB.map = function(el, l) {
     }
 
   MM.Hash(MB.maps[el]);
-
+    
     if ($.inArray('attribuition', l.features) >= 0) wax.mm.attribution(MB.maps[el], t).appendTo(MB.maps[el].parent);
     if ($.inArray('zoompan', l.features) >= 0)   wax.mm.zoomer(MB.maps[el]).appendTo(MB.maps[el].parent);
     if ($.inArray('zoombox', l.features) >= 0)   wax.mm.zoombox(MB.maps[el]);
@@ -113,9 +113,7 @@ $(function() {
     if (location.hash === '#investment') {
         $('a#investment').trigger('click');
     }
-    if (location.hash === '#postbank') {
-        $('a#mix-sa-towns-postbank').trigger('click');
-    }
+
   
 
   var buildRequest = function(el) {
