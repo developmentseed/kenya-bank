@@ -26,7 +26,7 @@ MB.map = function(el, l) {
       MB.maps[el].setZoomRange(t.minzoom, t.maxzoom);
     }
 
-  MM.Hash(MB.maps[el]);
+  //MM.Hash(MB.maps[el]);
     
     if ($.inArray('attribuition', l.features) >= 0) wax.mm.attribution(MB.maps[el], t).appendTo(MB.maps[el].parent);
     if ($.inArray('zoompan', l.features) >= 0)   wax.mm.zoomer(MB.maps[el]).appendTo(MB.maps[el].parent);
@@ -92,7 +92,9 @@ $(function() {
 
   // Primary Navigation
   $('#nav').find('a').click(function(e) { 
+    //adds story 
 	if ($(this).attr('data-story') != 'open') {
+	  
     if (!$(this).parent().hasClass('active')) {
       var name = $(this).attr('data-story');
       var story = $('.' + name);
@@ -101,20 +103,36 @@ $(function() {
       $(this).addClass('active');
       story.addClass('active');
       story.find('li a').first().trigger('click');
-      
       window.location.hash = $(this).attr('hash');
-    } 
+    }
 	}
   });
-  
-  if (location.hash === '#performance') {
-        $('a#performance').trigger('click');
-    }
-    if (location.hash === '#investment') {
-        $('a#investment').trigger('click');
-    }
 
-  
+  if (location.hash === '#performance') {
+    $('a#performance').trigger('click');
+  }
+  if (location.hash === '#investment') {
+    $('a#investment').trigger('click');
+  }
+
+  new MB.map('map', {
+    id: $('.story.active .subnav .active a').attr('data-layer'),
+    center: {
+      lat: 0,
+      lon: 35.318,
+      zoom: 7
+    },
+    zoomrange: [6, 15],
+    features: [
+      'zoomwheel',
+      'zoombox',
+      'zoompan',
+      'legend',
+      'attribuition',
+      'tooltips',
+      'share'
+    ]
+  });
 
   var buildRequest = function(el) {
     var options = {}
@@ -132,7 +150,7 @@ $(function() {
     e.preventDefault();
     var el = $(this);
     if (!$(this).hasClass('active')) {
-      $('.subnav li:not(.subnav li li)').removeClass('active');
+      $('.subnav li').not(document.getElementById('primary toggle')).removeClass('active');
       $(this).parent().addClass('active');
       buildRequest(el);
     }
@@ -142,12 +160,13 @@ $(function() {
   $('a.toggle').click(function (e) {
     e.preventDefault();
     var el = $(this);
-    if (!$(this).hasClass('active')) {
-      $('a.toggle').removeClass('active');
-      $(this).addClass('active');
+    if (!el.hasClass('active')) {
+      $('a.toggle', el.parent().parent())
+        .removeClass('active');
+      el.addClass('active');
       buildRequest(el);
     }
-  });  
+  });
 
   // About
   $('a.methods-link').click(function(e){

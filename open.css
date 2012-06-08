@@ -55,7 +55,6 @@ body {
           line-height: 16px;
           -moz-border-radius: 2px;
           border-radius: 2px;
-          margin-left:2px;
           padding-top:6px;
           }
       .navigation li a.active {
@@ -100,7 +99,7 @@ body {
   top:0;
   bottom: 0;
   width:40%;
-  right: -200%;
+  right:200%;
   overflow: hidden;
   background: #ccdee9;
   border-left: 10px solid #ccdee9;
