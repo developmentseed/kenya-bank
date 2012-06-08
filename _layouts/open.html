@@ -11,12 +11,12 @@ layout: default
   </div>   
 
 	<ul id='nav' class='clearfix limiter layers'>
-		<li class='active'><a href='#' data-story='context' class='active'>Context</a></li>
+		<li><a href='#' data-story='context' class='active'>Context</a></li>
 		<li><a href='#' data-story='performance'>Performance</a></li>
 		<li><a href='#' data-story='investment'>Investment</a></li>
 	</ul>
-	<ul id='data-modal' class='clearfix limiter layers'>  
-		<li><a href='open' data-story='open'>Data</a></li> 
+	<ul id='data-modal' class='layers'>  
+		<li class='active'><a href='open' data-story='open'>Data</a></li> 
 		<li><a href='#' data-story='methods' class='methods-link'>?</a></li> 
 	</ul>
 </div>	  
@@ -43,7 +43,7 @@ layout: default
         <div class='navigation' data-scrollspy="scrollspy">
             <ul>
                 {% for category in page.categories %}
-                <li><a class='{% if forloop.first %}active{% endif %}' href='#{{ category | downcase | replace: ' ', '-' }}'>{{ category }}</a></li>
+                <li><a class='{% if forloop.first %}active{% endif %}' href='#{{ category | downcase | replace: ' ', '-' }}'>{{ category }} Layers</a></li>
                 {% endfor %}
             </ul>
         </div>
