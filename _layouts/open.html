@@ -3,7 +3,7 @@ layout: default
 ---
 <div id='sidebar'>
   <div class='introduction'>
-    <h1 class='heading'><a href='/'>Exploring Kenyan Education</a></h1>
+    <h1 class='heading'><a href='http://www.developmentseed.org/kenya-bank/'>Exploring Kenyan Education</a></h1>
     <div class='limiter'>
       <h3>Visualizing education data in Kenya reveals a dynamic picture of the present situation as well as future challenges and opportunities.</h3>
       <p>With 50 percent of the population under the age of 18 it is increasingly important to increase education transparency as the country invests in these future leaders. Explore the site to see how resources are being used to reach Kenya's 2030 goal of creating “globally competitive, quality education and training for sustainable development”.<sup>[1]</sup></p>
@@ -11,7 +11,9 @@ layout: default
   </div>   
 
 	<ul id='nav' class='clearfix limiter layers'>
-		<li><a href='http://www.developmentseed.org/kenya-bank/' data-story='context'>Context</a></li>
+	    <li><a href='../#context' data-story='context' class='active'>Context</a></li>
+        <li><a href='../#performance' data-story='performance'>Performance</a></li>
+        <li><a href='../#investment' data-story='investment'>Investment</a></li>
 	</ul>
 	<ul id='data-modal' class='layers'>  
 		<li class='active'><a href='#' data-story='open'>Data</a></li> 
@@ -101,6 +103,19 @@ layout: default
     </div>
 </div> <!-- /.api-modal -->
 
+<div class='methods-modal' style='display:none;'>
+  <div class='methods-content'>
+    <h3>About the site</h3>      
+	<p>The Exploring Kenyan Education site investigates the education sector in Kenya and visualizes location data for all primary and secondary schools across the country. By mapping school locations with education outcomes and investment data, the site provides insight into the state of education within Kenya.</p>
+	<h3>Methodology</h3>
+	<p>Data work was carried out using OpenOffice and SQLite to join attribute data with spatial data for the purpose of visualization. Data was obtained and collected from the <a href="https://opendata.go.ke/">Kenya OpenData portal</a> and official Government of Kenya data. In cases of pre-2010 data, district names were updated to the 47 2010-designated counties. Data was aggregated and formatted into county-level tables and joined to county-level geographic data. Averages, minimums, and maximums were calculated to be included in the visualization.</p> 
+	<p>School location data was downloaded from the Kenya OpenData portal. Latitude and longitude data for 37,725 primary and secondary schools were reformatted for proper use in mapping applications. All points were plotted on the map, including schools that are listed with zero enrollment. It is unknown to whether these locations have invalid data, missing data, or are closed.</p> 
+	<p>Kenya Certificate of Primary Education (KCPE) and Kenya Certificate of Secondary Education (KCSE) exam results were obtained from the Kenyan National Examination Council. Exam results were listed by school with gender and score categorizations. Percentages of students passing (C+ or higher for secondary, or a score higher than 250 for primary) were calculated for both the KCPE and the KCSE exam results. Results were aggregated to county-level averages. The exam results only contained county location identifiers and did not include a national school identifier code so only county-level aggregations were able to be visualized.</p>
+	<p>Other contextual data was obtained from the Kenya OpenData portal. Data was matched to county administrative geographic data by county name. There is no official source of county administrative boundary geographic data. This site used county geographic data made publicly available on ArcGIS.com.</p>
+	<p>All maps were created with <a href="http://mapbox.com/tilemill">TileMill</a> and hosted with <a href="http://mapbox.com">MapBox</a>. Color scales were determined based on natural breaks within each of the visualized indicators.</p>
+	<a href='#' class='methods-close'>Close</a>
+  </div>
+</div>
 <!--
 <div id='open-footer'>
     <ul id='acknowledgment'>
