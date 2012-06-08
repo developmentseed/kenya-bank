@@ -11,9 +11,7 @@ layout: default
   </div>   
 
 	<ul id='nav' class='clearfix limiter layers'>
-		<li><a href='#' data-story='context' class='active'>Context</a></li>
-		<li><a href='#' data-story='performance'>Performance</a></li>
-		<li><a href='#' data-story='investment'>Investment</a></li>
+		<li><a href='http://developmentseed.org/kenya-bank/' data-story='context'>Context</a></li>
 	</ul>
 	<ul id='data-modal' class='layers'>  
 		<li class='active'><a href='open' data-story='open'>Data</a></li> 
@@ -43,7 +41,7 @@ layout: default
         <div class='navigation' data-scrollspy="scrollspy">
             <ul>
                 {% for category in page.categories %}
-                <li><a class='{% if forloop.first %}active{% endif %}' href='#{{ category | downcase | replace: ' ', '-' }}'>{{ category }} Layers</a></li>
+                <li><a class='{% if forloop.first %}active{% endif %}' href='#{{ category | downcase | replace: ' ', '-' }}'>{{ category }} Layer</a></li>
                 {% endfor %}
             </ul>
         </div>

@@ -628,7 +628,14 @@ body .wax-legend .scale ul li {
   color: #fff;
   }
 .methods-modal a {
- background:#fff; 
+ background:#fff;
+ -moz-box-shadow: inset 0 0 6px rgba(0,0,0,.4);
+ -webkit-box-shadow: inset 0 0 6px 
+ rgba(0, 0, 0, .4);
+ box-shadow: inset 0 0 6px 
+ rgba(0, 0, 0, .4);
+ font-weight:bold;
+ padding:2px 6px; 
  }  
 .methods-modal .methods-content {
   position:absolute;
@@ -661,8 +668,8 @@ body .wax-legend .scale ul li {
   background-image: url(img/controls.png);
   background-repeat: no-repeat;
   overflow: hidden;
-  width: 18px;
-  height: 18px;
+  width: 7px;
+  height: 13px;
   top: 4px;
   right:4px;
   z-index: 2;
