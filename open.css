@@ -51,9 +51,6 @@ body {
       .navigation li a.active {
         color: #fff;
         background-color: #000;
-        position: relative;
-        left: 10px;
-        width: 100px;
         }
         .navigation.fixed {
           position: fixed;
