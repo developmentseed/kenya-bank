@@ -35,7 +35,7 @@ body {
     .navigation a {
       color: #1D7FAD;
       padding: 8px 2px 2px;
-      font-weight:bold;
+      font-weight:normal;
       font-size:12px;
       border-radius:2px;
       }
@@ -55,6 +55,8 @@ body {
           line-height: 16px;
           -moz-border-radius: 2px;
           border-radius: 2px;
+          margin-left:13px;
+          padding-top:8px;
           }
       .navigation li a.active {
         color: #fff;

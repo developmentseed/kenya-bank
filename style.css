@@ -82,9 +82,9 @@ h1 {
   h1.heading {
     padding: 20px 10px 23px 18px;
     width: 400px;
-    letter-spacing: 0.1em;
-    font-family: 'Pompiere', cursive;
-    font-size:31px;
+    letter-spacing: 0.09em;
+    font-family: 'NobileRegular';
+    font-size:25px;
     font-variant:small-caps;
     }
     h1.heading a {
@@ -131,7 +131,22 @@ sup {
   vertical-align: top;
   position: relative;
   top: -3px;
-  }
+    }
+
+
+/* ------------------------------------------
+   ♥ Custom Font Face
+---------------------------------------------*/
+
+@font-face {
+    font-family: 'NobileRegular';
+    src: url('fonts/nobile-webfont.eot');
+    src: url('fonts/nobile-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/nobile-webfont.woff') format('woff'),
+         url('fonts/nobile-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* ------------------------------------------
   Layout ♥
@@ -621,8 +636,10 @@ body .wax-legend .scale ul li {
   }
 .methods-modal h3 {
   margin-bottom: 10px;
-  font-size: 28px;
+  font-size: 25px;
   color: #fff;
+  font-family: 'NobileRegular';
+  padding-bottom:5px;
   }
 .methods-modal p {
   color: #fff;
@@ -641,7 +658,7 @@ body .wax-legend .scale ul li {
   position:absolute;
   display:block;
   left:50%;
-  top:50px;
+  top:25px;
   margin:0 0 0 -400px;
   padding:19px;
   width:800px;
