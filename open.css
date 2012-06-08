@@ -54,6 +54,7 @@ body {
           -moz-border-radius: 2px;
           border-radius: 2px;
           margin-left:13px;
+          padding-top:8px;
           }
       .navigation li a.active {
         color: #fff;
