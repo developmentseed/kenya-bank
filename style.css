@@ -83,18 +83,14 @@ h1 {
     padding: 20px 10px 23px 18px;
     width: 420px;
     letter-spacing: 0.08em;
-    font-family: 'NobileRegular';
-    font-size:24px;
+    font-family: 'NobileRegular', 'Open Sans', Helvetica,arial,freesans,clean,sans-serif;
+    font-size:23px;
     font-variant:small-caps;
     }
     h1.heading a {
       color: #fff;
       }
-    h1.heading span.heading{
-      font-size:24px;
-      position: relative;
-      left: 25px;
-      }    
+      
 h2 {
   font-size: 18px;
   line-height: 22px;
