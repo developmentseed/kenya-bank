@@ -41,7 +41,7 @@ layout: default
         <div class='navigation' data-scrollspy="scrollspy">
             <ul>
                 {% for category in page.categories %}
-                <li><a class='{% if forloop.first %}active{% endif %}' href='#{{ category | downcase | replace: ' ', '-' }}'>{{ category }} Layer</a></li>
+                <li><a class='{% if forloop.first %}active{% endif %}' href='#{{ category | downcase | replace: ' ', '-' }}'>{{ category }} Layers</a></li>
                 {% endfor %}
             </ul>
         </div>
