@@ -32,12 +32,14 @@ body {
     margin-top: 15px;
     }
     .navigation a {
-      color: #006B9F;
+      color: #1D7FAD;
       padding: 8px 2px 2px;
+      font-weight:bold;
+      font-size:12px;
+      border-radius:2px;
       }
-      .navigation a:hover {
-        background-color: #ddd;
-        
+      .navigation a:hover { 
+        color: #006B9F;
         }
       .navigation li {
         line-height: 30px;
@@ -49,6 +51,9 @@ body {
       .navigation li a.active {
         color: #fff;
         background-color: #000;
+        position: relative;
+        left: 10px;
+        width: 100px;
         }
         .navigation.fixed {
           position: fixed;
