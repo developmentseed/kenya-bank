@@ -175,9 +175,8 @@ sup {
 /* ------------------------------------------
   General Styling ♥
 ---------------------------------------------*/
-.icon.kenya-opendata {
-  background-color: #202020;
-  background-color: rgba(0,0,0,0.75);
+.kenya-opendata { 
+  background: transparent url(../img/icon-hover-bg.png) repeat 0 0;
   background-position: 12px 10px;
   position: absolute;
   bottom: 30px;
@@ -187,11 +186,20 @@ sup {
   height: 55px;
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
+  text-indent: -999em;
   }
-  .icon.kenya-opendata:hover {
-   background-color: #202020;
+.kenya-opendata:hover {
+    background: transparent url(../img/icon-bg.png) repeat 0 0;
     }
-
+.kenya-opendata .icon{
+  position:absolute;
+  top:10px;left:12px;
+  background-image: url(../img/sprite.png); 
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  display: block;
+  width: 70px; height: 70px;
+}
 .introduction {
   padding: 0 20px 0 0;
   height: 290px;
@@ -225,12 +233,11 @@ sup {
   }
   .layers a:hover,
   .layers a:focus {
-    background-color: #1d7fad;
-    background-color: rgba(0,0,0,0.25);
+    background: transparent url(../img/layer-hover-bg.png) repeat 0 0;
     }
   .layers li.active a {
-    background-color: #fff;
-    color: #202020;
+    color: #000;
+    background:white;
     }
   .layers li.open a {    
 	margin-left: 35px;
@@ -522,8 +529,7 @@ body .wax-legend .scale ul li {
   font-size: 10px;
   text-align: center;
   text-transform: uppercase;
-  background-color: #202020;
-  background-color: rgba(0,0,0,0.75);
+  background: transparent url(../img/icon-hover-bg.png) repeat 0 0;
   color: #fff;
   border: none;
   -moz-border-radius: 0 0 3px 3px;
@@ -532,8 +538,8 @@ body .wax-legend .scale ul li {
   }
   .share:hover {
     color: #fff;
-    background-color: #000000;
-    background-color: rgba(0,0,0,0.90);
+    background: transparent url(../img/icon-bg.png) repeat 0 0;
+
     }
   .zoompan .share { top:45px; }
 .wax-share div {
@@ -697,15 +703,7 @@ body .wax-legend .scale ul li {
 /*  -------------------------------------------------------
  *  Little Helpers ♥
  *  ------------------------------------------------------- */
- .icon {
-   background-image: url(../img/sprite.png);
-   z-index:1;
-   background-repeat: no-repeat;
-   background-position: 0 0;
-   display: block;
-   text-indent: -999em;
-   width: 20px; height: 20px;
-   }
+
 .clearfix:after {
   content: '.';
   display: block;
