@@ -185,13 +185,11 @@ sup {
   margin-top: -25px;
   width: 95px;
   height: 55px;
-  z-index: 1000;
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
   }
   .icon.kenya-opendata:hover {
-    background-color: #000000;
-    background-color: rgba(0,0,0,0.9);
+   background-color: #202020;
     }
 
 .introduction {
@@ -215,8 +213,7 @@ sup {
 .layers a {
   display: block;
   padding: 5px 10px;
-  background-color: #000000;
-  background-color: rgba(0,0,0,0.15);
+  background: transparent url(../img/layer-bg.png) repeat 0 0;
   color: #fff;
   height: 25px;
   line-height: 25px;
@@ -702,6 +699,7 @@ body .wax-legend .scale ul li {
  *  ------------------------------------------------------- */
  .icon {
    background-image: url(../img/sprite.png);
+   z-index:1;
    background-repeat: no-repeat;
    background-position: 0 0;
    display: block;
