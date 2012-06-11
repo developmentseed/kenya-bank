@@ -149,7 +149,7 @@ sup {
   Layout ♥
 ---------------------------------------------*/
 #sidebar {
-  background: transparent url(img/sidebar-bg.png) repeat-x 0 0;
+  background: transparent url(../img/sidebar-bg.png) repeat-x 0 0;
   position: absolute;
   left: 0;
   width: 450px;
@@ -358,7 +358,7 @@ sup {
 .zoomer,
 a.method-close {
   text-indent: -999em;
-  background-image: url(img/controls.png);
+  background-image: url(../img/controls.png);
   background-position: 60px 60px;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -589,7 +589,7 @@ body .wax-legend .scale ul li {
     }
 
 .mapbox-watermark {
-  background:url(img/controls.png) 0px -90px no-repeat;
+  background:url(../img/controls.png) 0px -90px no-repeat;
   position: absolute;
   left: 500px;
   bottom: 5px;
@@ -604,7 +604,7 @@ body .wax-legend .scale ul li {
 .mmg-default {
   width:20px;
   height:40px;
-  background:url(img/controls.png) -120px -30px;
+  background:url(../img/controls.png) -120px -30px;
   left:-10px;
   top:-30px;
   }
@@ -688,7 +688,7 @@ body .wax-legend .scale ul li {
  } 
 .methods-modal a.methods-close {
   text-indent: -999em;
-  background-image: url(img/controls.png);
+  background-image: url(../img/controls.png);
   background-repeat: no-repeat;
   overflow: hidden;
   width: 7px;
@@ -706,7 +706,7 @@ body .wax-legend .scale ul li {
  *  Little Helpers ♥
  *  ------------------------------------------------------- */
 .icon {
-  background-image: url(img/sprite.png);
+  background-image: url(../img/sprite.png);
   background-repeat: no-repeat;
   background-position: 0 0;
   display: block;

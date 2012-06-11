@@ -7,7 +7,7 @@ body {
 }
 .header {
   
-  background: #222 url(img/open-bg.jpg) repeat-x 0 0;
+  background: #222 url(../img/open-bg.jpg) repeat-x 0 0;
   color: #fff;
   height: 320px;
   top:5px; 
@@ -233,7 +233,7 @@ a.download {
     }
 
 .downloads .icon {
-  background: transparent url(img/sprite-open.png) no-repeat 0 0px;
+  background: transparent url(../img/sprite-open.png) no-repeat 0 0px;
   display: block;
   width: 45px;
   height: 50px;
@@ -398,7 +398,7 @@ a.download {
         }
         .methods-modal a.methods-close {
           text-indent: -999em;
-          background-image: url(img/controls.png);
+          background-image: url(../img/controls.png);
           background-repeat: no-repeat;
           overflow: hidden;
           width: 7px;
