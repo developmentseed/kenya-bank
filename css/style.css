@@ -395,7 +395,7 @@ a.method-close {
   background-position: -6px -6px;
   }
 .wax-tooltip  {
-  background-color: #202020;
+  background: transparent url(../img/tooltip-bg.png) repeat-x 0 0;
   background-color: rgba(0,0,0,.75);
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -701,7 +701,14 @@ body .wax-legend .scale ul li {
 /*  -------------------------------------------------------
  *  Little Helpers ♥
  *  ------------------------------------------------------- */
-
+ .icon {
+   background-image: url(../img/sprite.png);
+   background-repeat: no-repeat;
+   background-position: 0 0;
+   display: block;
+   text-indent: -999em;
+   width: 20px; height: 20px;
+   }
 .clearfix:after {
   content: '.';
   display: block;
