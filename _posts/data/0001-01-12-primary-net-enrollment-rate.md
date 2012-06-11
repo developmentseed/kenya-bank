@@ -1,5 +1,5 @@
 --
-title: "Primary Net Enrollment Rate: 2009""
+title: "Primary Net Enrollment Rate: 2009"
 categories: 
     - data
     - Investment
