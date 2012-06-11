@@ -13,16 +13,19 @@
   "format": "png",
   "interactivity": {
     "fields": [
-      "percent_diff0610",
+      "percent_change_0610",
       "COUNTY",
+      "change_sign",
+      "lowest_change",
+      "highest_change",
       "percent_passed06",
       "percent_passed10"
     ],
     "layer": "sec_exam_change",
-    "template_teaser": "{{#percent_change_0610}}\n<h4 class=\"int-title\">\n{{{COUNTY}}} \n</h4>\n<h5 class=\"int-stat\">Passed-2006: <span class=\"int-value\">{{{percent_passed06}}}%</span> \n<h5 class=\"int-stat\">Passed-2010: <span class=\"int-value\">{{{percent_passed10}}}%</span>\n<h5 class=\"int-stat\">Change: <span class=\"int-value\">{{{percent_change_0610}}}%</span>\n</h5>\n{{/percent_change_0610}}\n{{^percent_change_0610}}\n<h4 class=\"int-title\">\n</h4>\n{{{COUNTY}}} \n<h5 class=\"int-stat\">Passed-2006: <span class=\"int-value\">{{{percent_passed06}}}%</span></h5> \n<h5 class=\"int-stat\">Passed-2010: <span class=\"int-value\">{{{percent_passed10}}}%</span></h5>\n<h5 class=\"int-stat\">Change: <span class=\"int-value\">0%</span>\n</h5>\n{{/percent_change_0610}}\n"
+    "template_teaser": "{{#percent_change_0610}}\n<div class='heading'>\n <h4 class='int-title'>\n {{{COUNTY}}} \n </h4>\n</div>\n<div class='clearfix'>\n <div class='total' style='float:left;'>\n <h5 class='int-stat'>Change: <span class='int-value'>{{#change_sign}}{{{change_sign}}}{{/change_sign}}{{{percent_change_0610}}}%</span>\n </div>\n <div class='range'>\n    <h6 class='int-range'>(Range: {{{lowest_change}}} - {{{highest_change}}}%)</h6>\n </div>\n <div class='gender' style='float:left;'>\n <h6 class='int-gender'>Passed-2006: <span class='int-gender'>{{{percent_passed06}}}%</span>\n </h6> \n <h6 class='int-gender'>Passed-2010: <span class='int-gender'>{{{percent_passed10}}}%</span>\n </h6>\n </div>\n</div>\n{{/percent_change_0610}}\n\n{{^percent_change_0610}}\n<div class='heading'>\n<h4 class='int-title'>\n{{{COUNTY}}}\n</h4>\n</div>\n<div class='clearfix'>\n <div class='total' style='float:left;'>\n  <h5 class=\"int-stat\">Change: <span class=\"int-value\">0%</span>\n  </h5> \n </div>\n <div class='range'>\n    <h6 class='int-range'>\n    (Range: {{{lowest_change}}} -    \n    {{{highest_change}}}%)   \n    </h6>\n </div>\n <div class='gender' style='float:left;'>\n  <h6 class=\"int-gender\">Passed-2006: <span class=\"int-gender\">{{{percent_passed06}}}%</span></h6> \n  <h6 class=\"int-gender\">Passed-2010: <span class=\"int-gender\">{{{percent_passed10}}}%</span></h6>\n </div>\n</div>\n{{/percent_change_0610}}\n\n"
   },
   "minzoom": 6,
-  "maxzoom": 13,
+  "maxzoom": 11,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "style.mss"

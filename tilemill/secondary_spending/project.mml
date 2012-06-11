@@ -17,10 +17,10 @@
       "Per_capita_spending_based_on_TSC_Enrolments_2011",
       "COUNTY"
     ],
-    "template_teaser": "{{#Per_capita_spending_based_on_TSC_Enrolments_2011}}\n<h4 class=\"int-title\">\n{{{COUNTY}}} \n</h4>\n<h5 class=\"int-stat\">Spending: <span class='int-value'>${{{Per_capita_spending_based_on_TSC_Enrolments_2011}}} per capita</span>\n</h5>\n{{/Per_capita_spending_based_on_TSC_Enrolments_2011}}\n"
+    "template_teaser": "{{#Per_capita_spending_based_on_TSC_Enrolments_2011}}\n<div class='heading'>\n<h4 class=\"int-title\">\n{{{COUNTY}}} \n</h4>\n</div>\n<div class='total'>\n<h5 class=\"int-stat\">Spending: <span class='int-value'>${{{Per_capita_spending_based_on_TSC_Enrolments_2011}}} per capita</span>\n</h5>\n</div>\n{{/Per_capita_spending_based_on_TSC_Enrolments_2011}}\n"
   },
   "minzoom": 6,
-  "maxzoom": 13,
+  "maxzoom": 11,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "style.mss"

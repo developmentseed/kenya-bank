@@ -13,7 +13,7 @@
   "format": "png",
   "interactivity": {
     "layer": "primary_spending",
-    "template_teaser": "{{#Per_Primary_capita_spending_TSC_Enrolments_2011}}\n<h4 class=\"int-title\">\n{{{COUNTY}}} \n</h4>\n<h5 class=\"int-stat\">Spending: <span class=\"int-value\">\n${{{Per_Primary_capita_spending_TSC_Enrolments_2011}}} per capita</span>\n</h5>\n{{/Per_Primary_capita_spending_TSC_Enrolments_2011}}\n{{^Per_Primary_capita_spending_TSC_Enrolments_2011}}\n<h4 class=\"int-title\">\n{{{COUNTY}}} \n</h4>\n{{/Per_Primary_capita_spending_TSC_Enrolments_2011}}\n",
+    "template_teaser": "{{#Per_Primary_capita_spending_TSC_Enrolments_2011}}\n<div class='heading'>\n<h4 class=\"int-title\">\n{{{COUNTY}}} \n</h4>\n</div>\n<div class='total'>\n<h5 class=\"int-stat\">Spending: <span class=\"int-value\">\n${{{Per_Primary_capita_spending_TSC_Enrolments_2011}}} per capita</span>\n</h5>\n</div>\n{{/Per_Primary_capita_spending_TSC_Enrolments_2011}}\n",
     "fields": [
       "Per_Primary_capita_spending_TSC_Enrolments_2011",
       "COUNTY"

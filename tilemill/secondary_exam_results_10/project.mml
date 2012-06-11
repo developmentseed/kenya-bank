@@ -16,13 +16,15 @@
       "percent_passed10",
       "COUNTY",
       "lowest_percentage_passed10",
-      "highest_percentage_passed10"
+      "highest_percentage_passed10",
+      "percent_male_passed10",
+      "percent_female_passed10"
     ],
     "layer": "sec_exam_10",
-    "template_teaser": "{{#percent_passed10}}\n<div class='heading'>\n<h4 class='int-title'>{{{COUNTY}}}</h4>\n</div>\n<div class='clearfix'>\n  <div class='total' style='float:left;'>\n   <h5 class='int-stat'>\n   Passed:<br></br>\n   <span class='int-value'>{{{percent_passed10}}}%</span>           \n   </h5>  \n  </div>\n  <div class='range'>\n    <h6 class='int-range'>\n    (Range: {{{lowest_percentage_passed10}}} -    \n    {{{highest_percentage_passed10}}}%)   \n    </h6>\n  </div>\n<div class='gender' style='float:left;'>\n  <h6 class='int-gender'>\n  Boys: <span class='int-gender'>{{{percent_male_passed10}}}%</span></h6><h6 class='int-gender'>\n  Girls: <span class='int-gender'>{{{percent_female_passed10}}}%</span>\n  </h6> \n </div> \n</div>\n{{/percent_passed10}}\n\n<style type='text/css'>\n.wax-tooltip {\nmin-width:240px;\nwidth:auto;\nheight:90px;\n}\n.wax-tooltip h5.int-stat {\ndisplay:block;\nfloat:left;\n}\n.wax-tooltip span.int-value{\nfont-size:17px;\nposition: relative;\nleft:10px;\n}\n.wax-tooltip h6.int-range {\ndisplay:block;\nfont-size:10px;\nposition:relative;\ntop:40px;\nright:50px;\nfloat:left;\n}\n\n\n</style>"
+    "template_teaser": "{{#percent_passed10}}\n<div class='heading'>\n<h4 class='int-title'>{{{COUNTY}}}</h4>\n</div>\n<div class='clearfix'>\n  <div class='total' style='float:left;'>\n   <h5 class='int-stat'>\n   Passed:\n   <span class='int-value'>{{{percent_passed10}}}%</span>           \n   </h5>  \n  </div>\n  <div class='range'>\n    <h6 class='int-range'>(Range: {{{lowest_percentage_passed10}}} -    \n    {{{highest_percentage_passed10}}}%)</h6>\n  </div>\n<div class='gender' style='float:left;'>\n  <h6 class='int-gender'>\n  Boys: <span class='int-gender'>{{{percent_male_passed10}}}%</span>\n  </h6>  \n  <h6 class='int-gender'>\n  Girls: <span class='int-gender'>{{{percent_female_passed10}}}%</span>\n  </h6> \n </div> \n</div>\n{{/percent_passed10}}\n\n"
   },
   "minzoom": 6,
-  "maxzoom": 13,
+  "maxzoom": 11,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "style.mss"
