@@ -177,7 +177,6 @@ sup {
 ---------------------------------------------*/
 .icon.kenya-opendata {
   background-color: #202020;
-  background-color:rgb(0,0,0);
   background-color: rgba(0,0,0,0.75);
   background-position: 12px 10px;
   position: absolute;
@@ -191,7 +190,7 @@ sup {
   border-radius: 3px 0 0 3px;
   }
   .icon.kenya-opendata:hover {
-    background-color:rgb(0,0,0);
+    background-color: #000000;
     background-color: rgba(0,0,0,0.9);
     }
 
@@ -199,7 +198,7 @@ sup {
   padding: 0 20px 0 0;
   height: 290px;
   color: #d5ecf9;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   color: rgba(255, 255, 255, 0.85);
   }
   .introduction h3 {
@@ -218,7 +217,6 @@ sup {
   display: block;
   padding: 5px 10px;
   background-color: #1d7fad;
-  background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.15);
   color: #fff;
   height: 25px;
@@ -232,7 +230,6 @@ sup {
   .layers a:hover,
   .layers a:focus {
     background-color: #1d7fad;
-    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.25);
     }
   .layers li.active a {
@@ -267,11 +264,11 @@ sup {
   left:0;
   width:420px;
   }
-.subnav .section {
-  position: absolute;
-  left: 130px;
-  top: 2px;
-  }
+  .subnav .section {
+    position: absolute;
+    left: 130px;
+    top: 2px;
+    }
 
 .subnav li {
   margin-bottom: 1px;
@@ -400,7 +397,6 @@ a.method-close {
   }
 .wax-tooltip  {
   background-color: #202020;
-  background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,.75);
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -512,9 +508,8 @@ body .wax-legend .scale ul li {
     }
 
 .wax-share {
-  background-color:#666;
-  background-color:rgb(32,32,32);
-  background-color:rgba(32,32,32,0.75);
+  background-color: #202020;
+  background-color: rgba(32,32,32,0.75);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -532,8 +527,7 @@ body .wax-legend .scale ul li {
   font-size: 10px;
   text-align: center;
   text-transform: uppercase;
-  background-color: #333;
-  background-color: rgb(0,0,0);
+  background-color: #202020;
   background-color: rgba(0,0,0,0.75);
   color: #fff;
   border: none;
@@ -543,8 +537,7 @@ body .wax-legend .scale ul li {
   }
   .share:hover {
     color: #fff;
-    background-color: #000;
-    background-color:rgb(0,0,0);
+    background-color: #000000;
     background-color: rgba(0,0,0,0.90);
     }
   .zoompan .share { top:45px; }
@@ -637,7 +630,7 @@ body .wax-legend .scale ul li {
   Methods Modal
 -------------------------------------*/
 .methods-modal {
-  background-color:rgb(0,0,0);
+  background-color:#202020;
   background-color: rgba(0,0,0,0.75);
   position:absolute;
   top:0px; left:0px; right:0px; bottom:0px;
