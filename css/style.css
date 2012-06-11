@@ -197,7 +197,6 @@ sup {
 .introduction {
   padding: 0 20px 0 0;
   height: 290px;
-  color: #d5ecf9;
   color: #ffffff;
   color: rgba(255, 255, 255, 0.85);
   }
@@ -216,7 +215,7 @@ sup {
 .layers a {
   display: block;
   padding: 5px 10px;
-  background-color: #1d7fad;
+  background-color: #000000;
   background-color: rgba(0,0,0,0.15);
   color: #fff;
   height: 25px;
@@ -702,14 +701,7 @@ body .wax-legend .scale ul li {
 /*  -------------------------------------------------------
  *  Little Helpers ♥
  *  ------------------------------------------------------- */
-.icon {
-  background-image: url(../img/sprite.png);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  display: block;
-  text-indent: -999em;
-  width: 20px; height: 20px;
-  }
+
 .clearfix:after {
   content: '.';
   display: block;
