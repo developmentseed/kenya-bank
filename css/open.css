@@ -1,3 +1,17 @@
+/* ------------------------------------------
+   ♥ Custom Font Face
+---------------------------------------------*/
+
+@font-face {
+    font-family: 'NobileRegular';
+    src: url('fonts/nobile-webfont.eot');
+    src: local('☺'),url('fonts/nobile-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/nobile-webfont.woff') format('woff'),
+         url('fonts/nobile-webfont.svg#NobileRegular') format('svg'),
+         url('fonts/nobile-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 /*-----------------------------------
   Open Section
 -------------------------------------*/
@@ -13,7 +27,17 @@ body {
   top:5px; 
   position: relative;
   }
-
+  h1.heading {
+    padding: 20px 10px 23px 18px;
+    width: 420px;
+    letter-spacing: 0.08em;
+    font-family: 'NobileRegular', 'Open Sans', Helvetica,arial,freesans,clean,sans-serif;
+    font-size:23px;
+    font-variant:small-caps;
+    }
+    h1.heading a {
+      color: #fff;
+      }
 
 #open-page {
   position: absolute;
@@ -410,4 +434,5 @@ a.download {
           background-position: -6px -6px;
           color: #ccc;
           }
+
       
