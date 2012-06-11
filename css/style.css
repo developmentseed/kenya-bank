@@ -704,7 +704,14 @@ body .wax-legend .scale ul li {
 /*  -------------------------------------------------------
  *  Little Helpers ♥
  *  ------------------------------------------------------- */
-
+ .icon{
+   background-image: url(img/sprite.png);
+   background-repeat: no-repeat;
+   background-position: 0 0;
+   display: block;
+   text-indent: -999em;
+   width: 20px; height: 20px;
+ }
 .clearfix:after {
   content: '.';
   display: block;
