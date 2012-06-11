@@ -192,9 +192,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="448.29446"
-     inkscape:cy="483.67873"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="-88.83788"
+     inkscape:cy="947.44482"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -235,9 +235,9 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="base"
-     style="display:none">
+     style="display:inline">
     <rect
-       style="color:#000000;fill:#ececec;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.173913;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.17391300000000021;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7372"
        width="500"
        height="500"
@@ -252,7 +252,7 @@
     <rect
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/tristen/devseed/kenya-bank/img/sidebar-bg.png"
+       inkscape:export-filename="/Users/mayarichman/Projects/kenya-bank/img/sidebar-bg.png"
        y="272.36218"
        x="-60"
        height="1505"
@@ -262,7 +262,7 @@
     <rect
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
-       inkscape:export-filename="/Users/tristen/devseed/kenya-bank/img/sidebar-bg.png"
+       inkscape:export-filename="/Users/mayarichman/Projects/kenya-bank/img/sidebar-bg.png"
        y="597.36218"
        x="-60"
        height="1179.9999"
@@ -289,7 +289,7 @@
        sodipodi:cy="108.11219"
        sodipodi:rx="66.447914"
        sodipodi:ry="25.814034"
-       d="m 626.85014,108.11219 a 66.447914,25.814034 0 1 1 -132.89583,0 66.447914,25.814034 0 1 1 132.89583,0 z"
+       d="m 626.85014,108.11219 c 0,14.2567 -29.74975,25.81403 -66.44792,25.81403 -36.69817,0 -66.44791,-11.55733 -66.44791,-25.81403 0,-14.256697 29.74974,-25.814033 66.44791,-25.814033 36.69817,0 66.44792,11.557336 66.44792,25.814033 z"
        transform="matrix(0.59890507,0,0,0.59860713,119.04289,517.41671)" />
     <path
        style="color:#000000;fill:url(#linearGradient7418);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -494,5 +494,15 @@
          x="8.7749901"
          id="tspan7353"
          sodipodi:role="line">K</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;opacity:0.15"
+       id="rect4106"
+       width="5"
+       height="60"
+       x="-60"
+       y="272.36218"
+       inkscape:export-filename="/Users/mayarichman/Projects/kenya-bank/img/sidebar-bg.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>
