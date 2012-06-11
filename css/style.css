@@ -251,6 +251,7 @@ sup {
     }
 .story {
   display: none;
+  position:relative;
   }
   .story a {
     font-weight: 500;
@@ -261,7 +262,9 @@ sup {
 
 /*Sub Navigation per story*/
 .subnav {
-  position: relative;
+  position: absolute;
+  left:0;
+  width:420px;
   }
 .subnav .section {
   position: absolute;
