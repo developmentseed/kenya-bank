@@ -264,13 +264,14 @@ sup {
 /*Sub Navigation per story*/
 .subnav {
   position: absolute;
-  left:0;
+  left:0px;
   width:420px;
   }
   .subnav .section {
     position: absolute;
     left: 130px;
     top: 2px;
+    width: 280px;
     }
 
 .subnav li {
