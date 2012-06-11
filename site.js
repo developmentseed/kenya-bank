@@ -1,5 +1,7 @@
 var MB = {};
-MB.maps = {};
+MB.maps = {};   
+var	apiUrl;
+var embedUrl;
 
 MB.api = function(l) {
   return 'http://api.tiles.mapbox.com/v3/worldbank-education.map-zlpoq0vs,' + l.id + '.jsonp';
@@ -57,6 +59,9 @@ MB.map = function(el, l) {
       );
     }
   });
+
+	apiUrl = MB.api(l);
+		
 };
 
 MB.refresh = function(m, l) {
@@ -85,6 +90,9 @@ MB.refresh = function(m, l) {
       MB.maps[m].setCenterZoom({ lat: lat, lon: lon }, zoom);
     }
   }
+	
+	apiUrl = MB.api(l);
+
 };
 
 
@@ -186,4 +194,16 @@ $(function() {
     $('[data-narrative="' + story + '"]').trigger('click');
     $('[data-narrative="' + 'datas"]').trigger('click');
   });
-});
+
+});   
+
+function updateEmbedApi() {
+    center = MB.maps['map'].pointLocation(new MM.Point(MB.maps['map'].dimensions.x/2,MB.maps['map'].dimensions.y/2));
+    embedUrl = '<iframe src="'
+                    + apiUrl.replace(".jsonp","")
+                    + '/mm/zoompan,tooltips,legend,bwdetect.html#'
+                    + MB.maps['map'].coordinate.zoom + '/'
+                    + center.lat + '/'
+                    + center.lon + '"'
+                    + ' frameborder="0" width="500" height="400"></iframe>';
+}
