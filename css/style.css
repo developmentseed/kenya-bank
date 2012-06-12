@@ -169,6 +169,9 @@ sup {
   padding: 0 20px;
 
   }
+  .limiter p.heading{
+   color:#fff; 
+  }
   #content .limiter {
     padding: 20px 20px 0 13px;
     }
