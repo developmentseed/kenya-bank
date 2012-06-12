@@ -30,9 +30,9 @@
       "geometry": "polygon",
       "Datasource": {
         "type": "sqlite",
-        "file": "/Users/mayarichman/Dropbox/Exam Data/SQlite/Kenya_County.sqlite",
+        "file": "../data/sqlite/Kenya_County.sqlite",
         "table": "(Select\n a.*,\n b.*,\nround(b.ptr_primary) as ptr_primary_r\nfrom kenya_county a\nleft outer join primary_indicators b on lower(a.county) = lower(b.County)\n)",
-        "attachdb": "Kenya_Database@/Users/mayarichman/Dropbox/kenya-bank/Kenya-Bank/Database/Kenya_Database.sqlite",
+        "attachdb": "Kenya_Database@../data/sqlite/Kenya_Database.sqlite",
         "extent": "",
         "id": "tpr-prim",
         "project": "tpr-primary",

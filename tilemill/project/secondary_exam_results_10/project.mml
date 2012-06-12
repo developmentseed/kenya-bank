@@ -34,9 +34,9 @@
       "geometry": "polygon",
       "Datasource": {
         "type": "sqlite",
-        "file": "/Users/mayarichman/Dropbox/Exam Data/SQlite/Kenya_County.sqlite",
+        "file": "../data/sqlite/Kenya_County.sqlite",
         "table": "(Select \n a.*,\n b.*\nfrom kenya_county a\nleft outer join secondary_results b on lower(a.county) = lower(b.County)\n)",
-        "attachdb": "Kenya_Database@/Users/mayarichman/Dropbox/kenya-bank/Kenya-Bank/Database/Kenya_Database.sqlite",
+        "attachdb": "Kenya_Database@../data/sqlite/Kenya_Database.sqlite",
         "extent": "",
         "id": "sec_exam_10",
         "project": "secondary_exam_results_10",

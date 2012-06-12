@@ -32,7 +32,7 @@
       "id": "hex",
       "class": "",
       "Datasource": {
-        "file": "/Users/natesmith/github/kenya-bank/data/shapefiles/kenya-schools-hexgrid.shp",
+        "file": "../data/shapefiles/kenya-schools-hexgrid.shp",
         "id": "hex",
         "project": "all-school-hex-density",
         "srs": null

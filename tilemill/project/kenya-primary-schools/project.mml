@@ -35,7 +35,7 @@
       "geometry": "point",
       "Datasource": {
         "type": "sqlite",
-        "file": "/Users/natesmith/github/kenya-bank/data/sqlite/kenya-primary-locations.sqlite",
+        "file": "../data/sqlite/kenya-primary-locations.sqlite",
         "table": "(select lower(name) as name, lower(spons) as sponsor, lower(type_1) as type_1, * from primary_locations order by toterl DESC)",
         "attachdb": "",
         "extent": "",
