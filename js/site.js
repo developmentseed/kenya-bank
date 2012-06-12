@@ -172,7 +172,6 @@ $(function() {
      console.log(el.parent());
     //removes activity from sub navigation but leaves toggle buttons highlighted
     if (!$(this).hasClass('active')) {
-      console.log(el.attr('class'));
       if(el.attr('class') == 'no-link section-name'){
         $('.subnav li').removeClass('active');
         $('.subnav li').find('a').removeClass('active');
