@@ -30,9 +30,9 @@
       "geometry": "polygon",
       "Datasource": {
         "type": "sqlite",
-        "file": "../data/sqlite/Kenya_County.sqlite",
+        "file": "../../../data/sqlite/Kenya_County.sqlite",
         "table": "(Select\n a.*,\n b.*,\nround(ptr_secondary) as ptr_secondary_r\nfrom kenya_county a\nleft outer join secondary_indicators b on lower(a.county) = lower(b.County)\n)\n\n",
-        "attachdb": "Kenya_Database@../data/sqlite/Kenya_Database.sqlite",
+        "attachdb": "Kenya_Database@../data/../../sqlite/Kenya_Database.sqlite",
         "extent": "",
         "id": "tpr-sec",
         "project": "tpr-sec",
