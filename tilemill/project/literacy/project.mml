@@ -1,0 +1,57 @@
+{
+  "bounds": [
+    30.8936,
+    -5.8346,
+    43.9453,
+    6.621
+  ],
+  "center": [
+    38.0566,
+    0.5273,
+    6
+  ],
+  "format": "png",
+  "interactivity": {
+    "layer": "literacy",
+    "fields": [
+      "average_lit_2005_06",
+      "County",
+      "literacy_lowest",
+      "literacy_highest",
+      "Literacy_Male_2005_06",
+      "Literacy_Female_2005_06"
+    ],
+    "template_teaser": "{{#average_lit_2005_06}}\n<div class='heading'> \n <h4 class='int-title'>\n {{{County}}}\n </h4>\n</div>\n<div class='clearfix'>\n  <div class='total' style='float:left;'>\n   <h5 class='int-stat'>Literacy: \n   <span class='int-value'>\n   {{{average_lit_2005_06}}}%\n   </span>\n   </h5>\n  </div>\n  <div class='range'>\n    <h6 class='int-range'>(Range: {{{literacy_lowest}}} - {{{literacy_highest}}}%)</h6>\n  </div>\n  <div class='gender' style='float:left;'>\n  <h6 class='int-gender'>\n  Boys: <span class='int-gender'>{{{Literacy_Male_2005_06}}}%</span></h6><h6 class='int-gender'>\n  Girls: <span class='int-gender'>{{{Literacy_Female_2005_06}}}%</span>\n  </h6> \n  </div> \n</div>\n{{/average_lit_2005_06}}\n\n"
+  },
+  "minzoom": 6,
+  "maxzoom": 11,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "Datasource": {
+        "type": "sqlite",
+        "file": "/Users/mayarichman/Dropbox/Exam Data/SQlite/Kenya_County.sqlite",
+        "table": "(Select \n a.*,\nb.average_lit_2005_06 as average_literacy,\n b.*  \nfrom kenya_county a\nleft outer join secondary_indicators b on lower(a.county) = lower(b.County)\n)",
+        "attachdb": "Kenya_Database@/Users/mayarichman/Dropbox/kenya-bank/Kenya-Bank/Database/Kenya_Database.sqlite",
+        "extent": "",
+        "id": "literacy",
+        "project": "literacy_counties",
+        "srs": null
+      },
+      "id": "literacy",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "name": "literacy"
+    }
+  ],
+  "name": "",
+  "description": "",
+  "_basemap": "http://a.tiles.mapbox.com/v3/mapbox.mapbox-streets.jsonp",
+  "attribution": "",
+  "legend": "<div class='my-legend'>\n<div class='title'>Average Literacy Rate: 2005 - 2006 (%) </div>\n<div class='note'>Rate represents averaged male and female literacy rates, aggregated by county.\n</div>\n<div class='scale'>\n  <ul class='labels'>\n    <li><span style='background:#76cdf5;'></span>0 - 30</li>\n    <li><span style='background:#5db3dc;'></span>30 - 67</li>\n    <li><span style='background:#5d9ebe;'></span>67 - 81</li>\n    <li><span style='background:#5d7c8b;'></span>81 - 87</li>\n    <li><span style='background:#54636a;'></span>> 87</li>\n</ul>\n</div>\n<div class='source'>Source: <a href=\"http://www.knbs.or.ke/\">Kenya Integrated Household Budget Survey 2005-06</a></div>\n</div>\n\n<style type='text/css'>\n  .wax-legend .title {\n    text-align: left;\n    margin-bottom: 4px;\n    font-weight: bold;\n    font-size: 90%;\n    }\n  .wax-legend .note {\n    line-height:13px;\n    font-size:85%;\n    text-align: left;\n    margin-bottom: 8px;\n    font-style: italic;\n   }\n  .wax-legend .scale ul {\n    margin: 0;\n    padding: 0;\n    float: left;\n    list-style: none;\n    }\n  .wax-legend .scale ul li {\n    display: block;\n    float: left;\n    width: 50px;\n    margin-bottom: 6px;\n    text-align: center;\n    font-size: 80%;\n    list-style: none;\n    }\n  .wax-legend ul.labels li span {\n    height: 10px;\n    width: 50px;\n\n    }\n  .wax-legend ul li span {\n    display: block;\n    float: left;\n    }\n  \n  .wax-legend .source {\n    font-size: 70%;\n    color: #999;\n    clear: both;\n    }\n  .wax-attribution a,\n  .wax-legend a {\n    color: #777;\n    }\n</style>"
+}
