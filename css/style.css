@@ -643,11 +643,12 @@ body .wax-legend .scale ul li {
   z-index:999999;
   overflow-y: auto;
   }
-.methods-modal h3 {
+.methods-modal .methods-content h3 {
   margin-bottom: 10px;
   font-size: 25px;
   color: #fff;
-  font-family: 'NobileRegular';
+  font-family: 'NobileRegular', 'Open Sans', Helvetica,arial,freesans,clean,sans-serif;
+  font-variant:small-caps;
   padding-bottom:5px;
   }
 .methods-modal p {
