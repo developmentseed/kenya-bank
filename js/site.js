@@ -169,12 +169,23 @@ $(function() {
   $('a.section-name').click(function(e) {
     e.preventDefault();
     var el = $(this);
+     console.log(el.parent());
     //removes activity from sub navigation but leaves toggle buttons highlighted
     if (!$(this).hasClass('active')) {
-      $('.subnav li').not(document.getElementById('primary toggle')).removeClass('active');
-      $(this).parent().addClass('active');
+      console.log(el.attr('class'));
+      if(el.attr('class') == 'no-link section-name'){
+        $('.subnav li').removeClass('active');
+        $('.subnav li').find('a').removeClass('active');
+        $(this).parent().addClass('active'); 
+        buildRequest(el);
+      }
+      else{
+        $('.subnav li').not(document.getElementById('primary toggle')).removeClass('active');
+        $(this).parent().addClass('active'); 
+        buildRequest(el);
+      }
       //builds new map request
-      buildRequest(el);
+
     }
   });
 
