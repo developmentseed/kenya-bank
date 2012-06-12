@@ -1,0 +1,57 @@
+{
+  "bounds": [
+    33.3545,
+    -4.872,
+    42.6709,
+    5.8346
+  ],
+  "center": [
+    37.4854,
+    0.4394,
+    6
+  ],
+  "format": "png",
+  "interactivity": {
+    "layer": "secondary-schools",
+    "template_teaser": "<h4 class=\"int-title\"> {{{district}}}</h4>\n<h5 class=\"int-stat\">Name:<span class=\"int-value\"> {{{name}}}</span></h5>\n<h5 class=\"int-stat\">Sponsor of School:<span class=\"int-value\"> {{{sponsor}}}</span></h5>\n<h5 class=\"int-stat\">Type of School:<span class=\"int-value\"> {{{type_1}}}</span></h5>\n<h5 class=\"int-stat\">Pupil-Teacher-Ratio:<span class=\"int-value\"> {{{p_t_r}}}</span></h5>\n<h5 class=\"int-stat\">Total Enrollment:<span class=\"int-value\"> {{{toterl}}}</span></h5>",
+    "fields": [
+      "district",
+      "name",
+      "sponsor",
+      "type_1",
+      "p_t_r",
+      "toterl"
+    ]
+  },
+  "minzoom": 0,
+  "maxzoom": 17,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "point",
+      "Datasource": {
+        "type": "sqlite",
+        "file": "/Users/natesmith/github/kenya-bank/data/sqlite/kenya-secondary-locations.sqlite",
+        "table": "(select lower(name) as name, lower(sponsor) as sponsor, lower(type_1) as type_1, * from secondary_locations order by toterl DESC)",
+        "attachdb": "",
+        "extent": "",
+        "id": "secondary-schools",
+        "project": "kenya-secondary-schools",
+        "srs": null
+      },
+      "id": "secondary-schools",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "name": "secondary-schools"
+    }
+  ],
+  "name": "kenya-secondary-schools",
+  "description": "",
+  "legend": "<div class='my-legend'>\n<div class='title'>Secondary School Locations: 2007</div>\n<div class='note'>Circle size scaled on total enrollment.\n</div>\n<div class='source'>Source: <a href=\"https://opendata.go.ke/Education/Kenya-Secondary-Schools-2007/i6vz-a543\">Kenya openData</a></div>\n</div>\n\n<style type='text/css'>\n  .wax-legend .title {\n    text-align: left;\n    margin-bottom: 8px;\n    font-weight: bold;\n    font-size: 90%;\n    }\n .wax-legend .note {\n    line-height:13px;\n    font-size:85%;\n    text-align: left;\n    margin-bottom: 8px;\n    font-style: italic;\n   }\n  .wax-legend ul.labels li span {\n    height: 10px;\n    width: 50px;\n    }\n  .wax-legend ul li span {\n    display: block;\n    float: left;\n    }\n  .wax-legend .source {\n    font-size: 70%;\n    color: #999;\n    clear: both;\n    }\n  .wax-attribution a,\n  .wax-legend a {\n    color: #777;\n    }\n</style>",
+  "attribution": "",
+  "_basemap": "http://a.tiles.mapbox.com/v3/mapbox.mapbox-light.jsonp"
+}
