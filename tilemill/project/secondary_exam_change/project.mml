@@ -37,7 +37,7 @@
         "type": "sqlite",
         "file": "../../../data/sqlite/Kenya_County.sqlite",
         "table": "(Select \n a.*,\n b.*\nfrom kenya_county a\nleft outer join secondary_results b on lower(a.county) = lower(b.County)\n)",
-        "attachdb": "Kenya_Database@../data/../../sqlite/Kenya_Database.sqlite",
+        "attachdb": "Kenya_Database@../../../data/sqlite/Kenya_Database.sqlite",
         "extent": "",
         "id": "sec_exam_change",
         "project": "secondary_exam_results",
@@ -52,7 +52,6 @@
   ],
   "name": "",
   "description": "",
-  "_basemap": "http://a.tiles.mapbox.com/v3/mapbox.mapbox-streets.jsonp",
   "attribution": "",
   "legend": "<div class='my-legend'>      \n<div class='title'>Change in Secondary Students With Passing Averages: 2006-2010 (%)</div>\n<div class='note'>Change calculated by subtracting percentage passed KCSE exam in 2010 with percentage passed in 2006, aggregated by county.\n</div>\n<div class='scale'>\n  <ul class='labels'>  \n    <li><span style='background:#B7B4B0'></span>< -10</li>    \n    <li><span style='background:#CECBC7;'></span>-10 - 0</li>\n    <li><span style='background:#76cdf5;'></span>0 - 3</li>\n    <li><span style='background:#5db3dc;'></span>3 - 6</li>\n    <li><span style='background:#5d9ebe;'></span>6 - 8</li>\n</ul>\n</div>\n<div class='source'>Source: <a>KCSE 2010</a></div>\n</div>\n\n<style type='text/css'>\n  .wax-legend .title {\n    text-align: left;\n    margin-bottom: 8px;\n    font-weight: bold;\n    font-size: 90%;\n    }\n .wax-legend .note {\n    line-height:13px;\n    font-size:85%;\n    text-align: left;\n    margin-bottom: 8px;\n    font-style: italic;\n   }\n  .wax-legend .scale ul {\n    margin: 0;\n    padding: 0;\n    float: left;\n    list-style: none;\n    }\n  .wax-legend .scale ul li {\n    display: block;\n    float: left;\n    width: 50px;\n    margin-bottom: 6px;\n    text-align: center;\n    font-size: 80%;\n    list-style: none;\n    }\n  .wax-legend ul.labels li span {\n    height: 10px;\n    width: 50px;\n\n    }\n  .wax-legend ul li span {\n    display: block;\n    float: left;\n    }\n  .wax-legend .source {\n    font-size: 70%;\n    color: #999;\n    clear: both;\n    }\n  .wax-attribution a,\n  .wax-legend a {\n    color: #777;\n    }\n</style>"
 }
