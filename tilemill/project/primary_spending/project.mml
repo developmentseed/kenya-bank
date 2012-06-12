@@ -30,9 +30,9 @@
       "geometry": "polygon",
       "Datasource": {
         "type": "sqlite",
-        "file": "../data/sqlite/Kenya_County.sqlite",
+        "file": "../../../data/sqlite/Kenya_County.sqlite",
         "table": "(Select  a.OGC_FID,\n a.GEOMETRY, \na.*, \n b.*,\ncast(b.Per_Primary_capita_spending_TSC_Enrolments_2011 as real) as Per_Primary_capita_spending_TSC_Enrolments_2011_num\nfrom kenya_county a\nleft  join primary_indicators  b on lower(a.county) = lower(b.County)\n)",
-        "attachdb": "Kenya_Database@../data/sqlite/Kenya_Database.sqlite",
+        "attachdb": "Kenya_Database@../../../data/sqlite/Kenya_Database.sqlite",
         "extent": "",
         "id": "primary_spending",
         "project": "primary_spending",
@@ -47,7 +47,6 @@
   ],
   "name": "primary_spending",
   "description": "",
-  "_basemap": "http://a.tiles.mapbox.com/v3/mapbox.mapbox-streets.jsonp",
   "legend": "<div class='my-legend'>\n<div class='title'>Primary Per Capita Spending: 2011 ($)</div>\n<div class='note'>County spending per student based on TSC enrollment rates from 2011. </div> \n<div class='scale'>\n  <ul class='labels'>\n    <li><span style='background:#76cdf5;'></span>4 - 6K</li>\n    <li><span style='background:#5db3dc;'></span>6 - 8K</li>\n    <li><span style='background:#5d9ebe;'></span>8 - 10K</li>\n    <li><span style='background:#5d7c8b;'></span>10 - 11K</li>\n    <li><span style='background:#54636a;'></span>> 11K</li>\n</ul>\n</div>\n<div class='source'>Source: <a href=\"https://opendata.go.ke/\">KENYA openData</a></div>\n</div>\n\n<style type='text/css'>\n  .wax-legend .title {\n    text-align: left;\n    margin-bottom: 8px;\n    font-weight: bold;\n    font-size: 90%;\n    }\n .wax-legend .note {\n    line-height:13px;\n    font-size:85%;\n    text-align: left;\n    margin-bottom: 8px;\n    font-style: italic;\n   }\n  .wax-legend .title-header{\n    font-size: 85%;\n   }\n  .wax-legend .scale ul {\n    margin: 0;\n    padding: 0;\n    float: left;\n    list-style: none;\n   }\n  .wax-legend .scale ul li {\n    display: block;\n    float: left;\n    width: 50px;\n    margin-bottom: 6px;\n    text-align: center;\n    font-size: 80%;\n    list-style: none;\n    }\n  .wax-legend ul.labels li span {\n    height: 10px;\n    width: 50px;\n\n    }\n  .wax-legend ul li span {\n    display: block;\n    float: left;\n    }\n  .wax-legend .source {\n    font-size: 70%;\n    color: #999;\n    clear: both;\n    }\n  .wax-attribution a,\n  .wax-legend a {\n    color: #777;\n    }\n</style>",
   "attribution": ""
 }

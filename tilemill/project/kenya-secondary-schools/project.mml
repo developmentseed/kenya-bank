@@ -34,7 +34,7 @@
       "geometry": "point",
       "Datasource": {
         "type": "sqlite",
-        "file": "../data/sqlite/kenya-secondary-locations.sqlite",
+        "file": "../../../data/sqlite/kenya-secondary-locations.sqlite",
         "table": "(select lower(name) as name, lower(sponsor) as sponsor, lower(type_1) as type_1, * from secondary_locations order by toterl DESC)",
         "attachdb": "",
         "extent": "",
