@@ -31,9 +31,9 @@
       "geometry": "point",
       "Datasource": {
         "type": "sqlite",
-        "file": "../data/sqlite/Ken_Districts_Centroids.sqlite",
+        "file": "../../../data/sqlite/Ken_Districts_Centroids.sqlite",
         "table": "(Select  a.OGC_FID,\n a.GEOMETRY, \na.distid,\n a.distname,\nlower(a.distname) as lower_distname,\n b.*\nfrom ken_districts_centroids a\nleft outer join Reasons b on lower(a.distname) = lower(b.District)\n)",
-        "attachdb": "Kenya_Database@../data/sqlite/Kenya_Database.sqlite",
+        "attachdb": "Kenya_Database@../../../data/sqlite/Kenya_Database.sqlite",
         "extent": "",
         "id": "kendistrictscentroid",
         "project": "POV_NEW",

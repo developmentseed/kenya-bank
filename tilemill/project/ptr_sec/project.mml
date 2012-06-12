@@ -30,9 +30,9 @@
       "geometry": "polygon",
       "Datasource": {
         "type": "sqlite",
-        "file": "../data/sqlite/Kenya_County.sqlite",
+        "file": "../../../data/sqlite/Kenya_County.sqlite",
         "table": "(Select\n a.*,\n b.*,\nround(ptr_secondary) as ptr_secondary_r\nfrom kenya_county a\nleft outer join secondary_indicators b on lower(a.county) = lower(b.County)\n)\n\n",
-        "attachdb": "Kenya_Database@../data/sqlite/Kenya_Database.sqlite",
+        "attachdb": "Kenya_Database@../../../data/sqlite/Kenya_Database.sqlite",
         "extent": "",
         "id": "tpr-sec",
         "project": "tpr-sec",
@@ -47,7 +47,6 @@
   ],
   "name": "ptr_sec",
   "description": "",
-  "_basemap": "http://a.tiles.mapbox.com/v3/mapbox.mapbox-streets.jsonp",
   "legend": "<div class='my-legend'>      \n<div class='title'>Secondary Pupil-Teacher Ratio: 2011</div>\n<div class='note'>Calculated by dividing total secondary enrollments by total TSC 2011 secondary teachers, aggregated by county.\n</div>\n<div class='scale'>\n  <ul class='labels'>\n    <li><span style='background:#76cdf5;'></span>12 - 18</li>\n    <li><span style='background:#5db3dc;'></span>18 - 23</li>\n    <li><span style='background:#5d9ebe;'></span>23 - 28</li>\n    <li><span style='background:#5d7c8b;'></span>28 - 33</li>\n    <li><span style='background:#54636a;'></span>> 33</li>\n</ul>\n</div>\n<div class='source'>Source: <a>TSC 2011</a></div>\n</div>\n\n<style type='text/css'>\n  .wax-legend .title {\n    text-align: left;\n    margin-bottom: 8px;\n    font-weight: bold;\n    font-size: 90%;\n    }\n .wax-legend .note {\n    line-height:13px;\n    font-size:85%;\n    text-align: left;\n    margin-bottom: 8px;\n    font-style: italic;\n   }\n  .wax-legend .scale ul {\n    margin: 0;\n    padding: 0;\n    float: left;\n    list-style: none;\n    }\n  .wax-legend .scale ul li {\n    display: block;\n    float: left;\n    width: 50px;\n    margin-bottom: 6px;\n    text-align: center;\n    font-size: 80%;\n    list-style: none;\n    }\n  .wax-legend ul.labels li span {\n    height: 10px;\n    width: 50px;\n\n    }\n  .wax-legend ul li span {\n    display: block;\n    float: left;\n    }\n  .wax-legend .source {\n    font-size: 70%;\n    color: #999;\n    clear: both;\n    }\n  .wax-attribution a,\n  .wax-legend a {\n    color: #777;\n    }\n</style>",
   "attribution": ""
 }
