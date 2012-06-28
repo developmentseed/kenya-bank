@@ -1,4 +1,4 @@
-# Exploring Kenyan Education
+# Exploring Kenyan Education Documentation
 
 Welcome to the Exploring Kenyan Education site. 
 
@@ -6,7 +6,6 @@ This is the public repository for the site: <http://developmentseed.org/kenya-ba
 
 ![](https://github.com/developmentseed/kenya-bank/raw/gh-pages/img/kenya-front.png)
 
-##Documentation 
 
 This documentation is divded into two parts. The first section covers how to set up github and fork the project, and explains the site architecture with file descriptions. The second section backs up to data processing and map design by providing links to tools to download, and docs for working with SQLite and Tilemill. 
 
