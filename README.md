@@ -93,60 +93,53 @@ Where something requires explanation there are inline notes in the code.
 
 After you have cloned or downloaded the repository, find where you saved the `tilemill` folder, and point your TileMill to this location in the setting tab: 
 
-![](https://skitch.com/d-johnson/edsxa/tilemill)
+![](https://img.skitch.com/20120628-9xb3u6if563m3k6tt5nbkyqke.png)
 
 If you're working with a cloned version of the site with git, makes sure that you're looking at the branch master by navigating to the project location in the terminal, then typing `git checkout master`.
 
-![](https://skitch.com/d-johnson/edstc/terminal-bash-80x34)
+![](https://img.skitch.com/20120628-pkts8e5snk4tx6h1iwe7qrd2qy.png)
 
 All of the TileMill projects are set up to point to the data, also in the master branch. So you will not need to worry about editing the Sqlite databases, however see below for more information about the joins that are happening between Sqlite files in TileMill. 
 
-Uploading maps 
+##### Uploading maps
+
+First, set up your TileMill to sync with your MapBox account. Then within any project, after making your desired changes, click upload, and the map layer will be pushed to the server with the name of the project folder. Unless you manually change the project folder name from your documents window, this will stay the same, and thus replace the corresponding map layer on your wb-education MapBox account. Create your own free account to upload tiles without making changes to the site. 
+
+Authorizing Sync 
+![](https://img.skitch.com/20120628-1u1gu7jte2rgb3pjxtjbdnphdc.png)
+
+Uploading
+
+![](https://img.skitch.com/20120628-dm5d2b1ef7mjrus6r9dw5sbu2m.png)
+
+### Working with Sqlite
 
 [This tutorial](http://mapbox.com/tilemill/docs/tutorials/sqlite-work/) walks through turning data sources into SQLite files. This requires downloading [Quantum GIS](www.qgis.org), and [Tilemill](www.tilemill.com).
 
 Qgis is a powerful tool for working with geographic files, but for right now we just want it to convert data formats like csvs and shapefiles into SQLite databases. 
 
-SQLite databases are the best tool for sorting data in Tilemill. SQLite lets you change the query on the data whenever you like, to find a different angle on your data. It is also an easy way to join databases with geographic information to those without geographic information, in the `attach db` field of the `add SQLite layer` in Tilemill. This process is outlined in the same [tutorial](http://mapbox.com/tilemill/docs/tutorials/sqlite-work/) as above.
+SQLite databases are the best tool for sorting data in Tilemill. SQLite lets you change the query on the data whenever you like, to find a different angle on your data. It is also an easy way to join databases with geographic information to those without geographic information, in the `attach db` field of the `add SQLite layer` in Tilemill. This process is outlined in the same [tutorial](http://mapbox.com/tilemill/docs/tutorials/sqlite-work/) as above, and can be seen in any of the Kenya-bank projects: 
 
-For example, with the LRA attacks and security incidents against humanitarian workers, I saved the original files as csvs, then imported them into QGIS. Then I saved the layers as SQLite databases. 
+![](https://img.skitch.com/20120628-g3c5rbu74y1yaaiftxseuewusj.png)
 
-Since I want to aggregate my LRA incidents by the district level, I need points that correspond to each district. So I looked at the admin2 shapefile from the `cod_boundaries`, which has district information.  In QGIS I add a vector layer and open up this `admin2.shp` file. This opens up polygons, but I don't want to join my LRA or security incidents to polygons, since I was display them as events by location. 
 
-To turn the polygons into centroids, I went to `vector, geometry tools, polygons to centroids.' Then I right-clicked on the shapefile and saved the layer as a SQLite database, and set the CRS (map projection) to google mercator, since this is what Tilemill by default uses. 
+Since I have my education factors at the county level, I need shapes that correspond to each county. So I navigate to the `Kenya_counties.sqlite`.
 
-Now you should have two SQLite databases, one for LRA attacks, and one for admin2 centroids. In Tilemill you will go to `add a layer`, choose `SQLite` and open up the admin2 centroids file. Then in the `attach DB` field, you will navigate to your LRA attacks file. The join between these two databases happens in the query field, and looks similar to this: 
+Then in the `attach DB` field, you will navigate to the file `Kenya_Database.sqlite`, which has all of the education factors I want to visualize. The join between these two databases happens in the query field, and looks similar to this. The asterisk means select all, and the round(ptr_secondary) is rounding the number, finally the join is made on the key `county`, which is contained in both databases.
 
-            (select *,
-	
-			count(unique_id) as num_attacks, 
-			sum(ppl_killed) as ppl_killed, 
-			sum(infants_kidnapped) as infants_kidnapped,  
-			sum(adults_kidnapped) as adults_kidnapped
-
-			  from  `admin3_centroids` a join `lra_attack` b
-			  on b.territory=a.nom
-			  group by month, territory
-			)
+            (Select
+             a.*,
+             b.*,
+            round(ptr_secondary) as ptr_secondary_r
+            from kenya_county a
+            left outer join secondary_indicators b on lower(a.county) = lower(b.County)
+            )
 			
-The asterisk means select all, and the following rows are counting or adding data so that as we aggregate by district, we won't lose individual information about each attack. This yield a table with a row for each territory of each month in the data with aggregated attacks, people killed, and people kidnapped. 
 
 ##Map Design 
 
 This comes much easier, as it follows a css-type like language called carto. All of the basics and more advanced options of styling your data can be found in the [mapbox.com/help](http://mapbox.com/help), starting with [styling data](http://mapbox.com/tilemill/docs/crashcourse/styling/) section.
 
-##Google image chart Graphs
 
-The charts that show up on the side bar in the site are created in the [google image chart wizard](https://developers.google.com/chart/image/docs/chart_wizard), which allows you to change the margins, styling and size of different kinds of charts. 
-
-However you can easily recreate the charts in the DRC site with the same styling by changing the URLs inserted in the <img> tags within <div='graphs'>. These are tagged with <class='year2010'> or <class='2011'> etc., which is read by the javascript to know when to appear with the year selector. See below:
-
-![](https://img.skitch.com/20120406-d6qh7aff173a16ktkun745xer1.jpg)
-
-These three image tags result in three unique graphs. The data and parameters are defined by the different tags within the URL, and separated by the `&` symbol. Below are the three parameters that must be changed in order to create a new URL for a graph. More information about the other components of these charts can [be found here](https://developers.google.com/chart/image/docs/chart_params).
- 
- - the title, `chtt=`
- - the data, `chd=t:`  the different data sets represented here are seperated by a pipe `|`
- - the img class (to match the year of the data you're inserting)
- 
-![](https://img.skitch.com/20120406-x3715g5spckk9utppr4239khb6.jpg)
+## Further Support
+There are many more tutorials on data processing and TileMill at [guides](http://mapbox.com/tilemill/docs/guides/add-shapefile/) and [support discussions](http://support.mapbox.com/discussions/tilemill). Please contact us as well if you get stuck!
