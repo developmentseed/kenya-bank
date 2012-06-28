@@ -89,7 +89,20 @@ Jekyll has a default chronological pagination system. Posts are ordered such tha
 ###Notes
 Where something requires explanation there are inline notes in the code.
 
-##Data Processing
+## TileMill + Data Processing 
+
+After you have cloned or downloaded the repository, find where you saved the `tilemill` folder, and point your TileMill to this location in the setting tab: 
+
+![](https://skitch.com/d-johnson/edsxa/tilemill)
+
+If you're working with a cloned version of the site with git, makes sure that you're looking at the branch master by navigating to the project location in the terminal, then typing `git checkout master`.
+
+![](https://skitch.com/d-johnson/edstc/terminal-bash-80x34)
+
+All of the TileMill projects are set up to point to the data, also in the master branch. So you will not need to worry about editing the Sqlite databases, however see below for more information about the joins that are happening between Sqlite files in TileMill. 
+
+Uploading maps 
+
 [This tutorial](http://mapbox.com/tilemill/docs/tutorials/sqlite-work/) walks through turning data sources into SQLite files. This requires downloading [Quantum GIS](www.qgis.org), and [Tilemill](www.tilemill.com).
 
 Qgis is a powerful tool for working with geographic files, but for right now we just want it to convert data formats like csvs and shapefiles into SQLite databases. 
