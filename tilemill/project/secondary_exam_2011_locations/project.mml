@@ -1,0 +1,65 @@
+{
+  "bounds": [
+    33.2996,
+    -4.7886,
+    42.616,
+    4.4299
+  ],
+  "center": [
+    37.6282,
+    -0.9379,
+    6
+  ],
+  "format": "png",
+  "interactivity": {
+    "layer": "kenyaknecscores",
+    "template_teaser": "<div class=\"heading\">\n\t<h4 class=\"int-title\">\n\t\t{{{g_county}}}\n\t</h4>\n</div>\n<div class=\"clearfix\">\n\t<h5 class=\"int-stat\">\n\t\tName: <span class=\"int-value\">{{{g_school_name}}}</span>\n\t</h5>\n\t<h5 class=\"int-stat\">\n\t\tSponsor of School: <span class=\"int-value\">{{{school_sponsor}}}</span>\n\t</h5>\n\t<h5 class=\"int-stat\">\n\t\tKNEC Code: <span class=\"int-value\">{{{g_knec_code}}}</span>\n\t</h5>\n\t<h5 class=\"int-stat\">\n\t\tTotal Test Takers: <span class=\"int-value\">{{{knec_total_students}}}</span>\n\t</h5>\n</div>\n<div class=\"clearfix\">\n\t<table class=\"int-table\">\n\t\t<thead>\n\t\t\t<tr>\n\t\t\t\t<th></th>\n\t\t\t\t<th>Male</th>\n\t\t\t\t<th>Female</th>\n\t\t\t</tr>\t\t\n\t\t</thead>\n\t\t<tbody>\n\t\t\t<tr>\n\t\t\t\t<th>\n\t\t\t\tA\n\t\t\t\t</th>\n\t\t\t\t<td>\n\t\t\t\t{{#pct_male_students_a:1}} {{{pct_male_students_a:1}}}% {{/pct_male_students_a:1}}\t\n\t\t\t\t</td>\n\t\t\t\t<td>\n\t\t\t\t{{#pct_female_students_a:1}} {{{pct_female_students_a:1}}}% {{/pct_female_students_a:1}}\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<th>\n\t\t\t\tB\t\n\t\t\t\t</th>\n\t\t\t\t<td>\n\t\t\t\t{{#pct_male_students_b:1}} {{{pct_male_students_b:1}}}% {{/pct_male_students_b:1}}\t\n\t\t\t\t</td>\n\t\t\t\t<td>\n\t\t\t\t{{#pct_female_students_b:1}} {{{pct_female_students_b:1}}}% {{/pct_female_students_b:1}}\t\n\t\t\t\t</td>\n\t\t\t</tr>\t\n\t\t\t<tr>\n\t\t\t\t<th>\n\t\t\t\tC\n\t\t\t\t</th>\n\t\t\t\t<td>\n\t\t\t\t{{#pct_male_students_c:1}} {{{pct_male_students_c:1}}}% {{/pct_male_students_c:1}}\t\n\t\t\t\t</td>\n\t\t\t\t<td>\n\t\t\t\t{{#pct_female_students_c:1}} {{{pct_female_students_c:1}}}% {{/pct_female_students_c:1}}\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<th>\n\t\t\t\tD\t\n\t\t\t\t</th>\n\t\t\t\t<td>\n\t\t\t\t{{#pct_male_students_d:1}} {{{pct_male_students_d:1}}}% {{/pct_male_students_d:1}}\t\n\t\t\t\t</td>\n\t\t\t\t<td>\n\t\t\t\t{{#pct_female_students_d:1}} {{{pct_female_students_d:1}}}% {{/pct_female_students_d:1}}\t\n\t\t\t\t</td>\n\t\t\t</tr>\t\n\t\t\t<tr>\n\t\t\t\t<th>\n\t\t\t\tE\n\t\t\t\t</th>\n\t\t\t\t<td>\n\t\t\t\t{{#pct_male_students_e:1}} {{{pct_male_students_e:1}}}% {{/pct_male_students_e:1}}\t\t\n\t\t\t\t</td>\n\t\t\t\t<td>\n\t\t\t\t{{#pct_female_students_e:1}} {{{pct_female_students_e:1}}}% {{/pct_female_students_e:1}}\t\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t</tbody>\n\t</table>\n</div>",
+    "fields": [
+      "g_county",
+      "g_school_name",
+      "school_sponsor",
+      "g_knec_code",
+      "knec_total_students",
+      "pct_male_students_a:1",
+      "pct_female_students_a:1",
+      "pct_male_students_b:1",
+      "pct_female_students_b:1",
+      "pct_male_students_c:1",
+      "pct_female_students_c:1",
+      "pct_male_students_d:1",
+      "pct_female_students_d:1",
+      "pct_male_students_e:1",
+      "pct_female_students_e:1"
+    ]
+  },
+  "minzoom": 6,
+  "maxzoom": 15,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "point",
+      "Datasource": {
+        "type": "sqlite",
+        "file": "/Users/christopherherwig/devseed/kenya/final/kenya_knec_scores.sqlite",
+        "table": "(select * from kenya_knec_scores JOIN kenya_no_zero on kenya_knec_scores.g_knec_code =kenya_no_zero.g_knec_code)",
+        "attachdb": "kenya_no_zero@/Users/christopherherwig/devseed/kenya/final/knec_kenya_no_zeroes.sqlite",
+        "extent": "",
+        "id": "kenyaknecscores",
+        "project": "kenya",
+        "srs": null
+      },
+      "id": "kenyaknecscores",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "name": "kenyaknecscores"
+    }
+  ],
+  "name": "Kenya 2010 KNEC Scores",
+  "description": "",
+  "attribution": "",
+  "legend": "<div class='my-legend'>\n<div class='title'>Kenya Certificate of Secondary Education 2010</div>\n<div class='note'>Circle size scaled on total test takers.\n</div>\n<div class='source'>Source: <a href=\\\"#\">Kenya openData</a></div>\n</div>\n\n<style type='text/css'>\n  .wax-legend .title {\n    text-align: left;\n    margin-bottom: 8px;\n    font-weight: bold;\n    font-size: 90%;\n    }\n .wax-legend .note {\n    line-height:13px;\n    font-size:85%;\n    text-align: left;\n    margin-bottom: 8px;\n    font-style: italic;\n   }\n  .wax-legend ul.labels li span {\n    height: 10px;\n    width: 50px;\n    }\n  .wax-legend ul li span {\n    display: block;\n    float: left;\n    }\n  .wax-legend .source {\n    font-size: 70%;\n    color: #999;\n    clear: both;\n    }\n  .wax-attribution a,\n  .wax-legend a {\n    color: #777;\n    }\n</style>"
+}
