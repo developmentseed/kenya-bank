@@ -7,7 +7,7 @@
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, em, img, ins, kbd, q, s, samp,F
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
@@ -481,6 +481,27 @@ a.method-close {
   padding-bottom:10px;
   text-align:left;
   }
+  
+  .wax-tooltip .int-table thead tr th{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 14px;
+    color: inherit;
+    padding:5px;
+  }
+  .wax-tooltip .int-table tbody tr th{
+    padding:5px;
+  }
+  .wax-tooltip .int-table tbody tr td{
+        font-weight: 200;
+        text-transform: none;
+        font-size: 15px;
+        color: #fff;
+        text-transform:capitalize;
+        padding:10px 0 0 10px;
+  }
+  
 /* ### Legend Styling Overrides ### */
 body .wax-legend .scale ul li {
   margin: 0;
