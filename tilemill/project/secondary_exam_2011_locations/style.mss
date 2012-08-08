@@ -6,10 +6,6 @@
 @m5: #001d2b;
 
 /* Layers */  
-
-
-
-
 #kenyaknecscores[g_knec_code != 401][g_knec_code != 205][g_knec_code != 805][g_knec_code != 557][g_knec_code != 508] {
     marker-opacity: 0.5;
     marker-line-opacity:0.5;
