@@ -43,9 +43,9 @@
       "geometry": "point",
       "Datasource": {
         "type": "sqlite",
-        "file": "/Users/christopherherwig/devseed/kenya/final/kenya_knec_scores.sqlite",
+        "file": "../../../data/sqlite/kenya_knec_scores.sqlite",
         "table": "(select * from kenya_knec_scores JOIN kenya_no_zero on kenya_knec_scores.g_knec_code =kenya_no_zero.g_knec_code)",
-        "attachdb": "kenya_no_zero@/Users/christopherherwig/devseed/kenya/final/knec_kenya_no_zeroes.sqlite",
+        "attachdb": "kenya_no_zero@../../../data/sqlite/knec_kenya_no_zeroes.sqlite",
         "extent": "",
         "id": "kenyaknecscores",
         "project": "kenya",
